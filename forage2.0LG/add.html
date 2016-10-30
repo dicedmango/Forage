@@ -82,10 +82,17 @@ input {   font-size: 35pt; width: 90%; height: 170px;  font-family: min;}
 
 
 }
+
+
+#line3 {
+  background:#615e5f; height: 10px; position: relative; top: -100px;
+
+
+}
 .logo  {position: relative; width: 10%;  top: 55px; left: 270px; padding-right: 30px; }
 
 .logo2 {position: relative; width: 10%;  top: 55px; left: 300px  }
-.logo45  {position: relative; width: 15%;  top: 115px; left: 300px; padding-right: 30px; }
+.logo45  {position: relative; width: 15%;  top: -85px; left: 300px; padding-right: 30px; }
 
 
 
@@ -147,12 +154,7 @@ font-size: 40pt; font-family: cool; color: #ddbf5e; position: relative;
 
 .typic4{font-size: 40px!important; position: relative; text-align: left; width: 480px; color: #f0eee9; font-family: min;}  
 
-#line3 {
-  background:#f0eee9; height: 10px;
-position: relative; top: -93px;
-    width: 97%;
 
-}
 
 
 .mush{    position: relative;
@@ -193,8 +195,10 @@ position: relative; top: -93px;
 <p id="typeic2"><i>Ingredients:</i></p>
   <input id="typeic3" type="text"  name="searchbox" onfocus="if (this.value=='Number of Guests') this.value = ''" type="text" placeholder="Ingredients eg. Cheese, Bread, Ham, Bacon..."></imput><br>
 
-  <input id="typeic3" type="text" name="searchbox" onfocus="if (this.value=='Discription') this.value = ''" type="text" placeholder="Method eg. Set hob to gas mark 5, melt butter in pan..."></imput>
+  <input id="typeic3" type="text" name="searchbox" onfocus="if (this.value=='Discription') this.value = ''" type="text" placeholder="Method eg. Set hob to gas mark 5, melt butter in pan..."></imput><br>
 
+
+<input id="typeic3" type="text" name="searchbox" onfocus="if (this.value=='Discription') this.value = ''" type="text" placeholder="Description eg. A Grilled Cheese like no other, perfect for a winter snack..."></imput><br>
   <div class="image-upload"><center>
       <label for="file-input"><br><br><br><br>
 
@@ -209,7 +213,7 @@ position: relative; top: -93px;
 
   <button  class="leves"onclick="sendRecipe()">Submit</button><br>
 <img class="logo45" src="./logo/sh69.png"></img>
-
+<div id="line3"></line></div>
 
 
 
