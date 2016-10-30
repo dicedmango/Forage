@@ -315,21 +315,11 @@ var numberOfpages = 0;
 var recepies = [];
 
     
-    $.get('/api/categories', function(data) {
+$.get('/api/categories', function(data) {
 
-      console.log("this is what I got from the server", data);
-      
-
-      var options = '';
-
-      for(var i = 0; i < data.length; i++) {  
-        options += '<option value="'+data[i].name+'" />';
-      }
-
-
-      $('#categories').html(options)
-
-    })
+    console.log("/api/categories from the server", data);
+    
+});
 
 
 
