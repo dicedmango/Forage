@@ -213,6 +213,13 @@ position: relative; top: -93px;
     left: 306px;
     width: 470px;
     top: -304px;}
+
+.read-more {
+  color: #e2cc85;
+}
+
+
+
 </style>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -431,7 +438,7 @@ function drawResults(data) {
 
         var dot= "";
 
-        if (data[i].name.length > 22) dot = "... Read More"
+        if (data[i].name.length > 22) dot = "... <a class='read-more' href='/rec.html?id="+data[i].id+"'>Read More</a>";
 
             var bit = 
 
