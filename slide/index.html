@@ -6,34 +6,182 @@
 
 		<title>Forage</title>
 
-		<link rel="stylesheet" type="text/css" href="./main.css" />
-
-		<link rel="stylesheet" type="text/css" href="css/multilevelmenu.css" />
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
 		<link rel="stylesheet" type="text/css" href="css/animations.css" />
 		<script src="js/modernizr.custom.js"></script>
+
+		<style>
+
+		@font-face {
+		font-family: min;
+		src: url("./MinionPro-Regular.otf") format("opentype");
+		}
+
+		@font-face {
+		font-family: cool;
+		src: url("./coolvetica rg.ttf") format("opentype");
+		}
+
+		h1 {font-size: 40pt; font-family: cool; color: #615e5f; position: relative;
+		    top: -10px; max-width: 90%; text-align: left;}
+
+		p {font-size: 40pt; font-family: min; color: #615e5f; position: relative;
+		     max-width: 90%; text-align: left;}    
+
+		a {font-size: 20pt; font-family: min; color: #615e5f; position: relative;
+		    text-decoration: none; }
+
+		body {
+		        background-color: #f0eee9
+		    } 
+
+		.logo {    
+		    position: relative;
+		    width: 50%;
+		    bottom: -1190px;
+		    right: -511px;
+		}
+
+		.logo2 {    
+		        position: relative;
+		    width: 41%;
+		    bottom: -1189px;
+		    right: 186px;
+		}
+
+		.logo3 {    
+		            position: relative;
+		    width: 10%;
+		    bottom: -1079px;
+		    right: -186px;
+		}
+
+		#lh {    font-size: 100px;
+		    color: #ddbf5e;
+		    position: relative;
+		    top: 482px;   
+		    left: -64px; }
+
+		#mm {position: relative;
+		    bottom: -460px;
+		    max-width: 100%;
+		    left:-40px;
+		}
+
+		.type
+		 {position: absolute; top: -500px; padding-left: 10%;}
+
+		 .line {
+		    background: #615e5f;
+		    height: 10px;
+		    position: relative;
+		    top:  314px;
+		}
+
+
+.logo {position: relative;
+    width: 13%;
+    top: 397px;
+    left: 350px;}
+
+
+.logo2     {position: relative;
+        top: 861px;
+    width: 10%;
+    right: -230px;}
+
+
+.logo7     {    position: relative;
+    top: 81px;
+    width: 12%;
+    right: 277px;}
+
+.logo9     {    position: relative;
+    top: 59px;
+    width: 13%;
+    right: 508px;}
+
+
+
+.logo5    {    position: relative;
+    top: 1230px;
+    width: 10%;
+    right: 68px;}
+
+
+form {position: relative; top: 350px; }
+
+input {width: 400px; height: 40px; font-size: 20pt;font-family: odin; font-size: 35px; }
+
+
+#text5
+{
+background: #f0eee9;
+color: #2e1b10;
+width:85%;
+height: 60px;
+padding: 6px 15px 6px 35px;
+border-radius: 10px;
+box-shadow: 0 1px 0 #ccc inset;
+transition:500ms all ease;
+}
+
+
+button
+
+{
+  
+color: #ddbf5e;
+    right: -135px;
+position: relative; 
+font-family: cool;
+font-size: 50px;
+
+    top: 500px;
+  
+
+
+}
+
+#ratch {position: relative; top: -30px; color: #fff;}
+
+
+
+		</style>
+
+
+
+
 	</head>
 	<body>	
 
 		<div class="pt-triggers">
+
 			<button id="iterateEffects" class="pt-touch-button">Show next page transition</button>
-			<div id="dl-menu" class="dl-menuwrapper">
-				<button class="dl-trigger">Choose a transition</button>
-				<ul class="dl-menu">
 
-					<li data-animation="1"><a href="#">Move to left/ from right</a></li>
-					<li data-animation="2"><a href="#">Move to right/ from left</a></li>
-					<li data-animation="3"><a href="#">Move to top/ from bottom</a></li>
-					<li data-animation="4"><a href="#">Move to bottom/ from top</a></li>
-
-				</ul>
-			</div><!-- /dl-menu-wrapper-->
 		</div><!-- /triggers -->
 
 		<div id="pt-main" class="pt-perspective">
 			<div class="pt-page pt-page-1">
 				<!-- pages go here -->
 
+
+					<center>
+
+
+					<br>
+					<div class="type">
+					<a href = "login.html"> <h1 id="lh">Forage</h1>
+
+
+
+					 <p id="mm" >Finding Your Inner Chef</p></center>
+					</div>
+
+					<div class="line"></div>
+				 	<img class="logo" src="./logo/shoom4z.png"></img></a>
+				 	<img class="logo2" src="./logo/sh14.png"></img></a>
+				  	<img class="logo3" src="./logo/shroom12.png"></img></a>
 
 
 
@@ -45,8 +193,27 @@
 			</div>
 			<div class="pt-page pt-page-2">
 				<!-- pages go here -->
+				<h1>Page 2</h1>
+
+				<form action="/form" method="POST">
+				<br>
+
+				  <input id="text5" type="text"  name="username" onfocus="if (this.value=='Username') this.value = ''" type="text" value="alex.richardson-@live.co.uk"></imput><br>
+
+				  <input id="text5" type="password" name="password" onfocus="if (this.value=='Password') this.value = ''" type="password" value="Password"></imput>
 
 
+
+				</form>
+				<br><center>
+				<a href="cookies.html"><button type="submit" value="MAKE A POST REQUEST">Login</button></a>
+
+				<img class="logo7" src="./logo/sh13.png"></img><img class="logo9" src="./logo/shoom4.png"></img>
+
+				<A HREF="ABOUT.HTML"><p>About Forage</p></A>
+				<p>Created by <a href="www.maverickmedia.org.uk">Maverick Media</a></p>
+				<img class="logo2" src="./logo/sh69.png"></img>
+				<img class="logo2" src="./logo/shroom5.png"></img>
 
 
 
@@ -57,7 +224,7 @@
 			</div>
 			<div class="pt-page pt-page-3">
 				<!-- pages go here -->
-
+				<h1>Page 3</h1>
 
 
 
