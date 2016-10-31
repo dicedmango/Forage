@@ -6,36 +6,11 @@
 
 <title>Forage</title>
 
-
+<link rel="stylesheet" type="text/css" href="./main.css" />
 
 <style>
 
 
-
-@font-face {
-font-family: min;
-src: url("./MinionPro-Regular.otf") format("opentype");
-}
-
-@font-face {
-font-family: cool;
-src: url("./coolvetica rg.ttf") format("opentype");
-}
-
-h1 {font-size: 40pt; font-family: cool; color: #615e5f; position: relative;
-    top: -10px; max-width: 90%;}
-
-p {font-size: 20pt; font-family: min; color: #615e5f; position: relative;
-    top: -10px; max-width: 90%; text-align: left;}    
-
-a {font-family: min; color: #615e5f; position: relative;
-    text-decoration: none; }
-
-body {
-        background-color: #f0eee9;
-    }
-
-#foot {text-align: center;}
 
 
 
@@ -156,53 +131,13 @@ input {width: 400px; height: 40px; text-align: left; width: 480px; color: #615e5
     width: 7%;
     left: -25px;}
 
-.share2{    position: relative;
+.share2 {    
+    position: relative;
     top: -760px;
     width: 7%;
     left: -25px;}
 
-#menu-panel {
-	position: fixed;
-	height: 100%;
-	left: 0;
-	top: 0;
-    background-color: #615e5f;
-    color: #f0eee9;
 
-
-   opacity: 1;
-
-   transition: opacity .75s ease-in-out;
-   -moz-transition: opacity .75s ease-in-out;
-   -webkit-transition: opacity .75s ease-in-out;
-}
-
-.startInvisible {
-	opacity: 0 !important;
-}
-
-#menu-panel a {
-    color: #f0eee9 !important;
-}
-
-.bringToTop {
-        z-index: 99999999;
-
-}
-
-
-
-.menu-title {
-
-font-size: 40pt; font-family: cool; color: #ddbf5e; position: relative;
-    top: -10px; max-width: 90%; text-align: left;
-
-}
-
-.mush{    position: relative;
-    left: 306px;
-    width: 470px;
-    top: -304px;}
 </style>
 
 <script src="./libs/jquery.min.js"></script>
@@ -213,7 +148,7 @@ font-size: 40pt; font-family: cool; color: #ddbf5e; position: relative;
 <body>
 
 
-<div id="menu-panel" class="bringToTop startInvisible"> 
+  <div id="menu-panel" class="bringToTop startInvisible"> 
 
 
 
@@ -278,7 +213,7 @@ font-size: 40pt; font-family: cool; color: #ddbf5e; position: relative;
 
 <br>
 </center><br><br><br><br>
-<input id="text5" autocomplete="on" type="text" name="input" value="" placeholder="" list="categories" onchange="search()"></input>
+<input id="text5" autocomplete="on" type="text" name="input" value="" onclick="selectFromMenu()" placeholder="" list="categories" onchange="search()"></input>
   <datalist id="categories"></datalist>
 
   <button type="submit" value="searchBtn" onclick="search()"><img id="tri" src="./img/arr.png"></button>
@@ -309,7 +244,9 @@ font-size: 40pt; font-family: cool; color: #ddbf5e; position: relative;
 
 
 
-
+function selectFromMenu() {
+  console.log("menu item", this);
+}
 
 function openMenu() {
 
