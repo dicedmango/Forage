@@ -70,19 +70,18 @@ input {
     width: 90%;
 }
 
-#text554 {    background: #f0eee9;
-    border-style: solid;
-    background: #f0eee9;
-    color: #615e5f;
+#text554 {    
+
+    color: #ddbf5e;
     width: 90%;
     height: 60px;
-    padding: 36px 0px 36px 35px;
-    box-shadow: #f0eee9;
+    padding: 36px 36px 36px 35px;
+ 
     position: relative;
-    left: 0px;
+
     top: 10px;
-    border-color: #f0eee9;
-}
+    
+    font-family: cool; 
 }
 
 
