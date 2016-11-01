@@ -15,137 +15,6 @@
 
 
 
-.logo690  {position: relative; width: 10%;  top: 55px; left: 343px; padding-right: 30px; }
-
-.logo6902 {position: relative; width: 10%;  top: 55px; left: 352px;  }
-
-.logo6903 {position: relative; width: 10%;  left: 300px  }
-
-
-#text5
-{
-  background: #f0eee9;
-    border-style: solid;
-    background: #f0eee9;
-    color: #615e5f;
-    width: 80%;
-    height: 60px;
-    padding: 6px 15px 6px 35px;
-    border-radius: 10px;
-    box-shadow: #f0eee9;
-    position: relative;
-    left: 30px;
-    top: 10px;
-    border-color: #615e5f;
-}
-
-
-
-#lin333 {
-  background:#dcbe65; height: 10px;
-position: relative;
-    top: -50px;
-
-}
-
-#lin3332 {
-  background:#dcbe65; height: 10px;
-position: relative; top: 230px;
-
-}
-
-#lin3333 {
-  background:#dcbe65; height: 10px;
-position: relative; top: -93px;
-    width: 97%;
-
-}
-
-
-
-
-
-#buu2 {width:20%;
-    position: relative;
-    left: 235px; top:100px;}
-
-#buu3 {width:20%; 
-    position: relative;
-    left: -235px;top:100px;}
-
-button
-
-{    position: relative;
-        top: 7px;
-    right: -20px;
-max-width: 200px;
-color: #615e5f;
-height: 100px;
-position: relative; 
-font-family: min;
-font-size: 35px;
-
-
-
-}
-
-input {width: 400px; height: 40px; text-align: left; width: 480px; color: #615e5f; font-family: min; font-size: 30pt; }
-
-.icon1141 { width: 100%;
-  height: 500px; 
-  background-color: #f8edcb;
-   
-  }
-
-
-.imgic2456 { width: 38.8%;
-    position: relative;
-
-    position: relative;
-    right: 270px;
-    top: 0px;
-    
-
-   }
-.text567 {font-size: 45px; position: relative; top:-510px; left: 195px; color: #615e5f; font-family: cool; max-width: 500px; text-align: left;}
-
-
-.text5672 {    font-size: 35px;
-    max-width: 20%;
-    position: relative;
-    top: -531px;
-    left: 70px;
-    color: #615e5f;
-    font-family: min;
-    font-style: italic;
-    padding: 10px;}
-
-
-.text5673 {font-size: 40px; position: relative; top: -632px; left: 190px; text-align: left; width: 480px; color: #615e5f; font-family: min; }
-#title45, .title45 {font-size: 40pt; font-family: cool; color: #615e5f; position: relative; top:-70px;
-     max-width: 50%; text-align: left; left: 50px; }
-
-.text6978069{font-size: 40px!important; position: relative; text-align: left; width: 480px; color: #f0eee9; font-family: min;}
-.title455 {font-size: 35pt!important; font-family: cool; color: #f0eee9; position: relative; right: -20px; padding: 30px; top: -130px;  width: 50%; text-align: left; }
-
-   
-
-.cookr69{    position: relative;
-       top: -695px;
-    width: 13%;
-    left: 458px;}
-
-    .share169{    position: relative;
-    top: -744px;
-    width: 7%;
-    left: -25px;}
-
-.share269 {    
-    position: relative;
-    top: -744px;
-    width: 7%;
-    left: -45px;}
-
 
 </style>
 
@@ -225,7 +94,7 @@ input {width: 400px; height: 40px; text-align: left; width: 480px; color: #615e5
 <input id="text5" autocomplete="on" type="text" name="input" value="" onclick="selectFromMenu()" placeholder="" list="categories" onchange="search()"></input>
   <datalist id="categories"></datalist>
 
-  <button type="submit" value="searchBtn" onclick="search()"><img id="tri2" src="./img/arr.png"></button>
+  <button class="button23"type="submit" value="searchBtn" onclick="search()"><img id="tri2" src="./img/arr.png"></button>
 <center>
 
 
@@ -234,14 +103,14 @@ input {width: 400px; height: 40px; text-align: left; width: 480px; color: #615e5
 <div id="lin3332">
 <br><br><br>
 </center><br>
-<input id="text5" autocomplete="on" type="text" name="input" value="" placeholder="" list="categories" onchange="search()"></input>
+<input class="input23" id="text5" autocomplete="on" type="text" name="input" value="" placeholder="" list="categories" onchange="search()"></input>
   <datalist id="categories"></datalist>
 
-  <button type="submit"  value="searchBtn" onclick="search()"><img id="tri2" src="./img/arr.png"></button>
+  <button  class="button23" type="submit"  value="searchBtn" onclick="search()"><img id="tri2" src="./img/arr.png"></button>
 <center>
 
-  <button id="buu3" onclick="prevPage()"><h1>Back</button>
-  <button id="buu2" onclick="nextPage()"><h1>Next</h1></button>
+  <button class="button23" id="buu3" onclick="prevPage()"><h1>Back</button>
+  <button class="button23" id="buu2" onclick="nextPage()"><h1>Next</h1></button>
   
 
 
@@ -351,7 +220,7 @@ function search() {
         '<img class="imgic2456" src="'+ data[i].img +'">'+
         '<br><p class="text567">'+ data[i].name.substr(0,22) + dot2 +'</p>'+
         '<p class="text5672">Ingredience:</p><br><br>'+
-        '<p class="text5673">' +data[i].ingredients.substr(0,110)+ dot +
+        '<p class="text5673">' +data[i].ingredients.substr(0,100)+ dot +
         '</p><br>'+
         '<img class="cookr69" src="./logo/sh13.png">'+
         '<img class="share269" src="./img/share.png">'+
@@ -433,7 +302,7 @@ function drawResults(data) {
             '<img class="imgic2456" src="'+ data[i].img +'">'+
             '<p class="text567">'+ data[i].name.substr(0,22) + dot +'</p>'+
             '<p class="text5672">Ingredience:</p><br><br>'+
-            '<p class="text5673">' +data[i].ingredients.substr(0,110)+ dot +
+            '<p class="text5673">' +data[i].ingredients.substr(0,100)+ dot +
             '</p><br>'+
             '<img class="cookr69" src="./logo/sh13.png">'+
             '<img class="share269" src="./img/share.png">'+

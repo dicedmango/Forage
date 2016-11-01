@@ -8,86 +8,7 @@
 
 <link rel="stylesheet" type="text/css" href="./main.css" />
 
-<style>
 
-
-
-.logo  {position: relative; width: 10%;  top: 55px; left: 300px; padding-right: 30px; }
-
-.logo2 {position: relative; width: 10%;  top: 55px; left: 300px  }
-
-
-
-#text5
-{
-background: #fff;
-color: #615e5f;
-width:85%;
-height: 60px;
-padding: 6px 15px 6px 35px;
-border-radius: 10px;
-box-shadow: 0 1px 0 #ccc inset;
-transition:500ms all ease;
-}
-
-
-
-.line {
-    background:#ddbf5e; height: 10px;
-    position: relative;
-    top: -145px;
-    width: 100%;
-
-}
-
-
-#line2 {
-  background:#615e5f; height: 10px;
-position: relative; top: 230px;
-
-}
-
-#line3 {
-  background:#f0eee9; height: 10px;
-position: relative; top: -93px;
-    width: 97%;
-
-}
-
-.line5 {
-  background:#ddbf5e; height: 10px;
-position: relative;
- top: -146px;
-    width: 100%;
-
-
-}
-
-
-
-
-button
-
-{
-  
-color: #615e5f;
-padding: 6px 15px 6px 35px;
-position: relative; 
-font-family: min;
-font-size: 35px;
-
-
-
-}
-
-input {width: 400px; height: 40px; font-size: 20pt; }
-
-
-
-
-
-
-</style>
 
 <script src="./libs/jquery.min.js"></script>
 <script src="./libs/underscore-min.js"></script>
@@ -105,13 +26,13 @@ input {width: 400px; height: 40px; font-size: 20pt; }
 
   <center>
   <br><br><br>
-  <img class="logo" src="./img/search.png" >
+  <img class="logo34636363636363636" src="./img/search.png" >
 
-    <img class="logo3" src="./img/x.png" onclick="closeMenu()">
+    <img class="logo346363636363636363" src="./img/x.png" width="10%" onclick="closeMenu()">
    </center>
   <h1 class="title5">Menu</h1>
   <center>
-  <hr id="line3">
+  <hr id="line6767673">
 
   
   <h1 class="bringToTop menu-title">Recipe</h1>
@@ -145,13 +66,13 @@ input {width: 400px; height: 40px; font-size: 20pt; }
 
  <center>
  <div id="header">
-  <a href="search.html"><img class="logo" src="./img/search2.png" ></img></a>
-  <img class="logo2" src="./img/tools2.png" onclick="openMenu()">
+  <a href="search.html"><img class="logo34636363636363636" src="./img/search2.png" ></img></a>
+  <img class="logo346363636363636362" src="./img/tools2.png" onclick="openMenu()">
   </center><a href="cookies.html">
 <h1 class="title2">Dish Of The Day</h1></a>
 
 
-<div class="line"></div>
+<div class="line676767"></div>
 </div>
 
 
@@ -160,18 +81,17 @@ input {width: 400px; height: 40px; font-size: 20pt; }
 
 
 <div id="contence"></div><br><br><br><br><br>
-<div class="line5">
+<div class="line6767675">
 <br><br><br><div class="block">
-  <button id="bu2" onclick="nextPage()"><h1>Back</h1></button>
-  <button id="bu3" onclick="prevPage()"><h1>Next</button>
+  <button class="button238945" id="bu2" onclick="nextPage()"><h1>Back</h1></button>
+  <button class="button238945" id="bu3" onclick="prevPage()"><h1>Next</button>
 
   
 </div>
 <br><br><br>
 <br>
-<h1><font color="#f0eee9">javascript baby yea!!</h1>
 
-</div>
+
 
 
 </body>
@@ -221,7 +141,7 @@ var recepies = [];
 
     function search() {
 
-      var matchString = $("#text5").val();
+      var matchString = $("#text2343434345").val();
 
 
       var data = _.filter(recepies, function(recpie) {
@@ -310,16 +230,16 @@ function drawResults(data) {
 
             var bit = 
 
-            '<img class="imgic" src="'+ data[i].img +'">'+
-            '<img class="share2" src="./img/share.png">'+
+            '<img class="imgic238" src="'+ data[i].img +'"><br>'+
+            '<div class="hizz"><img class="share2" src="./img/share.png">'+
             '<img class="share1" src="./img/add2.png">'+
             '<div class="icon1" >'+
             '<a href="/rec.html?id='+data[i].id+'">'+
-            '<p class="typeic">'+ data[i].name +'</p>'+
+            '<center><p class="typeic">'+ data[i].name +'</p>'+
             '<p class="typeic2">Ingredience:</p>'+
             '<p class="typeic3">' +data[i].ingredients.substr(0,500)+ dot +
             '</p><br>'+
-            '<img class="cookr" src="./logo/sh69.png">'+
+            '<img class="cookr" src="./logo/sh69.png"></div>'+
             
             '</a>'+
 

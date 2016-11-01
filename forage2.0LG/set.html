@@ -8,27 +8,10 @@
 
 
 
+    <link rel="stylesheet" type="text/css" href="./main.css" />
 <style>
 
 body 
-
-@font-face {
-font-family: min;
-src: url("./MinionPro-Regular.otf") format("opentype");
-}
-
-@font-face {
-font-family: cool;
-src: url("./coolvetica rg.ttf") format("opentype");
-}
-
-
-body {
-        background-color: #f0eee9
-    }
-
-
-
 
 
 
@@ -96,21 +79,11 @@ input {width: 400px; height: 40px; font-size: 20pt; }
 
 
 
-h1 {font-family: cool; color: #615e5f; 
-     font-size: 55pt; max-width: 70%;  color: #615e5f;  max-width: 67%; text-align: center;}
-
-p {font-size: 35pt; font-family: min; color: #615e5f; 
-     text-align: left;}    
-
-a { 
-    text-decoration: none; }
-
-
-.type1 { position: relative;  top: -440px;
-    left: 150px; ;
+.type1 { position: relative;      top: -424px;
+    left: 103px; width: 80%;
    
 }
-.type2 { position: relative; top: -580px;
+.type2 { position: relative; top: -560px;
     left: 203px;
     width: 50%; padding: 40px; }
 
@@ -137,7 +110,7 @@ a {
    
    
 
-.cookr{    position: relative;
+.cookr459090{    position: relative;
  
     width: 12%!important;
      top: -950px;
@@ -146,18 +119,18 @@ a {
     
    }
 
-    .share1{    position: relative;
+    .235757575751{    position: relative;
     
     width: 12%;
        left: 680px;
  top: 50px;}
 
-.share2{    position: relative;
+.235757575752{    position: relative;
 
     width: 12%;
    left: 80px; top: 50px;}
 
-#header {background-color: #ddbf5e; height: 200px;}
+#headeraa12 {background-color: #ddbf5e; height: 200px;}
 
 
 .icon1 { width: 100%;
@@ -238,8 +211,11 @@ position: relative; top: -93px;
 
 }
     .edit {    position: relative;
-    top: -550px;
-    left: 400px;}
+    top: -520px;
+    left: 400px;
+    width: 6%;
+
+  }
 
 .back {width: 80%;     position: relative;
     top: 20px;
@@ -303,7 +279,7 @@ position: relative; top: -93px;
 
 
  <center>
- <div id="header">
+ <div id="headeraa12">
   <button onclick="goBack()"><img class="back" src="./img/arr2.png"></button>
   <a href="search.html"><img class="logo" src="./img/search2.png" ></img></a>
   <img class="logo2" src="./img/tools2.png" onclick="openMenu()">
@@ -489,15 +465,15 @@ function drawResults(data) {
             var bit = 
 
             '<img class="imgic" src="'+ data[i].img +'">'+
-            '<img class="share2" src="./img/share.png">'+
-            '<img class="share1" src="./img/add2.png">'+
+            '<img class="235757575752" src="./img/23575757575.png">'+
+            '<img class="235757575751" src="./img/add2.png">'+
             '<div class="icon1" >'+
             '<a href="/rec.html?id='+data[i].id+'">'+
             '<p class="typeic">'+ data[i].name +'</p>'+
             '<p class="typeic2">Ingredience:</p>'+
             '<p class="typeic3">' +data[i].ingredients.substr(0,500)+ dot +
             '</p><br>'+
-            '<img class="cookr" src="./logo/sh.png">'+
+            '<img class="cookr459090" src="./logo/sh.png">'+
             
             '</a>'+
 
