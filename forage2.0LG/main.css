@@ -39,6 +39,14 @@ body {
     top: 550px;
     width: 30%;
 }
+
+.back33 {
+       width: 13%;
+    position: relative;
+    top: -64px;
+    left: 400px;
+}
+
 form {
     position: relative;
     top: 0px;
@@ -61,6 +69,23 @@ input {
     padding: 20px;
     width: 90%;
 }
+
+#text554 {    background: #f0eee9;
+    border-style: solid;
+    background: #f0eee9;
+    color: #615e5f;
+    width: 90%;
+    height: 60px;
+    padding: 36px 0px 36px 35px;
+    box-shadow: #f0eee9;
+    position: relative;
+    left: 0px;
+    top: 10px;
+    border-color: #f0eee9;
+}
+}
+
+
 button {
     color: #ddbf5e;
 
@@ -109,10 +134,12 @@ input {
     width: 90%;
 }
 #sum {
-    width: 90%;
+        width: 90%;
     position: relative;
-    top: -100px;
+    top: -70px;
+    height: 600px;
 }
+
 
 #tri2 {  width: 60% !important;
     position: relative;
@@ -149,7 +176,7 @@ input {
 .logo45 {
     position: relative;
     width: 15%;
-    top: -85px;
+
     left: 300px;
     padding-right: 30px;
 }
@@ -200,6 +227,10 @@ input {
     top: -168px;
     left: 680px;
 }
+
+
+.chii {text-align: left;}
+
 .menu-title {
     font-size: 40pt;
     font-family: cool;
@@ -231,6 +262,7 @@ input {
 .leves {
     position: relative;
     top: 0px;
+    left: -300px
 }
 #file-input {
     font-size: 35pt;
