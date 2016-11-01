@@ -79,7 +79,7 @@ input {
     font-size: 45px;
     position: relative;
     top: -540px;
-    left: 195px;
+
     color: #615e5f;
     font-family: cool;
     max-width: 500px;
@@ -91,7 +91,7 @@ input {
     max-width: 20%;
     position: relative;
     top: -570px;
-    left: 70px;
+ 
     color: #615e5f;
     font-family: min;
     font-style: italic;
@@ -101,7 +101,7 @@ input {
     font-size: 40px;
     position: relative;
     top: -690px;
-    left: 190px;
+ 
     text-align: left;
     width: 480px;
     color: #615e5f;
