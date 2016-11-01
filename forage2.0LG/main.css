@@ -63,12 +63,11 @@ input {
 }
 button {
     color: #ddbf5e;
-    padding: 6px 15px 6px 35px;
+
     position: relative;
     font-family: cool;
     font-size: 55px;
-    top: 100px;
-    left: -300px;
+   
 }
 input {
     font-size: 35pt;
@@ -114,6 +113,13 @@ input {
     position: relative;
     top: -100px;
 }
+
+#tri2 {    width: 60% !important;
+    position: relative;
+    right: -1100px;
+    top: -87px;
+}
+
 #line,
 #line2 {
     background: #ddbf5e;
