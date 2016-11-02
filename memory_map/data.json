@@ -1,0 +1,27 @@
+{
+  "nodes": [
+    {"id": "Ipswich", "group": 1, "size": 12},
+    {"id": "Alex", "group": 1, "size": 6},
+    {"id": "Rob", "group": 1, "size": 6},
+    {"id": "Kasper", "group": 4, "size": 22},
+    {"id": "Justyna", "group": 4, "size": 22},
+    {"id": "Sweden", "group": 2, "size": 6},
+    {"id": "Work", "group": 3, "size": 6},
+    {"id": "Köpstadsö", "group": 2, "size": 6},
+    {"id": "University", "group": 2, "size": 6},
+    {"id": "MotherInnocent", "group": 0}
+  ],
+  "links": [
+    {"source": "Alex", "target": "Ipswich", "thickness": 2, "length": 40},
+    {"source": "Rob", "target": "Ipswich", "thickness": 3, "length": 40},
+    {"source": "Kasper", "target": "Ipswich", "thickness": 5, "length": 40},
+    {"source": "Sweden", "target": "Kasper", "thickness": 3, "length": 80},
+    {"source": "Alex", "target": "Kasper", "thickness": 3, "length": 50},
+    {"source": "Sweden", "target": "Alex", "thickness": 1, "length": 80},
+    {"source": "Justyna", "target": "Kasper", "thickness": 10, "length": 50},
+    {"source": "Justyna", "target": "Ipswich", "thickness": 4, "length": 50},
+    {"source": "Work", "target": "Kasper", "thickness": 2, "length": 80},
+    {"source": "Köpstadsö", "target": "Sweden", "thickness": 4, "length": 80},
+    {"source": "University", "target": "Sweden", "thickness": 4, "length": 80}
+  ]
+}
