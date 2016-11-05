@@ -147,3 +147,5 @@ var PageTransitions = (function() {
 	};
 
 })();
+
+console.log("PageTransitions", PageTransitions);
