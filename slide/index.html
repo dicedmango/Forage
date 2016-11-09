@@ -1,342 +1,82 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-		<title>A Collection of Page Transitions</title>
-		<meta name="description" content="A Collection of Page Transitions with CSS Animations" />
-		<meta name="keywords" content="page transition, css animation, website, effect, css3, jquery" />
-		<meta name="author" content="Codrops" />
-		<link rel="shortcut icon" href="../favicon.ico"> 
-
-		<link rel="stylesheet" type="text/css" href="css/multilevelmenu.css" />
-		<link rel="stylesheet" type="text/css" href="css/component.css" />
-		<link rel="stylesheet" type="text/css" href="css/animations.css" />
-		<script src="js/modernizr.custom.js"></script>
-
-
-
-
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
-			<style>
+<link rel="stylesheet" type="text/css" href="./main.css" /> 
 
-			@font-face {
-			font-family: min;
-			src: url("./MinionPro-Regular.otf") format("opentype");
-			}
-
-			@font-face {
-			font-family: cool;
-			src: url("./coolvetica rg.ttf") format("opentype");
-			}
+</head>
+<body>
 
-			h1 {font-size: 40pt; font-family: cool; color: #615e5f; position: relative;
-			    top: -10px; max-width: 90%; text-align: left;}
 
-			p {font-size: 40pt; font-family: min; color: #615e5f; position: relative;
-			     max-width: 90%; text-align: left;}    
 
-			a {font-size: 20pt; font-family: min; color: #615e5f; position: relative;
-			    text-decoration: none; }
+<!-- LOGIN -->
+<div data-role="page" id="pageone">
 
-			body {
-			        background-color: #f0eee9
-			    } 
+            <input id="text5" type="text"  name="username" onfocus="if (this.value=='Username') this.value = ''" type="text" value="alex.richardson-@live.co.uk"></imput><br>
 
-			.logo {    
-			    position: relative;
-			    width: 50%;
-			    bottom: -1190px;
-			    right: -511px;
-			}
+              <input id="text5" type="password" name="password" onfocus="if (this.value=='Password') this.value = ''" type="password" value="Password"></imput>
 
-			.logo2 {    
-			        position: relative;
-			    width: 41%;
-			    bottom: -1189px;
-			    right: 186px;
-			}
 
-			.logo3 {    
-			            position: relative;
-			    width: 10%;
-			    bottom: -1079px;
-			    right: -186px;
-			}
+              <br><center>
+              <a href="#cookiespage" data-transition="slide"><button type="submit" value="MAKE A POST REQUEST">Login</button></a>
 
-			#lh {    font-size: 100px;
-			    color: #ddbf5e;
-			    position: relative;
-			    top: 482px;   
-			    left: -64px; }
+              <img class="logo7" src="./logo/sh13.png"></img><img class="logo9" src="./logo/shoom4.png"></img>
 
-			#mm {position: relative;
-			    bottom: -460px;
-			    max-width: 100%;
-			    left:-40px;
-			}
+              <A HREF="ABOUT.HTML"><p>About Forage</p></A>
+              <p>Created by <a href="www.maverickmedia.org.uk">Maverick Media</a></p>
+              <img class="logo2" src="./logo/sh69.png"></img>
+              <img class="logo2" src="./logo/shroom5.png"></img>
 
-			.type
-			 {position: absolute; top: -500px; padding-left: 10%;}
+            <link rel="stylesheet" type="text/css" href="./main.css" />
+</div>
 
-			 .line {
-			    background: #615e5f;
-			    height: 10px;
-			    position: relative;
-			    top:  314px;
-			}
 
 
-#tri {width: 60% !important; position: relative;
-    right: -800px;
-    top: -95px;
-}
 
 
-#bu2 {width:20%;
-    position: relative;
-    left: 235px; top:100px;}
 
-#bu3 {width:20%; 
-    position: relative;
-    left: -235px;top:100px;}
 
-button
 
-{    position: relative;
-        top: 7px;
-    right: -20px;
-max-width: 200px;
-color: #615e5f;
-height: 100px;
-position: relative; 
-font-family: min;
-font-size: 35px;
 
 
 
-}
 
-input {width: 400px; height: 40px; text-align: left; width: 480px; color: #615e5f; font-family: min; font-size: 30pt; }
 
-.icon1 { width: 100%;
-  height: 500px; 
-  background-color: #f8edcb;
-   
-  }
 
+<!-- Cookie Page -->
+<div data-role="page" id="cookiespage">
 
-.imgic { width: 38.8%;
-    position: relative;
+  <h1>Cookies Page</h1>
+  <a href="#recepiepage" data-transition="slide"><button>Go to recepie page</button></a>
 
-    position: relative;
-    right: 270px;
-    top: 0px;
-    
+</div>
 
-   }
-.typeic {font-size: 45px; position: relative; top:-520px; left: 195px; color: #615e5f; font-family: cool; max-width: 500px; text-align: left;}
-.typeic2 {font-size: 35px; max-width: 20%; position: relative; top: -550px; left: 70px; color: #615e5f; font-family: min; font-style: italic;}
-.typeic3 {font-size: 40px; position: relative; top: -645px; left: 190px; text-align: left; width: 480px; color: #615e5f; font-family: min; }
-#title, .title {font-size: 40pt; font-family: cool; color: #615e5f; position: relative; top:-70px;
-     max-width: 50%; text-align: left; left: 50px; }
 
-.typic4{font-size: 40px!important; position: relative; text-align: left; width: 480px; color: #f0eee9; font-family: min;}
-.title5 {font-size: 35pt!important; font-family: cool; color: #f0eee9; position: relative; right: -20px; padding: 30px; top: -130px;  width: 50%; text-align: left; }
 
-   
 
-.cookr{    position: relative;
-       top: -713px;
-    width: 13%;
-    left: 458px;}
 
-    .share1{    position: relative;
-    top: -760px;
-    width: 7%;
-    left: -25px;}
 
-.share2 {    
-    position: relative;
-    top: -760px;
-    width: 7%;
-    left: -25px;}
 
 
 
-			</style>
 
 
-	</head>
-	<body>	
 
 
-		<div class="pt-triggers">
-			<button id="iterateEffects" class="pt-touch-button">Show next page transition</button>
 
-			<div  class="dl-menuwrapper">
-				<button id="dl-menu" class="dl-trigger">Choose a transition</button>
 
-			</div><!-- /dl-menu-wrapper-->
-		</div><!-- /triggers -->
 
-		<div id="pt-main" class="pt-perspective">
-			<div class="pt-page pt-page-1">
+<!-- Recepie page -->
+<div data-role="page" id="recepiepage">
 
-					<center>
+  <h1>Recepie page</h1>
 
+</div>
 
-					<br>
-					<div class="type">
-						<h1 id="lh">Forage</h1>
 
-				 		<p id="mm" >Finding Your Inner Chef</p>
-
-					</div>
-					
-					<div class="line"></div>
-				 	<img class="logo" src="./logo/shoom4z.png"></img></a>
-				 	<img class="logo2" src="./logo/sh14.png"></img></a>
-				  	<img class="logo3" src="./logo/shroom12.png"></img></a>
-
-
-			</div>
-			<div class="pt-page pt-page-2">
-
-				<form action="/form" method="POST">
-				<br>
-
-				  <input id="text5" type="text"  name="username" onfocus="if (this.value=='Username') this.value = ''" type="text" value="alex.richardson-@live.co.uk"></imput><br>
-
-				  <input id="text5" type="password" name="password" onfocus="if (this.value=='Password') this.value = ''" type="password" value="Password"></imput>
-
-
-
-				</form>
-				<br><center>
-				<a href="cookies.html"><button type="submit" value="MAKE A POST REQUEST">Login</button></a>
-
-				<img class="logo7" src="./logo/sh13.png"></img><img class="logo9" src="./logo/shoom4.png"></img>
-
-				<A HREF="ABOUT.HTML"><p>About Forage</p></A>
-				<p>Created by <a href="www.maverickmedia.org.uk">Maverick Media</a></p>
-				<img class="logo2" src="./logo/sh69.png"></img>
-				<img class="logo2" src="./logo/shroom5.png"></img>
-
-
-			</div>
-			<div class="pt-page pt-page-3">
-				<h1>3</h1>
-
-
-				  <div id="menu-panel" class="bringToTop startInvisible"> 
-
-				  <center>
-				  <br><br><br>
-				  <img class="logo" src="./img/search.png" >
-
-				    <img class="logo3" src="./img/x.png" onclick="closeMenu()">
-				   </center>
-				  <h1 class="title5">Menu</h1>
-				  <center>
-				  <hr id="line3">
-
-				  
-				  <h1 class="bringToTop menu-title">Recipe</h1>
-
-				  <p class="typic4">
-				  <a href="add.html">Add Recipe<br></a>
-				  <a href="cookies.html">Popular Dishes<br><a>
-				  <a href="duk.html">Tips & Tricks<br></a>
-				  <br><br>
-				  <h1 class="menu-title">Profile</h1>
-
-				  <p class="typic4">
-				  <a href="set.html">Cookbook<br></a>
-				  Recently Viewed<br>
-				 <a href="set.html"> My Profile<br></a>
-				  <br><br>
-				  <h1 class="menu-title">Forage</h1>
-
-				  <p class="typic4">
-				    <a href="rate.html">Rating System</a><br>
-				  <a href="about.html">About<br><a>
-				  <a href="index.html">Log Out</a>
-				<br>
-				  <img class="mush"src="./logo/sha.png">
-				  <br><br><br>
-
-
-				</div>
-
-
-
-
-
-
-
-
-
-
-				<center>
-				 
-				  <a href="search.html"><img class="logo" src="./img/search.png" ></a>
-				  <img class="logo2" src="./img/tools.png" onclick="openMenu()">
-				   </center><a href="cookies.html">
-				<h1 id="title">Forage</h1></a>
-
-
-				<center>
-				<div id="line"></line>
-
-				<br>
-				</center><br><br><br><br>
-				<input id="text5" autocomplete="on" type="text" name="input" value="" onclick="selectFromMenu()" placeholder="" list="categories" onchange="search()"></input>
-				  <datalist id="categories"></datalist>
-
-				  <button type="submit" value="searchBtn" onclick="search()"><img id="tri" src="./img/arr.png"></button>
-				<center>
-
-
-
-				<div id="contence"></div><br><br>
-				<div id="line2">
-				<br><br><br>
-				</center><br>
-				<input id="text5" autocomplete="on" type="text" name="input" value="" placeholder="" list="categories" onchange="search()"></input>
-				  <datalist id="categories"></datalist>
-
-				  <button type="submit"  value="searchBtn" onclick="search()"><img id="tri" src="./img/arr.png"></button>
-				<center>
-
-				  <button id="bu3" onclick="prevPage()"><h1>Back</button>
-				  <button id="bu2" onclick="nextPage()"><h1>Next</h1></button>
-
-
-
-
-			</div>
-			<div class="pt-page pt-page-4">
-				<h1>4</h1>
-
-			</div>
-			<div class="pt-page pt-page-5">
-				<h1>5</h1>
-
-			</div>
-			<div class="pt-page pt-page-6">
-				<h1>6</h1>
-
-			</div>
-		</div>
-
-		<div class="pt-message">
-			<p>Your browser does not support CSS animations.</p>
-		</div>
-
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script src="js/jquery.dlmenu.js"></script>
-		<script src="js/pagetransitions.js"></script>
-	</body>
+</body>
 </html>
