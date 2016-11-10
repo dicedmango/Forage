@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>	
+
+<title>Forage</title>
+
+<link rel="stylesheet" type="text/css" href="./main.css" />
+
+
+
+<script src="./libs/jquery.min.js"></script>
+<script src="./libs/underscore-min.js"></script>
+
+
+</head>
+<body>
+
+
+
+<div id="menu-panel" class="bringToTop startInvisible"> 
+
+
+
+
+  <center>
+  <br><br><br>
+  <img class="logo34636363636363636" src="./img/search.png" >
+
+    <img class="logo346363636363636363" src="./img/x.png" width="10%" onclick="closeMenu()">
+   </center>
+  <h1 class="title5">Menu</h1>
+  <center>
+  <hr id="line6767673">
+
+  
+  <h1 class="bringToTop menu-title">Recipe</h1>
+
+  <p class="typic4">
+  <a href="add.html">Add Recipe<br></a>
+  <a href="cookies.html">Popular Dishes<br><a>
+  <a href="duk.html">Tips & Tricks<br></a>
+  <br><br>
+  <h1 class="menu-title">Profile</h1>
+
+  <p class="typic4">
+  <a href="set.html">Cookbook<br></a>
+  Recently Viewed<br>
+ <a href="set.html"> My Profile<br></a>
+  <br><br>
+  <h1 class="menu-title">Forage</h1>
+
+  <p class="typic4">
+    <a href="rate.html">Rating System</a><br>
+  <a href="about.html">About<br><a>
+  <a href="index.html">Log Out</a>
+<br>
+  <img class="mush"src="./logo/sha.png">
+  <br><br><br>
+
+
+</div>
+
+
+
+ <center>
+ <div id="header">
+  <a href="search.html"><img class="logo34636363636363636" src="./img/search2.png" ></img></a>
+  <img class="logo346363636363636362" src="./img/tools2.png" onclick="openMenu()">
+  </center><a href="cookies.html">
+<h1 class="title2">Dish Of The Day</h1></a>
+
+
+<div class="line676767"></div>
+</div>
+
+
+
+
+
+
+<div id="contence"></div><br><br><br><br><br>
+<div class="line6767675">
+<br><br><br><div class="block">
+  <button class="button238945" id="bu2" onclick="nextPage()"><h1>Back</h1></button>
+  <button class="button238945" id="bu3" onclick="prevPage()"><h1>Next</button>
+
+  
+</div>
+<br><br><br>
+<br>
+
+
+
+
+</body>
+
+
+<script>
+
+
+
+
+function openMenu() {
+
+  $("#menu-panel").css("opacity", 1);
+  $("#menu-panel").css("z-index", 9999999999);
+  $("#menu-panel").addClass("bringToTop");
+
+}
+
+
+
+function closeMenu() {
+
+
+  console.log("close menu");
+
+
+  $("#menu-panel").css("opacity", 0);
+  $("#menu-panel").css("z-index", 0);
+  $("#menu-panel").removeClass("bringToTop");
+
+}
+
+closeMenu();
+
+setTimeout(function() {
+  $("#menu-panel").removeClass("startInvisible"); 
+}, 1750)
+
+
+
+console.log(_);    
+
+var numberOfpages = 0;
+var recepies = [];
+
+
+
+    function search() {
+
+      var matchString = $("#text2343434345").val();
+
+
+      var data = _.filter(recepies, function(recpie) {
+
+            var re = new RegExp(matchString,"g");
+
+            console.log(recpie)
+
+            if(recpie.Method.match(re)) return true;
+            if(recpie.description.match(re)) return true;
+            if(recpie.ingredients.match(re)) return true;
+            if(recpie.name.match(re)) return true;
+      })
+
+
+          if(data.length == 1) {
+            window.location.href = "/rec.html?id=" + data[0].id;
+          }
+
+          console.log("change", matchString, data);
+          //drawResults(data);
+
+    }
+
+
+
+
+
+
+
+
+
+    function showRecepie(id) {
+      console.log("show recipes", id);
+    }
+
+
+
+
+
+
+  
+    $.get('/api/recipes', function(data) {
+
+        drawResults(data);
+    })
+
+function drawResults(data) {
+      console.log("recipes", data);
+
+
+      recepies = data;
+
+      console.log("this is what I got from the server for dropdown", data);
+      
+      var options = '';
+
+      for(var i = 0; i < data.length; i++) {  
+        options += '<option value="'+data[i].name+'"" />';
+      }
+
+
+      $('#categories').html(options)
+
+
+
+
+
+
+
+      $('#contence').html("");
+
+      var htmlsegment = "";
+      var resultsPerPage = 5;
+
+      numberOfpages = Math.floor(data.length / resultsPerPage);
+      console.log("number of pages", numberOfpages)
+
+      var startPos = page * resultsPerPage;
+
+      for(var i = startPos; i < (startPos + resultsPerPage); i++) {  
+
+        var dot= "";
+
+        if (data[i].name.length > 22) dot = "... <a class='read-more' href='/rec.html?id="+data[i].id+"'>Read More</a>";
+
+            var bit = 
+
+            '<img class="imgic238" src="'+ data[i].img +'"><br>'+
+            '<div class="hizz"><img class="share2" src="./img/share.png">'+
+            '<img class="share1" src="./img/add2.png">'+
+            '<div class="icon1" >'+
+            '<a href="/rec.html?id='+data[i].id+'">'+
+            '<center><p class="typeic">'+ data[i].name +'</p>'+
+            '<p class="typeic2">Ingredience:</p>'+
+            '<p class="typeic3">' +data[i].ingredients.substr(0,500)+ dot +
+            '</p><br>'+
+            '<img class="cookr" src="./logo/sh69.png"></div>'+
+            
+            '</a>'+
+
+            '</div>'+
+            '<br><br><br><br>';
+
+
+            htmlsegment = htmlsegment + bit;
+
+
+
+      }
+
+      $('#contence').html(htmlsegment);
+
+
+
+
+}
+
+
+
+
+var QueryString = function () {
+  // This function is anonymous, is executed immediately and 
+  // the return value is assigned to QueryString!
+  var query_string = {};
+  var query = window.location.search.substring(1);
+  var vars = query.split("&");
+  for (var i=0;i<vars.length;i++) {
+    var pair = vars[i].split("=");
+        // If first entry with this name
+    if (typeof query_string[pair[0]] === "undefined") {
+      query_string[pair[0]] = decodeURIComponent(pair[1]);
+        // If second entry with this name
+    } else if (typeof query_string[pair[0]] === "string") {
+      var arr = [ query_string[pair[0]],decodeURIComponent(pair[1]) ];
+      query_string[pair[0]] = arr;
+        // If third or later entry with this name
+    } else {
+      query_string[pair[0]].push(decodeURIComponent(pair[1]));
+    }
+  } 
+  return query_string;
+}();
+
+
+var page = 1;
+
+if(!QueryString.page) { 
+
+  insertParam("page", page); 
+
+} else {
+
+  page = parseInt(QueryString.page);
+
+}
+
+// pagination
+function nextPage() {
+
+
+  if(page == numberOfpages) return;
+
+  page = page + 1;
+  console.log("next", page);
+  insertParam("page", page);
+}
+
+// pagination
+function prevPage() {
+
+  if(page == 0) return;
+
+  page = page - 1;
+  console.log("prev", page);
+  insertParam("page", page);  
+}
+
+
+function insertParam(key, value)
+{
+    key = encodeURI(key); value = encodeURI(value);
+
+    var kvp = document.location.search.substr(1).split('&');
+
+    var i=kvp.length; var x; while(i--) 
+    {
+        x = kvp[i].split('=');
+
+        if (x[0]==key)
+        {
+            x[1] = value;
+            kvp[i] = x.join('=');
+            break;
+        }
+    }
+
+    if(i<0) {kvp[kvp.length] = [key,value].join('=');}
+
+    //this will reload the page, it's likely better to store this until finished
+    document.location.search = kvp.join('&'); 
+}
+
+
+
+
+
+
+
+  </script>
+
+
+
+
+<html>
