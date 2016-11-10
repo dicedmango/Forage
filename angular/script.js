@@ -17,6 +17,11 @@ function closeMenu() {
   $("#menu-panel").removeClass("bringToTop");
 }
 
+setTimeout(function() {
+  $("#menu-panel").removeClass("startInvisible"); 
+}, 1750)
+
+
 closeMenu();
 
 
@@ -35,35 +40,172 @@ function getParameterByName(name, url) {
 }
 
 
-    function search() {
 
-      var matchString = $("#text2343434345").val();
+function search() {
 
-
-      var data = _.filter(recepies, function(recpie) {
-
-            var re = new RegExp(matchString,"g");
-
-            console.log(recpie)
-
-            if(recpie.Method.match(re)) return true;
-            if(recpie.description.match(re)) return true;
-            if(recpie.ingredients.match(re)) return true;
-            if(recpie.name.match(re)) return true;
-      })
+  var matchString = $("#text5").val();
 
 
-          if(data.length == 1) {
-            window.location.href = "/rec.html?id=" + data[0].id;
-          }
+  var data = _.filter(recepies, function(recpie) {
 
-          console.log("change", matchString, data);
-          //drawResults(data);
+        var re = new RegExp(matchString,"g");
 
+        if(recpie.Method.match(re)) return true;
+        if(recpie.description.match(re)) return true;
+        if(recpie.ingredients.match(re)) return true;
+        if(recpie.name.match(re)) return true;
+  })
+
+  if(data.length == 0) return;
+  if(data.length == 1) {
+    window.location.href = "/rec.html?id=" + data[0].id;
+  }
+
+  console.log("change", matchString, data);
+
+
+
+  //insertParam("search", $("#text5").val()); 
+
+  //insertParam("page", 1); 
+
+  $('#contence').html("");
+
+  var htmlsegment = "";
+  var resultsPerPage = 10; 
+
+  numberOfpages = Math.floor(data.length / resultsPerPage);
+  console.log("number of pages", numberOfpages)
+
+  var startPos = 0;
+
+  var endPos = data.length;
+
+  if(data.length > 5) {
+  	endPos = 5;
+  }
+
+  for(var i = startPos; i < endPos; i++) {  
+
+    var dot= "";
+
+    if (data[i].name.length > 22) dot = "...Read More"
+
+    var dot2= "";
+
+    if (data[i].name.length > 22) dot2 = "..." 	
+
+        var bit = '<div class="icon1141" >'+
+
+        '<a href="/rec.html?id='+data[i].id+'">'+
+        '<img class="imgic2456" src="'+ data[i].img +'">'+
+        '<br><p class="text567">'+ data[i].name.substr(0,22) + dot2 +'</p>'+
+        '<p class="text5672">Ingredience:</p><br><br>'+
+        '<p class="text5673">' +data[i].ingredients.substr(0,100)+ dot +
+        '</p><br>'+
+        '<img class="cookr69" src="./logo/sh13.png">'+
+        '<img class="share269" src="./img/share.png">'+
+        '<img class="share169" src="./img/add2.png">'+
+        '</a>'+
+
+        '</div>'+
+        '<br><br>';
+
+        htmlsegment = htmlsegment + bit;
+  }
+
+  $('#contence').html(htmlsegment);
+
+
+}
+
+
+
+function selectFromMenu() {
+  console.log("menu item", this);
+}
+
+
+
+function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah')
+                    .attr('src', e.target.result)
+                    .width(150)
+                    .height(200);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
     }
 
 
 
+
+function openMenu() {
+
+  $("#menu-panel").css("opacity", 1);
+  $("#menu-panel").css("z-index", 9999999999);
+  $("#menu-panel").addClass("bringToTop");
+
+}
+
+
+
+function closeMenu() {
+
+
+  console.log("close menu");
+
+
+  $("#menu-panel").css("opacity", 0);
+  $("#menu-panel").css("z-index", 0);
+  $("#menu-panel").removeClass("bringToTop");
+
+}
+
+closeMenu();
+
+setTimeout(function() {
+  $("#menu-panel").removeClass("startInvisible"); 
+}, 1750)
+
+var numberOfpages = 0;
+var recepies = [];
+
+
+
+
+function sendRecipe() {
+
+var name = $("#text5").val();
+
+var Ingredients = $("#text7").val();
+
+var method = $("#text6").val();
+
+   var inputIMG =  $('#file-input').prop('files');
+ 
+   console.log(inputIMG);
+
+   inputIMG = JSON.toString(inputIMG);
+
+
+$.post( "/api/add", {
+ name: name,
+ ingredients: Ingredients,
+ method: method
+
+}, function() {
+  window.location.href = "/cookies.html";
+});
+
+console.log("sendRecipe", name, Ingredients, method);
+
+}
 
 
 
@@ -87,7 +229,7 @@ function getParameterByName(name, url) {
 
 function drawResults(data) {
       console.log("recipes", data);
-
+      if(data.length == 0) return;
 
       recepies = data;
 
@@ -150,10 +292,6 @@ function drawResults(data) {
       }
 
       $('#contence').html(htmlsegment);
-
-
-
-
 }
 
 
@@ -282,7 +420,17 @@ var recepies = [];
 
 
 
+var page = 1;
 
+if(!QueryString.page) { 
+
+  insertParam("page", page); 
+
+} else {
+
+  page = parseInt(QueryString.page);
+
+}
 
 
 
@@ -315,12 +463,15 @@ var app = angular.module('app', ['ngRoute'])
 	$routeProvider
 		.when('/', { templateUrl: 'templates/index.html', controller: 'PageCtrl' })
 		.when('/login', { templateUrl: 'templates/login.html', controller: 'PageCtrl' })	
+		.when('/rate', { templateUrl: 'templates/rate.html', controller: 'PageCtrl' })
 		.when('/recipe', { templateUrl: 'templates/recipe.html', controller: 'PageCtrl' })
+		.when('/rec', { redirectTo: '/recipe' })
 		.when('/add', { templateUrl: 'templates/add.html' })
 		.when('/about', { templateUrl: 'templates/about.html' })
 		.when('/search', { templateUrl: 'templates/search.html' })
 		.when('/cookies', { templateUrl: 'templates/cookies.html' })
-		.otherwise({ redirectTo: '/', controller: 'PageCtrl' });
+		.when('/duk', { templateUrl: 'templates/duk.html' })
+		.otherwise({ redirectTo: '/' });
 }]);
 
 
@@ -328,21 +479,11 @@ var app = angular.module('app', ['ngRoute'])
 
 app.controller('PageCtrl', ['$scope', '$http', '$location', function($s, $http, $location) {
 
-	console.log("page controller");
-	closeMenu();
-
-	setTimeout(function() {
-	  $("#menu-panel").removeClass("startInvisible"); 
-	}, 1750)
-
-	var numberOfpages = 0;
-	var recepies = [];
-
-
   
     $.get('/api/recipe?id='+getParameterByName('id'), function(data) {
 
       console.log("rechtfvfbchcfbnchfncncbfipes", data);
+      if(!data || !data[0] || data.length == 0) return;
 
       var htmlsegment = "";
 

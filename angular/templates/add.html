@@ -1,30 +1,15 @@
-<!DOCTYPE html>
-<html>
-
-<head>	
-
-    <title>Forage</title>
-
-    <link rel="stylesheet" type="text/css" href="./main.css" />
-
-    <script src="./libs/jquery.min.js"></script>
-    <script src="./libs/underscore-min.js"></script>
-
-</head>
-<body>
-
 
 
 
  <center>
 
-    <a href="search.html"><img class="logo565656" src="./img/search.png" ></img></a>
+    <a href="#/search"><img class="logo565656" src="./img/search.png" ></img></a>
  
     <button onclick="goBack()"><img class="back33" src="./img/x2.png"></button>
 
 </center>
 
-<a href="cookies.html">
+<a href="#/cookies">
     <h1 id="title">Add Recipe</h1>
 </a>
 
@@ -35,11 +20,11 @@
 <center>
 <div id="sum">
 
-  <input id="text554" type="text"  name="searchbox" onfocus="if (this.value=='Cusine') this.value = ''" type="text" placeholder="Title eg. Ultimate Grilled Cheese"></imput><br>
+  <input id="text554" type="text"  name="searchbox" type="text" placeholder="Title eg. Ultimate Grilled Cheese"></imput><br>
 
-  <input id="typeic2" type="text"  name="searchbox" onfocus="if (this.value=='Number of Guests') this.value = ''" type="text" placeholder="Ingredients eg. Cheese, Bread, Ham, Bacon..."></imput><br>
+  <input id="typeic2" type="text"  name="searchbox" = ''" type="text" placeholder="Ingredients eg. Cheese, Bread, Ham, Bacon..."></imput><br>
 
-  <input id="typeic3" type="text" name="searchbox" onfocus="if (this.value=='Discription') this.value = ''" type="text" placeholder="Method eg. Set hob to gas mark 5, melt butter in pan..."></imput><br>
+  <input id="typeic3" type="text" name="searchbox" type="text" placeholder="Method eg. Set hob to gas mark 5, melt butter in pan..."></imput><br>
 
 
 <input id="typeic3" type="text" name="searchbox" onfocus="if (this.value=='Discription') this.value = ''" type="text" placeholder="Description eg. A Grilled Cheese like no other, perfect for a winter snack..."></imput><br>
@@ -64,99 +49,3 @@
 
 
 </center>
-
-<script>
-
-
-
-
-function openMenu() {
-
-  $("#menu-panel").css("opacity", 1);
-  $("#menu-panel").css("z-index", 9999999999);
-  $("#menu-panel").addClass("bringToTop");
-
-}
-
-
-
-function closeMenu() {
-
-
-  console.log("close menu");
-
-
-  $("#menu-panel").css("opacity", 0);
-  $("#menu-panel").css("z-index", 0);
-  $("#menu-panel").removeClass("bringToTop");
-
-}
-
-closeMenu();
-
-setTimeout(function() {
-  $("#menu-panel").removeClass("startInvisible"); 
-}, 1750)
-
-
-
-
-
-function sendRecipe() {
-
-var name = $("#text5").val();
-
-var Ingredients = $("#text7").val();
-
-var method = $("#text6").val();
-
-   var inputIMG =  $('#file-input').prop('files');
- 
-   console.log(inputIMG);
-
-   inputIMG = JSON.toString(inputIMG);
-
-
-$.post( "/api/add", {
- name: name,
- ingredients: Ingredients,
- method: method
-
-}, function() {
-  window.location.href = "/cookies.html";
-});
-
-console.log("sendRecipe", name, Ingredients, method);
-
-}
-
-
-function readURL(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-
-            reader.onload = function (e) {
-                $('#blah')
-                    .attr('src', e.target.result)
-                    .width(150)
-                    .height(200);
-            };
-
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-
-
-function goBack() {
-    window.history.back();
-}
-
-
-
-
-</script>
-
-
-</body>
-
-<html>
