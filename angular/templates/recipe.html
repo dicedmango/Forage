@@ -52,14 +52,6 @@ body {
     width: 10%; position: relative;left: -250px; top: 100px;
    }
 
-form {position: relative; top: 0px; }
-
-input {width: 400px; height: 40px;}
-
-@font-face {
-font-family: odin;
-src: url("./odin.otf") format("opentype");
-}
 
 
 #text5
@@ -87,165 +79,20 @@ box-shadow: 0 1px 0 #ccc inset;
 transition:500ms all ease;
 }
 
-
-
-
-
 input {width: 400px; height: 40px; font-size: 20pt; }
-
-
 
 #line {
   background:#615e5f; height: 10px; position: 
-
-
 }
 
-#line3 {
-  background:#f0eee9; height: 10px;
-position: relative; top: -93px;
-    width: 97%;
 
-}
 
 .imgic {width: 90%; }
 
-.back {width: 80%;     position: relative;
-    top: 20px;
-    left: -300px;}
-
-
-button
-
-{    position: relative;
-        top: 7px;
-    right: -20px;
-max-width: 200px;
-color: #615e5f;
-height: 100px;
-position: relative; 
-font-family: cool;
-font-size: 55px;
-
-
-
-
-}
-
-
-#menu-panel {
-  position: fixed;
-  height: 100%;
-  left: 0;
-  top: 0;
-    background-color: #615e5f;
-    color: #f0eee9;
-
-
-   opacity: 1;
-
-   transition: opacity .75s ease-in-out;
-   -moz-transition: opacity .75s ease-in-out;
-   -webkit-transition: opacity .75s ease-in-out;
-}
-
-.startInvisible {
-  opacity: 0 !important;
-}
-
-#menu-panel a {
-    color: #f0eee9 !important;
-}
-
-.bringToTop {
-        z-index: 99999999;
-
-}
-
-.mush{    position: relative;
-    left: 306px;
-    width: 470px;
-    top: -304px;}
-
-.menu-title {
-
-font-size: 40pt; font-family: cool; color: #ddbf5e; position: relative;
-    top: -10px; max-width: 90%; text-align: left;
-
-}
-
-.logo3 {position: relative; width: 10%;  left: 300px  }
 
 </style>
 
 
-<div id="menu-panel" class="bringToTop startInvisible"> 
+<ng-include src="'./templates/headerBar.html'"></ng-include>
 
-
-
-
-  <center>
-  <br><br><br>
-  <img class="logo" src="./img/search.png" >
-
-    <img class="logo3" src="./img/x.png" onclick="closeMenu()">
-   </center>
-  <h1 class="title5">Menu</h1>
-  <center>
-  <hr id="line3">
-
-  
-  <h1 class="bringToTop menu-title">Recipe</h1>
-
-  <p class="typic4">
-  <a href="add.html">Add Recipe<br></a>
-  <a href="cookies.html">Popular Dishes<br><a>
-  <a href="duk.html">Tips & Tricks<br></a>
-  <br><br>
-  <h1 class="menu-title">Profile</h1>
-
-  <p class="typic4">
-  <a href="set.html">Cookbook<br></a>
-  Recently Viewed<br>
- <a href="set.html"> My Profile<br></a>
-  <br><br>
-  <h1 class="menu-title">Forage</h1>
-
-  <p class="typic4">
-    <a href="rate.html">Rating System</a><br>
-  <a href="about.html">About<br><a>
-  <a href="index.html">Log Out</a>
-<br>
-  <img class="mush"src="./logo/sha.png">
-  <br><br><br>
-
-
-</div>
-
-
-
- <center>
-
-
-  <button onclick="goBack()"><img class="back" src="./img/arr.png"></button>
-  <a href="search.html"><img class="logo" src="./img/search.png" ></a>
-    <img class="logo2" src="./img/tools.png" onclick="openMenu()">
-  </center>
-<h1 id="title"></h1><br></a>
-<center>
-<br><br>
-
-<div id="line"></line>
-
-<br><br><br><br>
-  <div id="contence"></div>
-
-
-<br>
-
-
-<h1><button onclick="goBack()" >Back</button><h1><br><br></h1><br><br>
-
-</center>
-
-<br><br><br>
+<div id="contence"></div>

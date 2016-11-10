@@ -1,69 +1,44 @@
+<ng-include src="'./templates/headerBar.html'"></ng-include>
 
-<div id="menu-panel" class="bringToTop startInvisible"> 
+<div ng-repeat="recepie in allRecipes">
+	<img class="imgic238" ng-src="{{recepie.img}}"><br>
+
+	<div class="hizz"><img class="share2" src="./img/share.png">
+		<img class="share1" src="./img/add2.png">
+		<a ng-href="#/rec?id={{recepie.id}}">
+			<center>
+				<p class="typeic">{{ recepie.name }}</p>
+				<p class="typeic2">Ingredience:</p>
+				<p class="typeic3">{{ recepie.ingredients }}</p>
+				<img class="cookr" src="./logo/sh69.png">
+			</center>
+		</a>
+	</div>
+</div>
+
+<button class="button238945" id="bu2" onclick="nextPage()"><h1>Back</h1></button>
+<button class="button238945" id="bu3" onclick="prevPage()"><h1>Next</button>
+
+<!--
+	<div ng-repeat="recepie in allRecipes">
+		<p>recepie {{ recepie.name }}</p>
+	
+		  <img class="imgic238" src="'+ data[i].img +'"><br>'+
+		  <div class="hizz"><img class="share2" src="./img/share.png">'+
+		  <img class="share1" src="./img/add2.png">'+
+		  <div class="icon1" >'+
+		  <a href="/rec.html?id='+data[i].id+'">'+
+		  <center><p class="typeic">'+ data[i].name +'</p>'+
+		  <p class="typeic2">Ingredience:</p>'+
+		  <p class="typeic3">' +data[i].ingredients.substr(0,500)+ dot
+		  </p><br>'+
+		  <img class="cookr" src="./logo/sh69.png"></div>
+		</div>
 
 
 
-
-  <center>
-  <br><br><br>
-  <img class="logo34636363636363636" src="./img/search.png" >
-
-    <img class="logo346363636363636363" src="./img/x.png" width="10%" onclick="closeMenu()">
-   </center>
-  <h1 class="title5">Menu</h1>
-  <center>
-  <hr id="line6767673">
-
-  
-  <h1 class="bringToTop menu-title">Recipe</h1>
-
-  <p class="typic4">
-  <a href="#/add">Add Recipe<br></a>
-  <a href="#/cookies">Popular Dishes<br><a>
-  <a href="#/duk">Tips & Tricks<br></a>
-  <br><br>
-  <h1 class="menu-title">Profile</h1>
-
-  <p class="typic4">
-  <a href="#/set">Cookbook<br></a>
-  Recently Viewed<br>
- <a href="#/set"> My Profile<br></a>
-  <br><br>
-  <h1 class="menu-title">Forage</h1>
-
-  <p class="typic4">
-    <a href="#/rate">Rating System</a><br>
-  <a href="#/about">About<br><a>
-  <a href="#/index">Log Out</a>
-<br>
-  <img class="mush"src="./logo/sha.png">
-  <br><br><br>
 
 
 </div>
 
-
-
- <center>
- <div id="header">
-  <a href="#/search"><img class="logo34636363636363636" src="./img/search2.png" ></img></a>
-  <img class="logo346363636363636362" src="./img/tools2.png" onclick="openMenu()">
-  </center><a href="#/cookies">
-<h1 class="title2">Dish Of The Day</h1></a>
-
-
-<div class="line676767"></div>
-</div>
-
-
-
-<div id="contence"></div><br><br><br><br><br>
-<div class="line6767675">
-<br><br><br><div class="block">
-  <button class="button238945" id="bu2" onclick="nextPage()"><h1>Back</h1></button>
-  <button class="button238945" id="bu3" onclick="prevPage()"><h1>Next</button>
-
-</div>
-
-<br><br><br>
-<br>
+-->

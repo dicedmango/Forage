@@ -1,29 +1,5 @@
 // regular js
 
-function openMenu() {
-
-  $("#menu-panel").css("opacity", 1);
-  $("#menu-panel").css("z-index", 9999999999);
-  $("#menu-panel").addClass("bringToTop");
-}
-
-function closeMenu() {
-
-
-  console.log("close menu");
-
-  $("#menu-panel").css("opacity", 0);
-  $("#menu-panel").css("z-index", 0);
-  $("#menu-panel").removeClass("bringToTop");
-}
-
-setTimeout(function() {
-  $("#menu-panel").removeClass("startInvisible"); 
-}, 1750)
-
-
-closeMenu();
-
 
 function goBack() {
     window.history.back();
@@ -41,90 +17,10 @@ function getParameterByName(name, url) {
 
 
 
-function search() {
-
-  var matchString = $("#text5").val();
-
-
-  var data = _.filter(recepies, function(recpie) {
-
-        var re = new RegExp(matchString,"g");
-
-        if(recpie.Method.match(re)) return true;
-        if(recpie.description.match(re)) return true;
-        if(recpie.ingredients.match(re)) return true;
-        if(recpie.name.match(re)) return true;
-  })
-
-  if(data.length == 0) return;
-  if(data.length == 1) {
-    window.location.href = "/rec.html?id=" + data[0].id;
-  }
-
-  console.log("change", matchString, data);
-
-
-
-  //insertParam("search", $("#text5").val()); 
-
-  //insertParam("page", 1); 
-
-  $('#contence').html("");
-
-  var htmlsegment = "";
-  var resultsPerPage = 10; 
-
-  numberOfpages = Math.floor(data.length / resultsPerPage);
-  console.log("number of pages", numberOfpages)
-
-  var startPos = 0;
-
-  var endPos = data.length;
-
-  if(data.length > 5) {
-  	endPos = 5;
-  }
-
-  for(var i = startPos; i < endPos; i++) {  
-
-    var dot= "";
-
-    if (data[i].name.length > 22) dot = "...Read More"
-
-    var dot2= "";
-
-    if (data[i].name.length > 22) dot2 = "..." 	
-
-        var bit = '<div class="icon1141" >'+
-
-        '<a href="/rec.html?id='+data[i].id+'">'+
-        '<img class="imgic2456" src="'+ data[i].img +'">'+
-        '<br><p class="text567">'+ data[i].name.substr(0,22) + dot2 +'</p>'+
-        '<p class="text5672">Ingredience:</p><br><br>'+
-        '<p class="text5673">' +data[i].ingredients.substr(0,100)+ dot +
-        '</p><br>'+
-        '<img class="cookr69" src="./logo/sh13.png">'+
-        '<img class="share269" src="./img/share.png">'+
-        '<img class="share169" src="./img/add2.png">'+
-        '</a>'+
-
-        '</div>'+
-        '<br><br>';
-
-        htmlsegment = htmlsegment + bit;
-  }
-
-  $('#contence').html(htmlsegment);
-
-
-}
-
-
 
 function selectFromMenu() {
   console.log("menu item", this);
 }
-
 
 
 function readURL(input) {
@@ -142,16 +38,6 @@ function readURL(input) {
         }
     }
 
-
-
-
-function openMenu() {
-
-  $("#menu-panel").css("opacity", 1);
-  $("#menu-panel").css("z-index", 9999999999);
-  $("#menu-panel").addClass("bringToTop");
-
-}
 
 
 
@@ -209,91 +95,9 @@ console.log("sendRecipe", name, Ingredients, method);
 
 
 
-
-
-
-    function showRecepie(id) {
-      console.log("show recipes", id);
-    }
-
-
-
-
-
-
-  
-    $.get('/api/recipes', function(data) {
-
-        drawResults(data);
-    })
-
-function drawResults(data) {
-      console.log("recipes", data);
-      if(data.length == 0) return;
-
-      recepies = data;
-
-      console.log("this is what I got from the server for dropdown", data);
-      
-      var options = '';
-
-      for(var i = 0; i < data.length; i++) {  
-        options += '<option value="'+data[i].name+'"" />';
-      }
-
-
-      $('#categories').html(options)
-
-
-
-
-
-
-
-      $('#contence').html("");
-
-      var htmlsegment = "";
-      var resultsPerPage = 5;
-
-      numberOfpages = Math.floor(data.length / resultsPerPage);
-      console.log("number of pages", numberOfpages)
-
-      var startPos = page * resultsPerPage;
-
-      for(var i = startPos; i < (startPos + resultsPerPage); i++) {  
-
-        var dot= "";
-
-        if (data[i].name.length > 22) dot = "... <a class='read-more' href='/rec.html?id="+data[i].id+"'>Read More</a>";
-
-            var bit = 
-
-            '<img class="imgic238" src="'+ data[i].img +'"><br>'+
-            '<div class="hizz"><img class="share2" src="./img/share.png">'+
-            '<img class="share1" src="./img/add2.png">'+
-            '<div class="icon1" >'+
-            '<a href="/rec.html?id='+data[i].id+'">'+
-            '<center><p class="typeic">'+ data[i].name +'</p>'+
-            '<p class="typeic2">Ingredience:</p>'+
-            '<p class="typeic3">' +data[i].ingredients.substr(0,500)+ dot +
-            '</p><br>'+
-            '<img class="cookr" src="./logo/sh69.png"></div>'+
-            
-            '</a>'+
-
-            '</div>'+
-            '<br><br><br><br>';
-
-
-            htmlsegment = htmlsegment + bit;
-
-
-
-      }
-
-      $('#contence').html(htmlsegment);
+function showRecepie(id) {
+  console.log("show recipes", id);
 }
-
 
 
 
@@ -321,21 +125,9 @@ var QueryString = function () {
 }();
 
 
-var page = 1;
-
-if(!QueryString.page) { 
-
-  insertParam("page", page); 
-
-} else {
-
-  page = parseInt(QueryString.page);
-
-}
 
 // pagination
 function nextPage() {
-
 
   if(page == numberOfpages) return;
 
@@ -380,7 +172,6 @@ function insertParam(key, value)
 }
 
 
-
 function openMenu() {
 
   $("#menu-panel").css("opacity", 1);
@@ -389,69 +180,8 @@ function openMenu() {
 
 }
 
-
-
-function closeMenu() {
-
-
-  console.log("close menu");
-
-
-  $("#menu-panel").css("opacity", 0);
-  $("#menu-panel").css("z-index", 0);
-  $("#menu-panel").removeClass("bringToTop");
-
-}
-
-closeMenu();
-
-setTimeout(function() {
-  $("#menu-panel").removeClass("startInvisible"); 
-}, 1750)
-
-
-
-console.log(_);    
-
 var numberOfpages = 0;
 var recepies = [];
-
-
-
-
-
-var page = 1;
-
-if(!QueryString.page) { 
-
-  insertParam("page", page); 
-
-} else {
-
-  page = parseInt(QueryString.page);
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -468,8 +198,8 @@ var app = angular.module('app', ['ngRoute'])
 		.when('/rec', { redirectTo: '/recipe' })
 		.when('/add', { templateUrl: 'templates/add.html' })
 		.when('/about', { templateUrl: 'templates/about.html' })
-		.when('/search', { templateUrl: 'templates/search.html' })
-		.when('/cookies', { templateUrl: 'templates/cookies.html' })
+		.when('/search', { templateUrl: 'templates/search.html', controller: 'PageCtrl' })
+		.when('/cookies', { templateUrl: 'templates/cookies.html', controller: 'PageCtrl' })
 		.when('/duk', { templateUrl: 'templates/duk.html' })
 		.otherwise({ redirectTo: '/' });
 }]);
@@ -478,6 +208,16 @@ var app = angular.module('app', ['ngRoute'])
 // CONTROLLERS
 
 app.controller('PageCtrl', ['$scope', '$http', '$location', function($s, $http, $location) {
+
+	$s.allRecipes = [];
+	$s.filteredRecipes = [];
+	$s.currentRecepie = {};
+
+  	$.get('/api/recipes', function(data) {
+
+	    $s.allRecipes = data;
+	    console.log("$s.allRecipes", $s.allRecipes);
+	})
 
   
     $.get('/api/recipe?id='+getParameterByName('id'), function(data) {
@@ -490,7 +230,6 @@ app.controller('PageCtrl', ['$scope', '$http', '$location', function($s, $http, 
         console.log("----recipes", data[0]); 
 
         var dot= "";
-
 
 		var bit = '<div class="icon1" >'+
 		'<p class="typeic">'+ data[0].name +'</p>'+
@@ -512,5 +251,22 @@ app.controller('PageCtrl', ['$scope', '$http', '$location', function($s, $http, 
 		$('#contence').html(htmlsegment);
 
     })
+
+
+    $s.searchtext = "";
+
+    $s.$watch("searchtext", function(n, o) {
+		
+		$s.filteredRecipes = _.filter($s.allRecipes, function(recipe) {
+
+			var reg = new RegExp(n);
+
+			return recipe.name.match(reg);
+
+		})
+
+		console.log("searchtext change", n, $s.filteredRecipes);
+    });
+
 
 }]);
