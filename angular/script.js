@@ -6,6 +6,7 @@ var app = angular.module('app', ['ngRoute'])
 		.when('/recipe', { templateUrl: 'templates/recipe.html', controller: 'PageCtrl' })
 		.when('/add', { templateUrl: 'templates/add.html' })
 		.when('/search', { templateUrl: 'templates/search.html' })
+		.when('/cookies', { templateUrl: 'templates/cookies.html' })
 		.otherwise({ redirectTo: '/', controller: 'PageCtrl' });
 }]);
 
