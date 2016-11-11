@@ -762,6 +762,32 @@ input {
 }
 
 
+.logo  {position: relative; width: 10%;  top: 55px; left: 300px; padding-right: 30px; }
+
+.logo2 {position: relative; width: 10%;  top: 55px; left: 300px  }
+
+
+
+
+#line {
+  background:#f0eee9; height: 10px;
+
+
+}
+
+
+.mush{    position: absolute;
+    left: 458px;
+    width: 465px;
+    top: 717px;}
+    
+
+
+#title {font-size: 40pt; font-family: cool; color: #ddbf5e;; position: relative; top:-70px;
+     max-width: 50%; text-align: left; left: 50px; }
+
+
+
 
 
 
