@@ -584,7 +584,6 @@ input {
     background-color: #ddbf5e;
     height: 200px;
 }
-
 #menu-panel a {
     color: #f0eee9 !important;
 }
@@ -698,7 +697,6 @@ input {
     position: relative;
     left: 30px;
 }
-
 .menu-title {
     font-size: 40pt;
     font-family: cool;
@@ -743,14 +741,12 @@ input {
     background-color: #ddbf5e;
     height: 200px;
 }
-
 .235757575751 {
     position: relative;
     width: 12%;
     left: 680px;
     top: 50px;
 }
-
 .235757575752 {
     position: relative;
     width: 12%;
@@ -760,91 +756,82 @@ input {
 .hizz {
     height: 1700px;
 }
-
-
-.logo  {position: relative; width: 10%;  top: 55px; left: 300px; padding-right: 30px; }
-
-.logo2 {position: relative; width: 10%;  top: 55px; left: 300px  }
-
-
-
-
-#line {
-  background:#f0eee9; height: 10px;
-
-
+.logo {
+    position: relative;
+    width: 10%;
+    top: 55px;
+    left: 300px;
+    padding-right: 30px;
 }
-
-
-.mush{    position: absolute;
+.logo2 {
+    position: relative;
+    width: 10%;
+    top: 55px;
+    left: 300px
+}
+#line {
+    background: #f0eee9;
+    height: 10px;
+}
+.mush {
+    position: absolute;
     left: 458px;
     width: 465px;
-    top: 717px;}
-    
-
-
-#title {font-size: 40pt; font-family: cool; color: #ddbf5e;; position: relative; top:-70px;
-     max-width: 50%; text-align: left; left: 50px; }
-
-
-
-
-
-
-.logo {    
+    top: 717px;
+}
+#title {
+    font-size: 40pt;
+    font-family: cool;
+    color: #ddbf5e;
+    ;
+    position: relative;
+    top: -70px;
+    max-width: 50%;
+    text-align: left;
+    left: 50px;
+}
+.logo {
     position: relative;
     width: 50%;
     bottom: -1190px;
     right: -511px;
 }
-
-.logo2 {    
-        position: relative;
+.logo2 {
+    position: relative;
     width: 41%;
     bottom: -1189px;
     right: 186px;
 }
-
-.logo3 {    
-            position: relative;
+.logo3 {
+    position: relative;
     width: 10%;
     bottom: -1079px;
     right: -186px;
 }
-
-#lh {    font-size: 100px;
+#lh {
+    font-size: 100px;
     color: #ddbf5e;
     position: relative;
-    top: 482px;   
-    left: -64px; }
-
-#mm {position: relative;
+    top: 482px;
+    left: -64px;
+}
+#mm {
+    position: relative;
     bottom: -460px;
     max-width: 100%;
-    left:-40px;
+    left: -40px;
 }
-
-.type
- {position: absolute; top: -500px; padding-left: 10%;}
-
- .line {
+.type {
+    position: absolute;
+    top: -500px;
+    padding-left: 10%;
+}
+.line {
     background: #615e5f;
     height: 10px;
     position: relative;
-    top:  314px;
-
-
+    top: 314px;
 }
-
-
-
-
-
-
-
-
-
-
 
 
 /* ANIMATIONS
