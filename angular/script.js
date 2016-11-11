@@ -188,24 +188,49 @@ var recepies = [];
 
 // Angular JS
 
-var app = angular.module('app', ['ngRoute'])
+var app = angular.module('app', ['ngRoute', 'ngAnimate'])
 .config( ['$routeProvider', function($routeProvider) {
 	$routeProvider
-		.when('/', { templateUrl: 'templates/index.html', controller: 'PageCtrl' })
-		.when('/login', { templateUrl: 'templates/login.html', controller: 'PageCtrl' })	
-		.when('/rate', { templateUrl: 'templates/rate.html', controller: 'PageCtrl' })
-		.when('/recipe', { templateUrl: 'templates/recipe.html', controller: 'PageCtrl' })
+		.when('/', { templateUrl: 'templates/index.html' })
+		.when('/login', { templateUrl: 'templates/login.html', controller: 'LoginCtrl' })	
+		.when('/rate', { templateUrl: 'templates/rate.html' })
+		.when('/recipe', { templateUrl: 'templates/recipe.html', controller: 'RecipeCtrl' })
 		.when('/rec', { redirectTo: '/recipe' })
 		.when('/add', { templateUrl: 'templates/add.html' })
 		.when('/about', { templateUrl: 'templates/about.html' })
-		.when('/search', { templateUrl: 'templates/search.html', controller: 'PageCtrl' })
-		.when('/cookies', { templateUrl: 'templates/cookies.html', controller: 'PageCtrl' })
+		.when('/search', { templateUrl: 'templates/search.html', controller: 'SearchCtrl' })
+		.when('/cookies', { templateUrl: 'templates/cookies.html', controller: 'CookieCtrl' })
 		.when('/duk', { templateUrl: 'templates/duk.html' })
 		.otherwise({ redirectTo: '/' });
 }]);
 
 
 // CONTROLLERS
+
+app.controller('LoginCtrl', ['$scope', '$http', '$location', function($s, $http, $location) {
+
+	$s.pageClass = 'login-page';
+
+}]);
+
+app.controller('SearchCtrl', ['$scope', '$http', '$location', function($s, $http, $location) {
+
+	$s.pageClass = 'search-page';
+
+}]);
+
+
+app.controller('RecipeCtrl', ['$scope', '$http', '$location', function($s, $http, $location) {
+
+	$s.pageClass = 'recipe-page';
+
+}]);
+
+app.controller('CookieCtrl', ['$scope', '$http', '$location', function($s, $http, $location) {
+
+	$s.pageClass = 'cookies-page';
+
+}]);
 
 app.controller('PageCtrl', ['$scope', '$http', '$location', function($s, $http, $location) {
 
@@ -219,36 +244,13 @@ app.controller('PageCtrl', ['$scope', '$http', '$location', function($s, $http, 
 	    console.log("$s.allRecipes", $s.allRecipes);
 	})
 
-  
     $.get('/api/recipe?id='+getParameterByName('id'), function(data) {
 
       console.log("rechtfvfbchcfbnchfncncbfipes", data);
       if(!data || !data[0] || data.length == 0) return;
 
-      var htmlsegment = "";
+      $s.currentRecepie = data[0];
 
-        console.log("----recipes", data[0]); 
-
-        var dot= "";
-
-		var bit = '<div class="icon1" >'+
-		'<p class="typeic">'+ data[0].name +'</p>'+
-		'<p class="typeic2">Ingredience:</p><br><br>'+
-		'<p class="typeic3">' +data[0].ingredients +
-		'</p><br>'+
-		'<img class="imgic" src="'+ data[0].img +'"><br><br>'+
-		'<p class="typeic3">' +data[0].Method +
-		'<br><br><center><img class="share2" src="./img/share.png">'+
-		'<img class="share1" src="./img/add2.png">'+
-		'<img class="cookrer" src="./logo/sh69.png"><br><br>'+
-		'<br><br><br><br><br><br><br><br><div id="line">'+
-
-
-		'</div><br><br><br><br><br><br>'+
-		'<br>';
-
-		htmlsegment = htmlsegment + bit;
-		$('#contence').html(htmlsegment);
 
     })
 

@@ -1,44 +1,22 @@
-<ng-include src="'./templates/headerBar.html'"></ng-include>
+<div class="cookies-page">
+	<ng-include src="'./templates/headerBar.html'"></ng-include>
 
-<div ng-repeat="recepie in allRecipes">
-	<img class="imgic238" ng-src="{{recepie.img}}"><br>
-
-	<div class="hizz"><img class="share2" src="./img/share.png">
-		<img class="share1" src="./img/add2.png">
-		<a ng-href="#/rec?id={{recepie.id}}">
-			<center>
-				<p class="typeic">{{ recepie.name }}</p>
-				<p class="typeic2">Ingredience:</p>
-				<p class="typeic3">{{ recepie.ingredients }}</p>
-				<img class="cookr" src="./logo/sh69.png">
-			</center>
-		</a>
-	</div>
-</div>
-
-<button class="button238945" id="bu2" onclick="nextPage()"><h1>Back</h1></button>
-<button class="button238945" id="bu3" onclick="prevPage()"><h1>Next</button>
-
-<!--
 	<div ng-repeat="recepie in allRecipes">
-		<p>recepie {{ recepie.name }}</p>
-	
-		  <img class="imgic238" src="'+ data[i].img +'"><br>'+
-		  <div class="hizz"><img class="share2" src="./img/share.png">'+
-		  <img class="share1" src="./img/add2.png">'+
-		  <div class="icon1" >'+
-		  <a href="/rec.html?id='+data[i].id+'">'+
-		  <center><p class="typeic">'+ data[i].name +'</p>'+
-		  <p class="typeic2">Ingredience:</p>'+
-		  <p class="typeic3">' +data[i].ingredients.substr(0,500)+ dot
-		  </p><br>'+
-		  <img class="cookr" src="./logo/sh69.png"></div>
+		<img class="imgic238" ng-src="{{recepie.img}}"><br>
+
+		<div class="hizz"><img class="share2" src="./img/share.png">
+			<img class="share1" src="./img/add2.png">
+			<a ng-href="#/rec?id={{recepie.id}}">
+				<center>
+					<p class="typeic">{{ recepie.name }}</p>
+					<p class="typeic2">Ingredience:</p>
+					<p class="typeic3">{{ recepie.ingredients }}</p>
+					<img class="cookr" src="./logo/sh69.png">
+				</center>
+			</a>
 		</div>
+	</div>
 
-
-
-
-
+	<button class="button238945" id="bu2" onclick="nextPage()"><h1>Back</h1></button>
+	<button class="button238945" id="bu3" onclick="prevPage()"><h1>Next</h1></button>
 </div>
-
--->

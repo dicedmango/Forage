@@ -10,6 +10,7 @@
 
 	<script type="text/javascript" src="./libs/angular.min.js"></script>
 	<script type="text/javascript" src="./libs/angular-route.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.js"></script>
 	<script type="text/javascript" src="./libs/jquery.min.js"></script>
 	<script src="./libs/underscore-min.js"></script>
 
@@ -18,7 +19,7 @@
 <body ng-app="app" ng-controller="PageCtrl">
 	<!-- <ng-include src="'./templates/banner.html'"></ng-include> -->
 
-	<div id="container" ng-view>
+	<div id="container" ng-view class="page {{ pageClass }}">
 	</div>
 
 	<script src="script.js"></script>

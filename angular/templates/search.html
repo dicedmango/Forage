@@ -1,40 +1,42 @@
-<ng-include src="'./templates/menuPanel.html'"></ng-include>
+<div class="search-page">
+    <ng-include src="'./templates/menuPanel.html'"></ng-include>
 
-<center>
- 
-  <a href="#/search"><img class="logo690" src="./img/search.png" ></a>
+    <center>
+     
+      <a href="#/search"><img class="logo690" src="./img/search.png" ></a>
 
-  <img class="logo6902" src="./img/tools.png" onclick="openMenu()">
-   </center><a href="#/cookies">
+      <img class="logo6902" src="./img/tools.png" onclick="openMenu()">
+       </center><a href="#/cookies">
 
-    <h1 id="title45">Forage</h1></a>
+        <h1 id="title45">Forage</h1></a>
 
 
-<center>
-<div id="lin333"></lin333>
+    <center>
+    <div id="lin333"></lin333>
 
-<br><br><br><br><br><br>
+    <br><br><br><br><br><br>
 
-<input id="text5" ng-model="searchtext" autocomplete="on" type="text" name="input" value="" onclick="selectFromMenu()" placeholder="" list="categories"></input>
+    <input id="text5" ng-model="searchtext" autocomplete="on" type="text" name="input" value="" onclick="selectFromMenu()" placeholder="" list="categories"></input>
 
-<datalist id="categories"></datalist>
+    <datalist id="categories"></datalist>
 
-<!--<button value="searchBtn" onclick="search()"><img id="tri2" src="./img/arr.png">Search</button>
--->
+    <!--<button value="searchBtn" onclick="search()"><img id="tri2" src="./img/arr.png">Search</button>
+    -->
 
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<div ng-repeat="recepie in filteredRecipes">
-    <img class="imgic238" ng-src="{{recepie.img}}"><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <div ng-repeat="recepie in filteredRecipes">
+        <img class="imgic238" ng-src="{{recepie.img}}"><br>
 
-    <div class="hizz"><img class="share2" src="./img/share.png">
-        <img class="share1" src="./img/add2.png">
-        <a ng-href="#/rec?id={{recepie.id}}">
-            <center>
-                <p class="typeic">{{ recepie.name }}</p>
-                <p class="typeic2">Ingredience:</p>
-                <p class="typeic3">{{ recepie.ingredients }}</p>
-                <img class="cookr" src="./logo/sh69.png">
-            </center>
-        </a>
+        <div class="hizz"><img class="share2" src="./img/share.png">
+            <img class="share1" src="./img/add2.png">
+            <a ng-href="#/rec?id={{recepie.id}}">
+                <center>
+                    <p class="typeic">{{ recepie.name }}</p>
+                    <p class="typeic2">Ingredience:</p>
+                    <p class="typeic3">{{ recepie.ingredients }}</p>
+                    <img class="cookr" src="./logo/sh69.png">
+                </center>
+            </a>
+        </div>
     </div>
 </div>
