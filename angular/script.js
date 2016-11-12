@@ -1,9 +1,4 @@
-// regular js
-
-
-function goBack() {
-    window.history.back();
-}
+function goBack() { window.history.back(); }
 
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
@@ -15,42 +10,32 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
-
-
-
 function selectFromMenu() {
   console.log("menu item", this);
 }
 
-
 function readURL(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
 
-            reader.onload = function (e) {
-                $('#blah')
-                    .attr('src', e.target.result)
-                    .width(150)
-                    .height(200);
-            };
+        reader.onload = function (e) {
+            $('#blah')
+                .attr('src', e.target.result)
+                .width(150)
+                .height(200);
+        };
 
-            reader.readAsDataURL(input.files[0]);
-        }
+        reader.readAsDataURL(input.files[0]);
     }
-
-
-
+}
 
 function closeMenu() {
 
-
   console.log("close menu");
-
 
   $("#menu-panel").css("opacity", 0);
   $("#menu-panel").css("z-index", 0);
   $("#menu-panel").removeClass("bringToTop");
-
 }
 
 closeMenu();
@@ -59,64 +44,40 @@ setTimeout(function() {
   $("#menu-panel").removeClass("startInvisible"); 
 }, 1750)
 
-var numberOfpages = 0;
-var recepies = [];
-
-
-
-
 function sendRecipe() {
 
-var name = $("#text5").val();
+	var name = $("#text5").val();
+	var Ingredients = $("#text7").val();
+	var method = $("#text6").val();
+	var inputIMG =  $('#file-input').prop('files');
 
-var Ingredients = $("#text7").val();
+	console.log(inputIMG);
 
-var method = $("#text6").val();
+	inputIMG = JSON.toString(inputIMG);
 
-   var inputIMG =  $('#file-input').prop('files');
- 
-   console.log(inputIMG);
+	$.post( "/api/add", {
+	 name: name,
+	 ingredients: Ingredients,
+	 method: method
 
-   inputIMG = JSON.toString(inputIMG);
+	}, function() {
+	  window.location.href = "/cookies.html";
+	});
 
-
-$.post( "/api/add", {
- name: name,
- ingredients: Ingredients,
- method: method
-
-}, function() {
-  window.location.href = "/cookies.html";
-});
-
-console.log("sendRecipe", name, Ingredients, method);
-
+	console.log("sendRecipe", name, Ingredients, method);
 }
-
-
-
-function showRecepie(id) {
-  console.log("show recipes", id);
-}
-
-
 
 var QueryString = function () {
-  // This function is anonymous, is executed immediately and 
-  // the return value is assigned to QueryString!
   var query_string = {};
   var query = window.location.search.substring(1);
   var vars = query.split("&");
   for (var i=0;i<vars.length;i++) {
     var pair = vars[i].split("=");
-        // If first entry with this name
-    if (typeof query_string[pair[0]] === "undefined") {
+    if (typeof query_string[pair[0]] === "undefined") { // If first entry with this name
       query_string[pair[0]] = decodeURIComponent(pair[1]);
-        // If second entry with this name
-    } else if (typeof query_string[pair[0]] === "string") {
+    } else if (typeof query_string[pair[0]] === "string") { // If second entry with this name
       var arr = [ query_string[pair[0]],decodeURIComponent(pair[1]) ];
-      query_string[pair[0]] = arr;
-        // If third or later entry with this name
+      query_string[pair[0]] = arr; // If third or later entry with this name
     } else {
       query_string[pair[0]].push(decodeURIComponent(pair[1]));
     }
@@ -124,66 +85,29 @@ var QueryString = function () {
   return query_string;
 }();
 
-
-
-// pagination
-function nextPage() {
-
-  if(page == numberOfpages) return;
-
-  page = page + 1;
-  console.log("next", page);
-  insertParam("page", page);
-}
-
-// pagination
-function prevPage() {
-
-  if(page == 0) return;
-
-  page = page - 1;
-  console.log("prev", page);
-  insertParam("page", page);  
-}
-
-
-function insertParam(key, value)
-{
+function insertParam(key, value){
     key = encodeURI(key); value = encodeURI(value);
-
     var kvp = document.location.search.substr(1).split('&');
-
-    var i=kvp.length; var x; while(i--) 
-    {
+    var i=kvp.length; var x; while(i--) {
         x = kvp[i].split('=');
 
-        if (x[0]==key)
-        {
+        if (x[0]==key) {
             x[1] = value;
             kvp[i] = x.join('=');
             break;
         }
     }
-
     if(i<0) {kvp[kvp.length] = [key,value].join('=');}
-
     //this will reload the page, it's likely better to store this until finished
     document.location.search = kvp.join('&'); 
 }
 
 
 function openMenu() {
-
   $("#menu-panel").css("opacity", 1);
   $("#menu-panel").css("z-index", 9999999999);
   $("#menu-panel").addClass("bringToTop");
-
 }
-
-var numberOfpages = 0;
-var recepies = [];
-
-
 
 
 // Angular JS
@@ -201,11 +125,19 @@ var app = angular.module('app', ['ngRoute', 'ngAnimate'])
 		.when('/search', { templateUrl: 'templates/search.html', controller: 'SearchCtrl' })
 		.when('/cookies', { templateUrl: 'templates/cookies.html', controller: 'CookieCtrl' })
 		.when('/duk', { templateUrl: 'templates/duk.html' })
+		.when('/user', { templateUrl: 'templates/user.html', controller: 'UserCtrl' })
 		.otherwise({ redirectTo: '/' });
 }]);
 
 
 // CONTROLLERS
+
+app.controller('UserCtrl', ['$scope', '$http', '$location', function($s, $http, $location) {
+
+	$s.pageClass = 'user-page';
+
+}]);
+
 
 app.controller('LoginCtrl', ['$scope', '$http', '$location', function($s, $http, $location) {
 
@@ -279,6 +211,5 @@ app.controller('PageCtrl', ['$scope', '$http', '$location', function($s, $http, 
 
 		console.log("searchtext change", n, $s.filteredRecipes);
     });
-
 
 }]);
