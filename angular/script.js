@@ -223,6 +223,18 @@ app.controller('SearchCtrl', ['$scope', '$http', '$location', function($s, $http
 app.controller('RecipeCtrl', ['$scope', '$http', '$location', function($s, $http, $location) {
 
 	$s.pageClass = 'recipe-page';
+	$s.currentRecepie = {};
+
+
+    $.get('/api/recipe?id='+getParameterByName('id'), function(data) {
+
+		console.log("recipe", data);
+		if(!data || !data[0] || data.length == 0) return;
+
+		$s.currentRecepie = data[0];
+
+		setTimeout(function() { $s.$apply() }, 50);
+    });
 
 }]);
 
@@ -236,23 +248,21 @@ app.controller('PageCtrl', ['$scope', '$http', '$location', function($s, $http, 
 
 	$s.allRecipes = [];
 	$s.filteredRecipes = [];
-	$s.currentRecepie = {};
+	$s.users = [];
+
+  	$.get('/api/users', function(data) {
+
+	    $s.users = data;
+	    console.log("$s.users", $s.users);
+	});
 
   	$.get('/api/recipes', function(data) {
 
 	    $s.allRecipes = data;
 	    console.log("$s.allRecipes", $s.allRecipes);
-	})
-
-    $.get('/api/recipe?id='+getParameterByName('id'), function(data) {
-
-      console.log("rechtfvfbchcfbnchfncncbfipes", data);
-      if(!data || !data[0] || data.length == 0) return;
-
-      $s.currentRecepie = data[0];
+	});
 
 
-    })
 
 
     $s.searchtext = "";

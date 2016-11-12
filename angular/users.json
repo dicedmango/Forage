@@ -1,0 +1,17 @@
+[
+	{
+		"name": "Alex",
+		"reputation": 300,
+		"img": "./img/pp.png"
+	},
+	{
+		"name": "Kasper",
+		"reputation": 250,
+		"img": "./img/me.jpg"
+	},
+	{
+		"name": "Jamie Oliver",
+		"reputation": 1500,
+		"img": "./img/Jamie-Social.jpg"
+	}
+]

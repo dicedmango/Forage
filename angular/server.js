@@ -18,6 +18,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 
 
 var recipes = JSON.parse(fs.readFileSync('savedRecepies.json', 'utf8'));
+var users = JSON.parse(fs.readFileSync('users.json', 'utf8'));
 
 // give all the recepies unique ID's
 recipes.forEach(function(d,i) {
@@ -25,30 +26,17 @@ recipes.forEach(function(d,i) {
 });
 
 
-var foods = [
-	{ "name": "Apple" },
-	{ "name": "Breads" },
-	{ "name": "orange" }
-];
-
-
-app.get('/api/foods', function (req, res) {
-
-	res.send(foods);
+app.get('/api/users', function (req, res) {
+	res.send(users);
 });
 
 
-
 app.get('/api/recipes', function (req, res) {
-
-
 	res.send(recipes);
 });
 
 
-
 app.post('/api/add', function (req, res) {
-
 
 	// add to list of recepies
 	console.log('req.query', req.body);
