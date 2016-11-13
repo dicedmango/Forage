@@ -216,11 +216,22 @@ input {
     top: -93px;
     width: 97%;
 }
+
+
+
+
+#line6767675556565656777777 {
+    background: #ddbf5e;
+    height: 10px;
+    position: relative;
+       top:-397px;
+    width: 100%;}
+
 .line6767675 {
     background: #ddbf5e;
     height: 10px;
     position: relative;
-       top: -213px;
+       top: -395px;
     width: 100%;
 }
 .back2 {
@@ -674,6 +685,13 @@ input {
     position: relative;
     top: 10px;
 }
+
+.icon139 {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    top: -402px;
+    background-color: #f8edcb;}
 .ratty {
     background-color: ;
     height: 1000px;
@@ -978,7 +996,7 @@ position: relative; top: -93px;
     top: 25px;
     left: 397px;}
 
-
+.bd {top: -126px}
 
     .title888{font-size: 40pt;
     font-family: cool;
@@ -987,7 +1005,8 @@ position: relative; top: -93px;
     top: -100px;
     max-width: 30%;
     left: 60px;}
-
+#ebbb{position: relative; top:-195px;     right: -50px;
+}
 
 #ratch {position: relative; top: -30px; color: #fff;}
 
@@ -1073,15 +1092,35 @@ font-size: 50px;
 .yemma {
         background-color: #615e5f;
     }
-
+.quirt{top: -373px;}
+.type1mill {
+    position: relative;
+    top: -424px;
+    left: 450px;
+    width: 50%;
+}
 
 .line45454545 {background: #f0eee9;
     height: 10px;
     position: relative;
     top: -30px;}
 
+.type2mill {
+    position: relative;
+    top: -560px;
+    left: 409px;
+    width: 50%;
+    padding: 40px;
+}
 
-
+.imgicbizzzz {
+    width: 38.8%;
+    position: relative;
+    position: relative;
+    right: -30px;
+    top: 0px;
+    padding-top: 12%;
+}
 
 .logo2000000 {
     position: relative;
@@ -1090,7 +1129,12 @@ font-size: 50px;
     left: 350px;
 }
 
-
+.edit420 {
+    position: relative;
+    top: -520px;
+    left: 838px;
+    width: 6%;
+}
 
 
 
@@ -1157,7 +1201,9 @@ font-size: 50px;
 
 }
 
-
+.squirt {    width: 90%;
+    position: relative;
+    top: -300px;}
 /* ANIMATIONS
 ============================================================================= */
 
