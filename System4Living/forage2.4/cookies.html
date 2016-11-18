@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>	
+
+<title>Forage</title>
+
+
+
+<style>
+
+
+
+@font-face {
+font-family: min;
+src: url("./MinionPro-Regular.otf") format("opentype");
+}
+
+@font-face {
+font-family: cool;
+src: url("./coolvetica rg.ttf") format("opentype");
+}
+
+h1 {font-family: cool; color: #532d3b; position: relative;
+    top: -10px; }
+
+p {font-size: 20pt; font-family: min; color: #532d3b; position: relative;
+    top: -10px; max-width: 90%; text-align: left;}    
+
+a { font-family: min; color: #532d3b; position: relative;
+    text-decoration: none; }
+
+body {
+        background-color: #c3ddd6
+    }
+
+
+
+
+
+
+.logo  {position: relative; width: 10%;  top: 55px; left: 300px; padding-right: 30px; }
+
+.logo2 {position: relative; width: 10%;  top: 55px; left: 300px  }
+
+
+
+#text5
+{
+background: #fff;
+color: #532d3b;
+width:85%;
+height: 60px;
+padding: 6px 15px 6px 35px;
+border-radius: 10px;
+box-shadow: 0 1px 0 #ccc inset;
+transition:500ms all ease;
+}
+
+
+
+.line {
+  background:#609087; height: 10px;
+position: relative;
+    top: -145px;
+    width: 100%;
+
+}
+
+
+#line2 {
+  background:#532d3b; height: 10px;
+position: relative; top: 230px;
+
+}
+
+#line3 {
+  background:#c3ddd6; height: 10px;
+position: relative; top: -93px;
+    width: 97%;
+
+}
+
+.line5 {
+  background:#609087; height: 10px;
+position: relative;
+ top: -100px;
+    width: 100%;
+
+
+}
+
+
+
+
+#bu2 {width:20%;
+    position: relative;
+    left: -135px; }
+
+#bu3 {width:20%; 
+    position: relative;
+    left: 720px;}
+
+button
+
+{
+  
+color: #532d3b;
+padding: 6px 15px 6px 35px;
+position: relative; 
+font-family: min;
+font-size: 35px;
+
+
+
+}
+
+input {width: 400px; height: 40px; font-size: 20pt; }
+
+
+
+
+.imgic { width: 100%;
+    position: relative;
+    top:-40px;
+
+  
+    
+
+   }
+.typeic {font-size: 55px; position: relative;  color: #609087; font-family: cool; max-width: 90%; text-align: center; padding: 40px; top: 50px;}
+.typeic2 {font-size: 35px; max-width: 20%; position: relative; color: #532d3b; font-family: min; font-style: italic; padding: 40px;top: 50px;}
+.typeic3 {font-size: 30px; position: relative;  text-align: left; width: 90%; color: #532d3b; font-family: min; padding: 40px;top: 50px;}
+.title {font-size: 35pt!important; font-family: cool; color: #532d3b; position: relative; right: -20px; padding: 20px; top: -180px;  max-width: 75%; text-align: left; }
+.title2 {font-size: 35pt!important; font-family: cool; color: #edebe6; position: relative; right: -20px; padding: 20px; top: -180px;  width: 50%; text-align: left; }
+.title5 {font-size: 35pt!important; font-family: cool; color: #c3ddd6; position: relative; right: -20px; padding: 30px; top: -130px;  width: 50%; text-align: left; }
+
+   
+   
+
+.cookr{    position: relative;
+ 
+    width: 12%;
+     top: 50px;
+padding-right: 45%;
+   
+    padding-left: 45%;
+   }
+
+    .share1{    position: relative;
+    
+    width: 12%;
+       left: 680px;
+ top: 50px;}
+
+.share2{    position: relative;
+
+    width: 12%;
+   left: 80px; top: 50px;}
+
+#header {background-color: #532d3b; height: 200px;}
+
+#menu-panel {
+  position: fixed;
+  height: 100%;
+  left: 0;
+  top: 0;
+    background-color: #532d3b;
+    color: #c3ddd6;
+
+
+   opacity: 1;
+
+   transition: opacity .75s ease-in-out;
+   -moz-transition: opacity .75s ease-in-out;
+   -webkit-transition: opacity .75s ease-in-out;
+}
+
+.startInvisible {
+  opacity: 0 !important;
+}
+
+#menu-panel a {
+    color: #c3ddd6 !important;
+}
+
+.bringToTop {
+        z-index: 99999999;
+
+}
+
+
+
+.menu-title {
+
+font-size: 40pt; font-family: cool; color: #609087; position: relative;
+    top: -10px; max-width: 90%; text-align: left;
+
+}
+
+.logo3 {position: relative; width: 10%;  left: 300px  }
+
+.typic4{font-size: 40px!important; position: relative; text-align: left; width: 480px; color: #c3ddd6; font-family: min;}  
+
+#line3 {
+  background:#c3ddd6; height: 10px;
+position: relative; top: -93px;
+    width: 97%;
+
+}
+
+.mush{    position: relative;
+    left: 306px;
+    width: 470px;
+    top: -304px;}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://rawgithub.com/jashkenas/underscore/master/underscore-min.js"></script>
+
+
+</head>
+<body>
+
+
+
+<div id="menu-panel" class="bringToTop startInvisible"> 
+
+
+
+
+  <center>
+  <br><br><br>
+  <img class="logo" src="./img/search.png" >
+
+    <img class="logo3" src="./img/x.png" onclick="closeMenu()">
+   </center>
+  <h1 class="title5">Menu</h1>
+  <center>
+  <hr id="line3">
+
+  
+  <h1 class="bringToTop menu-title">Recipe</h1>
+
+  <p class="typic4">
+  <a href="add.html">Add Recipe<br></a>
+  <a href="cookies.html">Popular Dishes<br><a>
+  <a href="idea.html">Tips & Tricks<br></a>
+  <br><br>
+  <h1 class="menu-title">Profile</h1>
+
+  <p class="typic4">
+  <a href="set.html">My Cookbook<br></a>
+  Recently Viewed<br>
+ <a href="set.html"> My Profile<br></a>
+  <br><br>
+  <h1 class="menu-title">Forage</h1>
+
+  <p class="typic4">
+  <a href="about.html">About<br><a>
+  <a href="index.html">Log Out</a>
+<br>
+  <img class="mush"src="./logo/sha.png">
+  <br><br><br>
+
+
+</div>
+
+
+
+ <center>
+ <div id="header">
+  <a href="search.html"><img class="logo" src="./img/search2.png" ></img></a>
+  <img class="logo2" src="./img/tools2.png" onclick="openMenu()">
+  </center><a href="cookies.html">
+<h1 class="title2">Dish Of The Day</h1></a>
+
+
+<div class="line"></div>
+</div>
+
+
+
+
+
+
+<div id="contence"></div><br><br>
+<div class="line5">
+<br><br><br>
+  <button id="bu3" onclick="prevPage()"><h1>Back</button>
+  <button id="bu2" onclick="nextPage()"><h1>Next</h1></button>
+  
+
+<br><br><br>
+<br>
+<h1><font color="#c3ddd6">javascript baby yea!!</h1>
+
+
+
+</body>
+
+
+<script>
+
+
+
+
+function openMenu() {
+
+  $("#menu-panel").css("opacity", 1);
+  $("#menu-panel").css("z-index", 9999999999);
+  $("#menu-panel").addClass("bringToTop");
+
+}
+
+
+
+function closeMenu() {
+
+
+  console.log("close menu");
+
+
+  $("#menu-panel").css("opacity", 0);
+  $("#menu-panel").css("z-index", 0);
+  $("#menu-panel").removeClass("bringToTop");
+
+}
+
+closeMenu();
+
+setTimeout(function() {
+  $("#menu-panel").removeClass("startInvisible"); 
+}, 1750)
+
+
+
+console.log(_);    
+
+var numberOfpages = 0;
+var recepies = [];
+
+
+
+    function search() {
+
+      var matchString = $("#text5").val();
+
+
+      var data = _.filter(recepies, function(recpie) {
+
+            var re = new RegExp(matchString,"g");
+
+            console.log(recpie)
+
+            if(recpie.Method.match(re)) return true;
+            if(recpie.description.match(re)) return true;
+            if(recpie.ingredients.match(re)) return true;
+            if(recpie.name.match(re)) return true;
+      })
+
+
+          if(data.length == 1) {
+            window.location.href = "/rec.html?id=" + data[0].id;
+          }
+
+          console.log("change", matchString, data);
+          //drawResults(data);
+
+    }
+
+
+
+
+
+
+
+
+
+    function showRecepie(id) {
+      console.log("show recipes", id);
+    }
+
+
+
+
+
+
+  
+    $.get('/api/recipes', function(data) {
+
+        drawResults(data);
+    })
+
+function drawResults(data) {
+      console.log("recipes", data);
+
+
+      recepies = data;
+
+      console.log("this is what I got from the server for dropdown", data);
+      
+      var options = '';
+
+      for(var i = 0; i < data.length; i++) {  
+        options += '<option value="'+data[i].name+'"" />';
+      }
+
+
+      $('#categories').html(options)
+
+
+
+
+
+
+
+      $('#contence').html("");
+
+      var htmlsegment = "";
+      var resultsPerPage = 5;
+
+      numberOfpages = Math.floor(data.length / resultsPerPage);
+      console.log("number of pages", numberOfpages)
+
+      var startPos = page * resultsPerPage;
+
+      for(var i = startPos; i < (startPos + resultsPerPage); i++) {  
+
+        var dot= "";
+
+        if (data[i].name.length > 22) dot = "... Read More"
+
+            var bit = 
+
+            '<img class="imgic" src="'+ data[i].img +'">'+
+            '<img class="share2" src="./img/share.png">'+
+            '<img class="share1" src="./img/add2.png">'+
+            '<div class="icon1" >'+
+            '<a href="/rec.html?id='+data[i].id+'">'+
+            '<p class="typeic">'+ data[i].name +'</p>'+
+            '<p class="typeic2">Ingredience:</p>'+
+            '<p class="typeic3">' +data[i].ingredients.substr(0,500)+ dot +
+            '</p><br>'+
+            '<img class="cookr" src="./logo/sh3.png">'+
+            
+            '</a>'+
+
+            '</div>'+
+            '<br><br><br><br>';
+
+
+            htmlsegment = htmlsegment + bit;
+
+
+
+      }
+
+      $('#contence').html(htmlsegment);
+
+
+
+
+}
+
+
+
+
+var QueryString = function () {
+  // This function is anonymous, is executed immediately and 
+  // the return value is assigned to QueryString!
+  var query_string = {};
+  var query = window.location.search.substring(1);
+  var vars = query.split("&");
+  for (var i=0;i<vars.length;i++) {
+    var pair = vars[i].split("=");
+        // If first entry with this name
+    if (typeof query_string[pair[0]] === "undefined") {
+      query_string[pair[0]] = decodeURIComponent(pair[1]);
+        // If second entry with this name
+    } else if (typeof query_string[pair[0]] === "string") {
+      var arr = [ query_string[pair[0]],decodeURIComponent(pair[1]) ];
+      query_string[pair[0]] = arr;
+        // If third or later entry with this name
+    } else {
+      query_string[pair[0]].push(decodeURIComponent(pair[1]));
+    }
+  } 
+  return query_string;
+}();
+
+
+var page = 1;
+
+if(!QueryString.page) { 
+
+  insertParam("page", page); 
+
+} else {
+
+  page = parseInt(QueryString.page);
+
+}
+
+// pagination
+function nextPage() {
+
+
+  if(page == numberOfpages) return;
+
+  page = page + 1;
+  console.log("next", page);
+  insertParam("page", page);
+}
+
+// pagination
+function prevPage() {
+
+  if(page == 0) return;
+
+  page = page - 1;
+  console.log("prev", page);
+  insertParam("page", page);  
+}
+
+
+function insertParam(key, value)
+{
+    key = encodeURI(key); value = encodeURI(value);
+
+    var kvp = document.location.search.substr(1).split('&');
+
+    var i=kvp.length; var x; while(i--) 
+    {
+        x = kvp[i].split('=');
+
+        if (x[0]==key)
+        {
+            x[1] = value;
+            kvp[i] = x.join('=');
+            break;
+        }
+    }
+
+    if(i<0) {kvp[kvp.length] = [key,value].join('=');}
+
+    //this will reload the page, it's likely better to store this until finished
+    document.location.search = kvp.join('&'); 
+}
+
+
+
+
+
+
+
+  </script>
+
+
+
+
+<html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>	
+
+<title>Forage</title>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+
+<style>
+
+
+@font-face {
+font-family: min;
+src: url("./MinionPro-Regular.otf") format("opentype");
+}
+
+@font-face {
+font-family: cool;
+src: url("./coolvetica rg.ttf") format("opentype");
+}
+
+h1 {font-size: 40pt; font-family: cool; color: #615e5f; position: relative;
+    top: -10px; max-width: 90%;}
+
+p {font-size:35pt; font-family: min; color: #615e5f; position: relative;
+    top: -10px; max-width: 90%; text-align: left;}    
+
+a { font-family: min; color: #615e5f; position: relative;
+    text-decoration: none; }
+
+body {
+        background-color: #f0eee9
+    }
+
+
+.logo2 {position: relative; top: 550px; width: 30%;}
+
+form {position: relative; top: 0px; }
+
+input { height: 40px;  background-color: #f0eee9; border: none; color: #615e5f;   width: 90%;}
+
+
+#text5
+{font-size: 55px; position: relative;  color: #ddbf5e; font-family: cool; max-width: 90%; text-align: left; background-color: #f0eee9; padding: 20px;    width: 90%;}
+
+
+
+
+button
+
+{
+  
+color: #ddbf5e;
+padding: 6px 15px 6px 35px;
+position: relative; 
+font-family: cool;
+font-size: 55px;
+top: 100px;
+left: -300px;
+
+}
+
+
+
+
+input {   font-size: 35pt; width: 90%; height: 170px;  font-family: min;}
+
+.typeic {font-size: 45px; position: relative; top:-540px; left: 195px; color: #615e5f; font-family: cool; max-width: 500px; text-align: left;    width: 90%;}
+.typeic2 {font-size: 35px; max-width: 20%; position: relative; top: -570px; left: 70px; color: #615e5f; font-family: min; font-style: italic;    width: 90%;}
+.typeic3 {font-size: 40px; position: relative; top: -690px; left: 190px; text-align: left; width: 480px; color: #615e5f; font-family: min;     width: 90%;}
+
+#sum {width: 90%; position: relative;top: -100px;}
+
+
+#line, #line2 {
+  background:#ddbf5e; height: 10px; position: relative; top: -165px;
+
+
+}
+.logo  {position: relative; width: 10%;  top: 55px; left: 270px; padding-right: 30px; }
+
+.logo2 {position: relative; width: 10%;  top: 55px; left: 300px  }
+.logo45  {position: relative; width: 15%;  top: 115px; left: 300px; padding-right: 30px; }
+
+
+
+
+.image-upload > input
+{
+    display: none;
+    font-size: 35px;
+     color: #615e5f; font-family: min;
+}
+
+#title {font-size: 40pt; font-family: cool; color: #615e5f; position: relative; top:-200px;
+     max-width: 50%; text-align: left; left: 90px; }
+#header {background-color: #615e5f; height: 200px;}
+
+
+#menu-panel {
+  position: fixed;
+  height: 100%;
+  left: 0;
+  top: 0;
+    background-color: #615e5f;
+    color: #f0eee9;
+
+
+   opacity: 1;
+
+   transition: opacity .75s ease-in-out;
+   -moz-transition: opacity .75s ease-in-out;
+   -webkit-transition: opacity .75s ease-in-out;
+}
+
+.startInvisible {
+  opacity: 0 !important;
+}
+
+#menu-panel a {
+    color: #f0eee9 !important;
+}
+
+.bringToTop {
+        z-index: 99999999;
+
+}
+
+ 
+.back {width: 13%;
+    position: relative;
+    top: -168px;
+    left: 680px;}
+
+.menu-title {
+
+font-size: 40pt; font-family: cool; color: #ddbf5e; position: relative;
+    top: -10px; max-width: 90%; text-align: left;
+
+}
+.logo3 {position: relative; width: 10%;  left: 300px  }
+
+.typic4{font-size: 40px!important; position: relative; text-align: left; width: 480px; color: #f0eee9; font-family: min;}  
+
+#line3 {
+  background:#f0eee9; height: 10px;
+position: relative; top: -93px;
+    width: 97%;
+
+}
+
+
+.mush{    position: relative;
+    left: 306px;
+    width: 470px;
+    top: -304px;}
+
+    .leves {position:relative;top: 0px;}
+
+</style>
+
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://rawgithub.com/jashkenas/underscore/master/underscore-min.js"></script>
+<body>
+
+
+
+
+ <center>
+
+  <a href="search.html"><img class="logo" src="./img/search.png" ></img></a>
+ 
+    <button onclick="goBack()"><img class="back" src="./img/x2.png"></button>
+  </center><a href="cookies.html">
+<h1 id="title">Add Recipe</h1></a>
+<center>
+
+
+<div id="line"></line></div>
+
+</center>
+<center>
+<div id="sum">
+
+  <input id="text5" type="text"  name="searchbox" onfocus="if (this.value=='Cusine') this.value = ''" type="text" placeholder="Title eg. Ultimate Grilled Cheese"></imput><br>
+<p id="typeic2"><i>Ingredients:</i></p>
+  <input id="typeic3" type="text"  name="searchbox" onfocus="if (this.value=='Number of Guests') this.value = ''" type="text" placeholder="Ingredients eg. Cheese, Bread, Ham, Bacon..."></imput><br>
+
+  <input id="typeic3" type="text" name="searchbox" onfocus="if (this.value=='Discription') this.value = ''" type="text" placeholder="Method eg. Set hob to gas mark 5, melt butter in pan..."></imput>
+
+  <div class="image-upload"><center>
+      <label for="file-input"><br><br><br><br>
+
+        
+           <br> <img class="logo" src="./img/photo.png"/ id="blah" src="#"  />
+
+      </label>
+
+      <input id="file-input" type="file" onchange="readURL(this);"/>
+  </div>
+<br>
+
+  <button  class="leves"onclick="sendRecipe()">Submit</button><br>
+<img class="logo45" src="./logo/sh69.png"></img>
+
+
+
+
+
+
+</center>
+
+<script>
+
+
+
+
+function openMenu() {
+
+  $("#menu-panel").css("opacity", 1);
+  $("#menu-panel").css("z-index", 9999999999);
+  $("#menu-panel").addClass("bringToTop");
+
+}
+
+
+
+function closeMenu() {
+
+
+  console.log("close menu");
+
+
+  $("#menu-panel").css("opacity", 0);
+  $("#menu-panel").css("z-index", 0);
+  $("#menu-panel").removeClass("bringToTop");
+
+}
+
+closeMenu();
+
+setTimeout(function() {
+  $("#menu-panel").removeClass("startInvisible"); 
+}, 1750)
+
+
+
+
+
+function sendRecipe() {
+
+var name = $("#text5").val();
+
+var Ingredients = $("#text7").val();
+
+var method = $("#text6").val();
+
+   var inputIMG =  $('#file-input').prop('files');
+ 
+   console.log(inputIMG);
+
+   inputIMG = JSON.toString(inputIMG);
+
+
+$.post( "/api/add", {
+ name: name,
+ ingredients: Ingredients,
+ method: method
+
+}, function() {
+  window.location.href = "/cookies.html";
+});
+
+console.log("sendRecipe", name, Ingredients, method);
+
+}
+
+
+function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah')
+                    .attr('src', e.target.result)
+                    .width(150)
+                    .height(200);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+
+function goBack() {
+    window.history.back();
+}
+
+
+
+
+</script>
+
+
+</body>
+
+<html>

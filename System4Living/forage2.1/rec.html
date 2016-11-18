@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>	
+
+<title>Forage</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+<style>
+
+@font-face {
+font-family: min;
+src: url("./MinionPro-Regular.otf") format("opentype");
+}
+
+@font-face {
+font-family: cool;
+src: url("./coolvetica rg.ttf") format("opentype");
+}
+
+h1 {font-size: 40pt; font-family: cool; color: #615e5f; position: relative;
+    top: -10px; max-width: 90%;}
+
+p {font-size: 20pt; font-family: min; color: #615e5f; position: relative;
+    top: -10px; max-width: 90%; text-align: left;}    
+
+a {
+    text-decoration: none; color:#615e5f  }
+
+body {
+        background-color: #f0eee9;
+    }
+
+
+.logo  {position: relative; width: 10%;   left: 200px; padding-right: 30px; }
+
+.logo2 {position: relative; width: 10%;  top: 55px; left: 300px; top: -3px;
+    left: 210px;  }
+
+.cookr{  width: 16%;}
+.typeic {font-size: 55px; position: relative;  color: #eb9587; font-family: cool; max-width: 90%; text-align: center;}
+.typeic2 {font-size: 35px; max-width: 20%; position: relative; color: #615e5f; font-family: min; font-style: italic;}
+.typeic3 {font-size: 40px; position: relative;  text-align: left; width: 90%; color: #615e5f; font-family: min; }
+#title {font-size: 40pt; font-family: cool; color: #f0eee9;; position: relative; top:-70px;
+     max-width: 50%; text-align: left; left: 50px; }
+
+
+.typic4{font-size: 40px!important; position: relative; text-align: left; width: 480px; color: #f0eee9; font-family: min;}
+.title5 {font-size: 35pt!important; font-family: cool; color: #f0eee9; position: relative; right: -20px; padding: 30px; top: -130px;  width: 50%; text-align: left; }
+
+   
+   
+
+
+.share1{    
+    width: 8%;
+    }
+
+.share2{   
+    width: 8%;
+   }
+
+form {position: relative; top: 0px; }
+
+input {width: 400px; height: 40px;}
+
+@font-face {
+font-family: odin;
+src: url("./odin.otf") format("opentype");
+}
+
+
+#text5
+{
+background: #fff;
+color: #615e5f;
+width:85%;
+height: 60px;
+padding: 6px 15px 6px 35px;
+border-radius: 10px;
+box-shadow: 0 1px 0 #ccc inset;
+transition:500ms all ease;
+}
+
+
+#text6
+{
+background: #fff;
+color: #444;
+width:85%;
+height: 250px;
+padding: 6px 15px 6px 35px;
+border-radius: 10px;
+box-shadow: 0 1px 0 #ccc inset;
+transition:500ms all ease;
+}
+
+
+
+
+
+input {width: 400px; height: 40px; font-size: 20pt; }
+
+
+
+#line {
+  background:#615e5f; height: 10px; position: 
+
+
+}
+
+#line3 {
+  background:#f0eee9; height: 10px;
+position: relative; top: -93px;
+    width: 97%;
+
+}
+
+.imgic {width: 90%; border-radius: 25px;}
+
+.back {width: 80%;     position: relative;
+    top: 20px;
+    left: -300px;}
+
+
+button
+
+{    position: relative;
+        top: 7px;
+    right: -20px;
+max-width: 200px;
+color: #615e5f;
+height: 100px;
+position: relative; 
+font-family: cool;
+font-size: 55px;
+
+
+
+
+}
+
+
+#menu-panel {
+  position: fixed;
+  height: 100%;
+  left: 0;
+  top: 0;
+    background-color: #615e5f;
+    color: #f0eee9;
+
+
+   opacity: 1;
+
+   transition: opacity .75s ease-in-out;
+   -moz-transition: opacity .75s ease-in-out;
+   -webkit-transition: opacity .75s ease-in-out;
+}
+
+.startInvisible {
+  opacity: 0 !important;
+}
+
+#menu-panel a {
+    color: #f0eee9 !important;
+}
+
+.bringToTop {
+        z-index: 99999999;
+
+}
+
+.mush{    position: relative;
+    left: 306px;
+    width: 470px;
+    top: -304px;}
+
+.menu-title {
+
+font-size: 40pt; font-family: cool; color: #eb9587; position: relative;
+    top: -10px; max-width: 90%; text-align: left;
+
+}
+
+.logo3 {position: relative; width: 10%;  left: 300px  }
+
+</style>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://rawgithub.com/jashkenas/underscore/master/underscore-min.js"></script>
+
+</head>
+<body>
+
+
+
+<div id="menu-panel" class="bringToTop startInvisible"> 
+
+
+
+
+  <center>
+  <br><br><br>
+  <img class="logo" src="./img/search.png" >
+
+    <img class="logo3" src="./img/x.png" onclick="closeMenu()">
+   </center>
+    <h1 class="title5">Menu</h1>
+  <center>
+  <div id="line3"></div>
+
+    <h1 class="bringToTop menu-title">Recipe</h1>
+
+  <p class="typic4">
+  <a href="add.html">Add Recipe<br></a>
+  <a href="cookies.html">Popular Dishes<br><a>
+  <a href="idea.html">Tips & Tricks<br></a>
+  <br><br>
+  <h1 class="menu-title">Profile</h1>
+
+  <p class="typic4">
+  <a href="set.html">My Cookbook<br></a>
+  Recently Viewed<br>
+ <a href="set.html"> My Profile<br></a>
+  <br><br>
+  <h1 class="menu-title">Forage</h1>
+
+  <p class="typic4">
+  <a href="about.html">About<br><a>
+  <a href="index.html">Log Out</a>
+
+  <img class="mush"src="./logo/sha.png">
+  <br><br><br>
+
+
+
+</div>
+
+
+ <center>
+
+
+  <button onclick="goBack()"><img class="back" src="./img/arr.png"></button>
+  <a href="search.html"><img class="logo" src="./img/search.png" ></a>
+    <img class="logo2" src="./img/tools.png" onclick="openMenu()">
+  </center>
+<h1 id="title"></h1><br></a>
+<center>
+<br><br>
+
+<div id="line"></line>
+
+<br><br><br><br>
+  <div id="contence"></div>
+
+
+<br>
+
+
+<h1><button onclick="goBack()" >Back To Search</button><h1><font color="#f0eee9"><br><br>javascript baby yea!!</h1></h1><br><br>
+
+</center>
+
+<br><br><br>
+
+
+<script>
+
+
+
+
+
+
+
+function openMenu() {
+
+  $("#menu-panel").css("opacity", 1);
+  $("#menu-panel").css("z-index", 9999999999);
+  $("#menu-panel").addClass("bringToTop");
+
+}
+
+
+
+function closeMenu() {
+
+
+  console.log("close menu");
+
+
+  $("#menu-panel").css("opacity", 0);
+  $("#menu-panel").css("z-index", 0);
+  $("#menu-panel").removeClass("bringToTop");
+
+}
+
+closeMenu();
+
+setTimeout(function() {
+  $("#menu-panel").removeClass("startInvisible"); 
+}, 1750)
+
+
+
+
+
+
+
+
+
+var numberOfpages = 0;
+var recepies = [];
+
+    
+    $.get('/api/categories', function(data) {
+
+      console.log("this is what I got from the server", data);
+      
+
+      var options = '';
+
+      for(var i = 0; i < data.length; i++) {  
+        options += '<option value="'+data[i].name+'" />';
+      }
+
+
+      $('#categories').html(options)
+
+    })
+
+
+
+function goBack() {
+    window.history.back();
+}
+
+
+
+
+
+
+
+
+
+
+
+  
+    $.get('/api/recipe?id='+getParameterByName('id'), function(data) {
+
+      console.log("rechtfvfbchcfbnchfncncbfipes", data);
+
+      var htmlsegment = "";
+
+
+        console.log("----recipes", data[0]); 
+
+        var dot= "";
+
+
+var bit = '<div class="icon1" >'+
+'<p class="typeic">'+ data[0].name +'</p>'+
+'<img class="cookr" src="./logo/sh3.png"><br><br>'+
+'<p class="typeic2">Ingredience:</p><br><br>'+
+'<p class="typeic3">' +data[0].ingredients +
+'</p><br>'+
+'<img class="imgic" src="'+ data[0].img +'"><br><br>'+
+'<p class="typeic3">' +data[0].Method +
+'<br><br><center><img class="share2" src="./img/share.png">'+
+'<img class="share1" src="./img/add2.png">'+
+'<br><br><br><br><br><br><br><br><div id="line">'+
+
+
+'</div><br><br><br><br><br><br>'+
+'<br>';
+
+
+htmlsegment = htmlsegment + bit;
+
+
+
+      $('#contence').html(htmlsegment);
+
+    })
+
+
+
+
+
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+  </script>
+
+</body>
+
+<html>

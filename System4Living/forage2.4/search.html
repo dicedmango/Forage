@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>  
+
+<title>Forage</title>
+
+
+
+<style>
+
+
+
+@font-face {
+font-family: min;
+src: url("./MinionPro-Regular.otf") format("opentype");
+}
+
+@font-face {
+font-family: cool;
+src: url("./coolvetica rg.ttf") format("opentype");
+}
+
+h1 {font-size: 40pt; font-family: cool; color: #532d3b; position: relative;
+    top: -10px; max-width: 90%;}
+
+p {font-size: 20pt; font-family: min; color: #532d3b; position: relative;
+    top: -10px; max-width: 90%; text-align: left;}    
+
+a {font-family: min; color: #532d3b; position: relative;
+    text-decoration: none; }
+
+body {
+        background-color: #c3ddd6;
+    }
+
+#foot {text-align: center;}
+
+
+
+
+.logo  {position: relative; width: 10%;  top: 55px; left: 300px; padding-right: 30px; }
+
+.logo2 {position: relative; width: 10%;  top: 55px; left: 300px  }
+
+.logo3 {position: relative; width: 10%;  left: 300px  }
+
+
+#text5
+{
+  background: #c3ddd6;
+    border-style: solid;
+    background: #c3ddd6;
+    color: #532d3b;
+    width: 80%;
+    height: 60px;
+    padding: 6px 15px 6px 35px;
+    border-radius: 10px;
+    box-shadow: #c3ddd6;
+    position: relative;
+    left: 30px;
+    top: 10px;
+    border-color: #532d3b;
+}
+
+
+
+#line {
+  background:#532d3b; height: 10px;
+position: relative;
+    top: -50px;
+
+}
+
+#line2 {
+  background:#532d3b; height: 10px;
+position: relative; top: 230px;
+
+}
+
+#line3 {
+  background:#c3ddd6; height: 10px;
+position: relative; top: -93px;
+    width: 97%;
+
+}
+
+
+#tri {width: 60% !important; position: relative;
+    right: -800px;
+    top: -95px;
+}
+
+
+#bu2 {width:20%;
+    position: relative;
+    left: 235px; top:100px;}
+
+#bu3 {width:20%; 
+    position: relative;
+    left: -235px;top:100px;}
+
+button
+
+{    position: relative;
+        top: 7px;
+    right: -20px;
+max-width: 200px;
+color: #532d3b;
+height: 100px;
+position: relative; 
+font-family: min;
+font-size: 35px;
+
+
+
+}
+
+input {width: 400px; height: 40px; text-align: left; width: 480px; color: #532d3b; font-family: min; font-size: 30pt; }
+
+.icon1 { width: 100%;
+  height: 500px; 
+  background-color: #609087;
+   
+  }
+
+
+.imgic { width: 38.8%;
+    position: relative;
+
+    position: relative;
+    right: 270px;
+    top: 0px;
+    
+
+   }
+.typeic {font-size: 45px; position: relative; top:-540px; left: 195px; color: #532d3b; font-family: cool; max-width: 500px; text-align: left;}
+.typeic2 {font-size: 35px; max-width: 20%; position: relative; top: -570px; left: 70px; color: #532d3b; font-family: min; font-style: italic;}
+.typeic3 {font-size: 40px; position: relative; top: -670px; left: 190px; text-align: left; width: 480px; color: #532d3b; font-family: min; }
+#title, .title {font-size: 40pt; font-family: cool; color: #532d3b; position: relative; top:-70px;
+     max-width: 50%; text-align: left; left: 50px; }
+
+.typic4{font-size: 40px!important; position: relative; text-align: left; width: 480px; color: #c3ddd6; font-family: min;}
+
+
+.cookr{    position: relative;
+   top: -740px;
+    width: 8%;
+    left: 458px;}
+
+    .share1{    position: relative;
+    top: -740px;
+    width: 7%;
+    left: -25px;}
+
+.share2{    position: relative;
+    top: -740px;
+    width: 7%;
+    left: -25px;}
+
+#menu-panel {
+	position: fixed;
+	height: 100%;
+	left: 0;
+	top: 0;
+    background-color: #532d3b;
+    color: #c3ddd6;
+
+
+   opacity: 1;
+
+   transition: opacity .75s ease-in-out;
+   -moz-transition: opacity .75s ease-in-out;
+   -webkit-transition: opacity .75s ease-in-out;
+}
+
+.startInvisible {
+	opacity: 0 !important;
+}
+
+#menu-panel a {
+    color: #c3ddd6 !important;
+}
+
+.bringToTop {
+        z-index: 99999999;
+
+}
+
+
+
+.menu-title {
+
+font-size: 40pt; font-family: cool; color: #609087; position: relative;
+    top: -10px; max-width: 90%; text-align: left;
+
+}
+
+
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://rawgithub.com/jashkenas/underscore/master/underscore-min.js"></script>
+
+
+</head>
+<body> 
+
+
+
+<div id="menu-panel" class="bringToTop startInvisible"> 
+
+
+
+
+  <center>
+  <br><br><br>
+  <img class="logo" src="./img/search.png" >
+
+  	<img class="logo3" src="./img/x.png" onclick="closeMenu()">
+   </center>
+	<h1 class="title">Forage</h1>
+	<center>
+	<div id="line3"></div>
+
+	  <h1 class="bringToTop menu-title">Recipe</h1>
+
+  <p class="typic4">
+  <a href="add.html">Add Recipe<br></a>
+  <a href="cookies.html">Popular Dishes<br><a>
+  <a href="idea.html">Tips & Tricks<br></a>
+  <br><br>
+  <h1 class="menu-title">Profile</h1>
+
+  <p class="typic4">
+  <a href="set.html">My Cookbook<br></a>
+  Recently Viewed<br>
+ <a href="set.html"> My Profile<br></a>
+  <br><br>
+  <h1 class="menu-title">Forage</h1>
+
+  <p class="typic4">
+  <a href="about.html">About<br><a>
+  <a href="index.html">Log Out</a>
+  <br><br><br>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center>
+ 
+  <a href="search.html"><img class="logo" src="./img/search.png" ></a>
+  <img class="logo2" src="./img/tools.png" onclick="openMenu()">
+   </center><a href="cookies.html">
+<h1 id="title">Forage</h1></a>
+
+
+<center>
+<div id="line"></line>
+
+<br>
+</center><br><br><br><br>
+<input id="text5" autocomplete="on" type="text" name="input" value="" placeholder="" list="categories" onchange="search()"></input>
+  <datalist id="categories"></datalist>
+
+  <button type="submit" value="searchBtn" onclick="search()"><img id="tri" src="./img/arr.png"></button>
+<center>
+
+
+
+<div id="contence"></div><br><br>
+<div id="line2">
+<br><br><br>
+</center><br>
+<input id="text5" autocomplete="on" type="text" name="input" value="" placeholder="" list="categories" onchange="search()"></input>
+  <datalist id="categories"></datalist>
+
+  <button type="submit"  value="searchBtn" onclick="search()"><img id="tri" src="./img/arr.png"></button>
+<center>
+
+  <button id="bu3" onclick="prevPage()"><h1>Back</button>
+  <button id="bu2" onclick="nextPage()"><h1>Next</h1></button>
+  
+
+
+
+</body>
+
+
+<script>
+
+
+
+
+
+function openMenu() {
+
+	$("#menu-panel").css("opacity", 1);
+	$("#menu-panel").css("z-index", 9999999999);
+	$("#menu-panel").addClass("bringToTop");
+
+}
+
+
+
+function closeMenu() {
+
+
+	console.log("close menu");
+
+
+	$("#menu-panel").css("opacity", 0);
+	$("#menu-panel").css("z-index", 0);
+	$("#menu-panel").removeClass("bringToTop");
+
+}
+
+closeMenu();
+
+setTimeout(function() {
+	$("#menu-panel").removeClass("startInvisible");	
+}, 1750)
+
+var numberOfpages = 0;
+var recepies = [];
+
+
+
+function search() {
+
+  var matchString = $("#text5").val();
+
+
+  var data = _.filter(recepies, function(recpie) {
+
+        var re = new RegExp(matchString,"g");
+
+        if(recpie.Method.match(re)) return true;
+        if(recpie.description.match(re)) return true;
+        if(recpie.ingredients.match(re)) return true;
+        if(recpie.name.match(re)) return true;
+  })
+
+
+  // this checks if there is only one result, if so, it goes straight to that recepie
+  if(data.length == 1) {
+    window.location.href = "/rec.html?id=" + data[0].id;
+  }
+
+  console.log("change", matchString, data);
+
+
+
+  //insertParam("search", $("#text5").val()); 
+
+  //insertParam("page", 1); 
+
+  $('#contence').html("");
+
+  var htmlsegment = "";
+  var resultsPerPage = 10; 
+
+  numberOfpages = Math.floor(data.length / resultsPerPage);
+  console.log("number of pages", numberOfpages)
+
+  var startPos = 0;
+
+  var endPos = data.length;
+
+  if(data.length > 5) {
+  	endPos = 5;
+  }
+
+  for(var i = startPos; i < endPos; i++) {  
+
+    var dot= "";
+
+    if (data[i].name.length > 22) dot = "...Read More"
+
+    var dot2= "";
+
+    if (data[i].name.length > 22) dot2 = "..." 	
+
+        var bit = '<div class="icon1" >'+
+
+        '<a href="/rec.html?id='+data[i].id+'">'+
+        '<img class="imgic" src="'+ data[i].img +'">'+
+        '<br><p class="typeic">'+ data[i].name.substr(0,22) + dot2 +'</p>'+
+        '<p class="typeic2">Ingredience:</p><br><br>'+
+        '<p class="typeic3">' +data[i].ingredients.substr(0,120)+ dot +
+        '</p><br>'+
+        '<img class="cookr" src="./logo/sh3.png">'+
+        '<img class="share2" src="./img/share.png">'+
+        '<img class="share1" src="./img/add2.png">'+
+        '</a>'+
+
+        '</div>'+
+        '<br><br>';
+
+        htmlsegment = htmlsegment + bit;
+  }
+
+  $('#contence').html(htmlsegment);
+
+
+}
+
+
+
+
+
+
+
+
+
+    function showRecepie(id) {
+      console.log("show recipes", id);
+    }
+
+
+
+
+
+
+  
+    $.get('/api/recipes', function(data) {
+
+        drawResults(data);
+    })
+
+function drawResults(data) {
+      console.log("recipes", data);
+
+
+      recepies = data;
+
+      console.log("this is what I got from the server for dropdown", data);
+      
+      var options = '';
+
+      for(var i = 0; i < data.length; i++) {  
+        options += '<option value="'+data[i].name+'"" />';
+      }
+
+
+      $('#categories').html(options)
+
+
+
+      $('#contence').html("");
+
+      var htmlsegment = "";
+      var resultsPerPage = 10;
+
+      numberOfpages = Math.floor(data.length / resultsPerPage);
+      console.log("number of pages", numberOfpages)
+
+      var startPos = page * resultsPerPage;
+
+      for(var i = startPos; i < (startPos + resultsPerPage); i++) {  
+
+        var dot= "";
+
+        if (data[i].name.length > 22) dot = "..."
+
+            var bit = '<div class="icon1" >'+
+
+            '<a href="/rec.html?id='+data[i].id+'">'+
+            '<img class="imgic" src="'+ data[i].img +'">'+
+            '<p class="typeic">'+ data[i].name.substr(0,22) + dot +'</p>'+
+            '<p class="typeic2">Ingredience:</p><br><br>'+
+            '<p class="typeic3">' +data[i].ingredients.substr(0,126)+ dot +
+            '</p><br>'+
+            '<img class="cookr" src="./logo/sh3.png">'+
+            '<img class="share2" src="./img/share.png">'+
+            '<img class="share1" src="./img/add2.png">'+
+            '</a>'+
+
+            '</div>'+
+            '<br><br>';
+
+
+            htmlsegment = htmlsegment + bit;
+
+
+
+      }
+
+      $('#contence').html(htmlsegment);
+
+
+
+
+}
+
+
+
+
+var QueryString = function () {
+  // This function is anonymous, is executed immediately and 
+  // the return value is assigned to QueryString!
+  var query_string = {};
+  var query = window.location.search.substring(1);
+  var vars = query.split("&");
+  for (var i=0;i<vars.length;i++) {
+    var pair = vars[i].split("=");
+        // If first entry with this name
+    if (typeof query_string[pair[0]] === "undefined") {
+      query_string[pair[0]] = decodeURIComponent(pair[1]);
+        // If second entry with this name
+    } else if (typeof query_string[pair[0]] === "string") {
+      var arr = [ query_string[pair[0]],decodeURIComponent(pair[1]) ];
+      query_string[pair[0]] = arr;
+        // If third or later entry with this name
+    } else {
+      query_string[pair[0]].push(decodeURIComponent(pair[1]));
+    }
+  } 
+  return query_string;
+}();
+
+
+var page = 1;
+
+if(!QueryString.page) { 
+
+  insertParam("page", page); 
+
+} else {
+
+  page = parseInt(QueryString.page);
+
+}
+
+// pagination
+function nextPage() {
+
+
+  if(page == numberOfpages) return;
+
+  page = page + 1;
+  console.log("next", page);
+  insertParam("page", page);
+}
+
+// pagination
+function prevPage() {
+
+  if(page == 0) return;
+
+  page = page - 1;
+  console.log("prev", page);
+  insertParam("page", page);  
+}
+
+
+function insertParam(key, value)
+{
+    key = encodeURI(key); value = encodeURI(value);
+
+    var kvp = document.location.search.substr(1).split('&');
+
+    var i=kvp.length; var x; while(i--) 
+    {
+        x = kvp[i].split('=');
+
+        if (x[0]==key)
+        {
+            x[1] = value;
+            kvp[i] = x.join('=');
+            break;
+        }
+    }
+
+    if(i<0) {kvp[kvp.length] = [key,value].join('=');}
+
+    //this will reload the page, it's likely better to store this until finished
+    document.location.search = kvp.join('&'); 
+}
+
+
+
+
+
+
+
+  </script>
+
+
+
+
+<html>

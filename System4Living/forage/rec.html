@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>	
+
+<title>Forage</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+<style>
+
+body {background-color: #fbf1eb;}
+
+.logo {position: relative;    width: 15%;  top: 55px;      padding-right: 40px;  padding-left: 40px;   }
+.logo21 {position: relative;  width: 16%;  top: 55px;      padding-right: 40px;  padding-left: 40px;   }
+.logo3 {position: relative;   width: 15%;  top: 55px;      padding-right: 40px;  padding-left: 40px;   }
+.logo4 {position: relative;   width: 13%;  top: 55px;      padding-right: 40px;  padding-left: 40px;  }
+
+
+.cookr{  width: 10%;}
+.typeic {font-size: 60px!important; color: #000;}
+.typeic2 {font-size: 45px!important; color: #000;}
+.typeic3 {font-size: 50px!important; color: #000; width: 90%}
+.share1{    
+    width: 5%;
+    }
+
+.share2{   
+    width: 8%;
+   }
+.logo2 {position: relative; top: 550px; width: 30%;}
+
+form {position: relative; top: 0px; }
+
+input {width: 400px; height: 40px;}
+
+@font-face {
+font-family: odin;
+src: url("./odin.otf") format("opentype");
+}
+
+
+
+p {font-size: 35pt; font-family: odin; color: #fff; position: relative;
+    top: -10px;}
+a {font-size: 35pt; font-family: odin; color: #fff; text-decoration: none; }
+
+#text5
+{
+background: #fff;
+color: #000;
+width:85%;
+height: 60px;
+padding: 6px 15px 6px 35px;
+border-radius: 10px;
+box-shadow: 0 1px 0 #ccc inset;
+transition:500ms all ease;
+}
+
+
+#text6
+{
+background: #fff;
+color: #000;
+width:85%;
+height: 260px;
+padding: 6px 15px 6px 35px;
+border-radius: 10px;
+box-shadow: 0 1px 0 #ccc inset;
+transition:500ms all ease;
+}
+
+
+
+button
+{
+background:  #eb3433;
+color: #ccc;
+width:90%;
+height: 80px;
+padding: 6px 15px 6px 35px;
+border-radius: 10px;
+box-shadow: 0 1px 0 #ccc inset;
+transition:500ms all ease;
+position: relative; top: 0px;
+font-family: sans-serif; font-size: 25px; color: #fff!important;
+font-family: odin;
+
+}
+
+
+input {width: 400px; height: 40px; font-size: 20pt; }
+
+
+
+
+#line {
+  background: green; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #ffd696 , #2e1b0e); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #ff0100 , #fddca6);; /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #ff0100 , #fddca6);); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #ff0100 , #fddca6);); /* Standard syntax */
+}
+/* The element to apply the animation to */
+#line {
+    width: 100%;
+    height: 4px;
+  
+    animation-"name": example;
+    animation-duration: 4s;
+
+        position: relative;
+    top: -70px;
+}
+
+.imgic {width: 90%; border-radius: 25px;}
+
+</style>
+</head>
+<body> <center>
+<a href="set.html"><img class="logo" src="./img/settings.png" ></img></a>
+  <a href="cookies.html"> <img class="logo21" src="./logo/sh.png"></img></a>
+     <a href="add.html"><img class="logo3" src="./img/new.png"></img></a>
+      <a href="idea.html"><img class="logo4" src="./img/bulb.png"></img><br><br></a>
+<br><br><br><br><br><br><br><br><br>
+<div id="line"><br><br><br><br>
+  <div id="contence"></div>
+
+
+<br>
+
+
+<br><br><br><br>
+
+</center>
+
+
+<script>
+    
+    $.get('/api/categories', function(data) {
+
+      console.log("this is what I got from the server", data);
+      
+
+      var options = '';
+
+      for(var i = 0; i < data.length; i++) {  
+        options += '<option value="'+data[i].name+'" />';
+      }
+
+
+      $('#categories').html(options)
+
+    })
+
+
+
+
+
+
+
+
+
+
+
+  
+    $.get('/api/recipe?id='+getParameterByName('id'), function(data) {
+
+      console.log("rechtfvfbchcfbnchfncncbfipes", data);
+
+      var htmlsegment = "";
+
+
+        console.log("----recipes", data[0]); 
+
+        var dot= "";
+
+
+var bit = '<div class="icon1" >'+
+'<p class="typeic">'+ data[0].name +'</p>'+
+'<img class="cookr" src="./logo/sh.png"><br><br>'+
+'<p class="typeic2">Ingredience:</p><br><br>'+
+'<p class="typeic3">' +data[0].ingredients +
+'</p><br>'+
+'<img class="imgic" src="'+ data[0].img +'"><br><br>'+
+'<p class="typeic3">' +data[0].Method +
+'<br><br><img class="share2" src="./img/share.png">'+
+'<img class="share1" src="./img/add2.png">'+
+'<br><br><br><br><div id="line">'+
+'<p><br><br><br>Created by: <a href="www.maverickmedia.org.uk">Maverick Media</a></p>'+
+
+'</div><br><br><br><br><br><br><br><br><br><br>'+
+'<br>';
+
+
+htmlsegment = htmlsegment + bit;
+
+
+
+      $('#contence').html(htmlsegment);
+
+    })
+
+
+
+
+
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+  </script>
+
+</body>
+
+<html>
