@@ -997,7 +997,9 @@ position: relative; top: -93px;
     top: 25px;
     left: 397px;}
 
-.bd {top: -126px}
+.bd {top: -126px;
+    font-size: 20pt;
+}
 
     .title888{font-size: 40pt;
     font-family: cool;
@@ -1006,7 +1008,12 @@ position: relative; top: -93px;
     top: -100px;
     max-width: 30%;
     left: 60px;}
-#ebbb{position: relative; top:-195px;     right: -50px;
+#ebbb{position: relative;
+    top: -133px;
+    font-family: cool;
+    right: -50px;
+    font-style: normal;
+    font-size: 30px;
 }
 
 #ratch {position: relative; top: -30px; color: #fff;}
@@ -1093,8 +1100,9 @@ font-size: 50px;
 .yemma {
         background-color: #615e5f;
     }
-.quirt{    top: -344px;
-    font-size: 30pt;}
+.quirt{       top: -300px;
+    font-size: 30pt;
+}
 .type1mill {
       position: relative;
     top: -462px;
@@ -1202,9 +1210,10 @@ font-size: 50px;
 
 }
 
-.squirt {    width: 90%;
+.squirt {      width: 100%;
     position: relative;
-    top: -300px;}
+    top: -208px;
+}
 /* ANIMATIONS
 ============================================================================= */
 
