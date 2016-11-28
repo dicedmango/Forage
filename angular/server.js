@@ -1,5 +1,4 @@
-const PORT=12345; 
-
+const PORT=1337; // hacker humour
 
 var express = require('express');
 var fs = require('fs');
@@ -25,12 +24,12 @@ recipes.forEach(function(d,i) {
 	d.id = i;
 });
 
-
+// get all users
 app.get('/api/users', function (req, res) {
 	res.send(users);
 });
 
-
+// get all recepies
 app.get('/api/recipes', function (req, res) {
 	res.send(recipes);
 });
@@ -62,12 +61,20 @@ app.post('/api/add', function (req, res) {
 	res.send('successfully added a recepie')
 });
 
-
+// get single recepie by id
 app.get('/api/recipe', function (req, res) {
 
 	console.log('req.query', req.query);
 	res.send([recipes[req.query.id]]);
 });
+
+app.get('/api/user', function (req, res) {
+
+	console.log('user req.query', req.query);
+
+	res.send([users[req.query.id]]);
+});
+
 
 
 

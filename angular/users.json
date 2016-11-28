@@ -1,17 +1,23 @@
 [
 	{
 		"name": "Alex",
+		"username": "alex",
 		"reputation": 300,
-		"img": "./img/pp.png"
+		"img": "./img/pp.png",
+		"bio": "I enjoy cooking"
 	},
 	{
 		"name": "Kasper",
+		"username": "kasper",
 		"reputation": 250,
-		"img": "./img/me.jpg"
+		"img": "./img/me.jpg",
+		"bio": "feed me pizza"
 	},
 	{
 		"name": "Jamie Oliver",
+		"username": "jamie_oliver",
 		"reputation": 1500,
-		"img": "./img/Jamie-Social.jpg"
+		"img": "./img/Jamie-Social.jpg",
+		"bio": "im jamie oliver"
 	}
 ]
