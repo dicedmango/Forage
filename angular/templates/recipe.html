@@ -10,8 +10,8 @@
               <center>
                   <p class="typeic">{{ currentRecepie.name }}</p>
                   <p class="typeic2">Ingredience:</p>
-                  <p class="typeic3">{{ currentRecepie.ingredients }}</p>
-                  <p class=""><a href="#/user?username=jamie_oliver">Jamie Oliver</p>
+                  <p class="typeic3">{{ currentRecepie.ingredients }}</p><br>
+                  <p class=""><a ng-href="#/user?username={{ currentRecepie.user }}">{{ currentRecepie.user }}</p><br>
                   <img class="cookr" src="./logo/sh69.png">
               </center>
 
