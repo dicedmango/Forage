@@ -2,8 +2,7 @@ const PORT=1337; // hacker humour
 
 var express = require('express');
 var fs = require('fs');
-var bodyParser = require('body-parser');
-var _ = require('underscore');
+var bodyParser = require('body-parser')
 
 var app = express();
 
@@ -73,9 +72,7 @@ app.get('/api/user', function (req, res) {
 
 	console.log('user req.query', req.query);
 
-	var user = _.findWhere(users, { username: req.query.username })
-
-	res.send(user);
+	res.send([users[req.query.id]]);
 });
 
 

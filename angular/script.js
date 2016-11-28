@@ -200,17 +200,6 @@ app.controller('DUKCtrl', ['$scope', '$http', '$location', function($s, $http, $
 app.controller('UserCtrl', ['$scope', '$http', '$location', function($s, $http, $location) {
 
 	$s.pageClass = 'user-page';
-	console.log("user controller");
-
-	$s.userDetails;
-
-	// get user details from username
-    $.get('/api/user?username='+getParameterByName('username'), function(data) {
-
-		console.log("user", data);
-		$s.userDetails = data;
-    });
-
 
 }]);
 
