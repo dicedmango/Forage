@@ -257,6 +257,7 @@ input {
     position: relative;
     width: 15%;
     left: 300px;
+        top: 0px;
     padding-right: 30px;
 }
 .image-upload > input {
@@ -275,6 +276,25 @@ input {
     text-align: left;
     left: 90px;
 }
+
+#title77 {
+    font-size: 40pt;
+    font-family: cool;
+    color: #ddbf5e;
+    position: relative;
+    top: -70px;
+    max-width: 50%;
+    text-align: left;
+    left: 91px
+}
+
+#line78787 {background: #615e5f!important; 
+    height: 10px;
+    position: relative;
+    top: -145px;
+    width: 100%;}
+
+
 .title2 {
     font-size: 40pt;
     font-family: cool;
@@ -349,8 +369,8 @@ input {
     top: 0px;
     left: -300px
 }
-#file-input {
-    font-size: 35pt;
+#file-input77 {
+    font-size: 0pt;
     font-family: min;
 }
 #foot {
@@ -372,6 +392,20 @@ input {
     width: 20%;
     position: relative;
     left: 720px;
+}
+
+#bu3777 {
+    width: 20%;
+    position: relative;
+    left: -135px;
+    top: -30px;
+}
+#bu2777 {
+    width: 20%;
+    position: relative;
+    left: 720px;
+      top: -30px;
+}
 }
 .imgic {
     width: 100%;
@@ -1054,7 +1088,7 @@ visibility: hidden;}
 
 
 .logo2454545     {position: relative;
-        top: 861px;
+        top: 987px;
     width: 10%;
     right: -230px;}
 
@@ -1186,16 +1220,16 @@ font-size: 50px;
     right: -186px;
 }
 
-#lh5555556 {     font-size: 100px;
+#lh5555556 {  font-size: 100px;
     color: #ddbf5e;
     position: relative;
-    top: -60px;
+    top: 15px;
     left: -30px;}
 
-#mm5555556 {position: relative;
-   top: -110px;
+#mm5555556 {    position: relative;
+    top: 30px;
     max-width: 100%;
-    left:-30px;
+    left: -30px;
 }
 
 .type5555556
@@ -1617,3 +1651,8 @@ font-size: 50px;
   top: 39px;
   left: 8px;
 }
+
+.logo2343 {    position: relative;
+    width: 15%;
+    
+    right: -5px;}
