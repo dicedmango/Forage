@@ -1,0 +1,19 @@
+<div class="recipe-page" ng-if="currentRecepie">
+    <ng-include src="'./templates/headerBar.html'"></ng-include>
+
+      <img class="imgic238" ng-src="{{currentRecepie.img}}"><br>
+
+      <div class="hizz">
+          <img class="share2" src="./img/share.png">
+          <img class="share1" src="./img/add2.png">
+
+              <center>
+                  <p class="typeic">{{ currentRecepie.name }}</p>
+                  <p class="typeic2">Ingredience:</p>
+                  <p class="typeic3">{{ currentRecepie.ingredients }}</p><br>
+                  <p class=""><a ng-href="#/user?username={{ currentRecepie.user }}">{{ currentRecepie.user }}</p><br>
+                  <img class="cookr" src="./logo/sh69.png">
+              </center>
+
+      </div>
+</div>

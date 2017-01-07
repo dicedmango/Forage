@@ -1,0 +1,32 @@
+[
+	{
+		"name": "Alex",
+		"myRecipes": [],
+		"favoriteRecepies": [],
+		"rating": 40,
+		"username": "alex",
+		"reputation": 300,
+		"img": "./img/pp.png",
+		"bio": "When I am not baking I like to take influence from different cultures and fuse them in my cooking. I like to cook..."
+	},
+	{
+		"name": "Kasper",
+		"myRecipes": [],
+		"favoriteRecepies": [],
+		"rating": 15,
+		"username": "kasper",
+		"reputation": 250,
+		"img": "./img/me.jpg",
+		"bio": "feed me pizza"
+	},
+	{
+		"name": "Jamie Oliver",
+		"myRecipes": [],
+		"favoriteRecepies": [],
+		"rating": 120,
+		"username": "jamie_oliver",
+		"reputation": 1500,
+		"img": "./img/Jamie-Social.jpg",
+		"bio": "im jamie oliver"
+	}
+]
