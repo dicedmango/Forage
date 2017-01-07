@@ -1,3 +1,8 @@
+
+
+
+
+
 function goBack() { window.history.back(); }
 
 function getParameterByName(name, url) {

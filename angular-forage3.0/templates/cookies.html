@@ -1,0 +1,31 @@
+ 
+
+<div class="cookies-page body2">
+	<ng-include src="'./templates/headerBar.html'"></ng-include>
+
+	<div ng-repeat="recepie in allRecipes">
+			<center>
+<center>
+					<h2 class="title-dish">{{ recepie.name }}<h2><br>
+			
+					<p class="description">{{ recepie.ingredients }}</p>
+				
+				</center><br><br>
+
+				<img class="timeline-img" ng-src="{{recepie.img}}"><br>
+
+	
+			<img class="add-cookbook" src="./img/add2.png">
+			<img class="share-rec" src="./img/share2.png">
+
+
+
+			<a ng-href="#/rec?id={{recepie.id}}">
+				
+			</a>
+		</div>
+	</div>
+
+	<button class="button238945" id="bu2777" onclick="nextPage()"><h1>Back</h1></button>
+	<button class="button238945" id="bu3777" onclick="prevPage()"><h1>Next</h1></button>
+</div>
