@@ -87,7 +87,7 @@ a {
 } 
 
 
-.title-position {position: absolute; bottom: 120px; width: 200px; left: 50px;  color: #476a30; font-size: 100px; }
+.title-position {position: absolute; bottom: 120px; width: 200px; left: 50px;  color: #6a6d52; font-size: 100px; }
 
 
 .title-position2 {position: absolute; bottom: 50px; width: 200px; left: 53px; color: #4a494e; font-size: 60px; }
@@ -231,28 +231,6 @@ a {
 
 
 
-
-/*Hamburger*/
-
-
-
-
-/*Menu*/
-
-
-
-.menu-title {color: #f0e1ce!important;  position: relative; left: 50px; line-height: 250px; top: 100px; text-align: left; font-size: 60px; z-index: 3;} 
-
-
-
-
-
-
-
-
-
-
-
 /* Timeline */
 
 .pattern {position: fixed; z-index:1; width: 100%; height: 100%;}
@@ -288,9 +266,37 @@ a {
 
 
 
-.title-dish {
+.title-dish:nth-child(1n) {
 
-color: #838488;
+color: #af8c90;
+    position: relative;
+    max-width: 90%;
+    text-align: center;
+    line-height: 80px;
+    font-size: 20px;
+    text-transform: capitalize;
+
+}
+
+.title-dish:nth-child(2n)
+
+{
+
+color: #af8c90;
+    position: relative;
+    max-width: 90%;
+    text-align: center;
+    line-height: 80px;
+    font-size: 20px;
+    text-transform: capitalize;
+
+}
+
+.title-dish:nth-child(3n)
+
+{
+
+color: #6a6d52;
     position: relative;
     max-width: 90%;
     text-align: center;
@@ -321,14 +327,15 @@ color: #838488;
     width: 90%;
     font-weight: normal;
     text-transform: capitalize;
-    font-style: italic;
+    font-style: bold;
+    text-decoration: underline;
 }
 
 .description3 {
     font-size: 12px;
     position: relative;
     text-align: left;
-    color: #476a30;
+    color: #af8c90;
     font-family: min;
     width: 90%;
     font-weight: normal;
@@ -385,7 +392,17 @@ background:  #faf7f2;
 
 /* Add */
 
+.file-input77 {  
 
+    font-size: 0pt!important;
+    position: relative;
+    top: -120px;
+    left: -60px;
+    width: 15%;
+    height: 100px;
+    z-index: 9;
+
+  }
 
 
 .add-title
@@ -396,7 +413,7 @@ color: #838488;
     max-width: 90%;
     text-align: center;
     line-height: 80px;
-    font-size: 60px;
+    font-size: 40px;
     text-transform: capitalize;
     width: 90%;
     padding-top: 100px;
@@ -408,11 +425,10 @@ color: #838488;
 .add-photo { 
 
 
-
-    position: relative;
+position: relative;
     width: 15%!important;
-         z-index:2 ;
-
+    z-index: 2;
+    right: -90px
 
 
 
@@ -476,23 +492,23 @@ position: relative;
 /* Profile */
 
 
-.pp {position: relative; width: 30%; border-radius: 1000px;}
+.pp {position: relative; width: 30%; border-radius: 1000px; z-index: 2;}
 
 
-.user-name {color: #838488; font-size: 40px; padding-top: 100px;}
+.user-name {color: #6a6d52; font-size: 60px; padding-top: 100px; z-index: 3;}
 
 
-.title-28 {color: #838488; font-size: 40px; padding-top: 100px;}
+.title-28 {color: #838488; font-size: 40px; padding-top: 100px; z-index: 2;}
 
-.title-29 {color: #af8c90; font-size: 20px; padding-top: 100px;}
+.title-29 {color: #af8c90; font-size: 20px; padding-top: 100px; z-index: 2;}
 
-.title-30 {color: #6a6d52; font-size: 20px; padding-top: 100px;}
+.title-30 {color: #6a6d52; font-size: 20px; padding-top: 100px; z-index: 2;}
 
-.title-31 {color: #838488; font-size: 20px; padding-top: 100px; padding-left: 100px;}
+.title-31 {color: #838488; font-size: 20px; padding-top: 100px; padding-left: 100px; z-index: 2;}
 
 .rec-img {width: 90%;}
 
-.pd {text-transform: none; }
+.pd {text-transform: none;  z-index: 2; z-index: 2;}
 
 
 .profile-colour1  {background-color: #f0e5ed; width: 100%;}
@@ -506,26 +522,131 @@ position: relative;
 }
 
 
-.add-rec {color: #6a6d52;}
+.add-rec {color: #6a6d52; z-index: 2;}
 
 
 
 
 
 
-/* Profile */
+/* Did You Know */
 
 
-.duk {color: #af8c90; padding-left: 50px; position: relative;top: -20px;}
+.duk {color: #af8c90; padding-left: 50px; position: absolute;top: 50px; font-size: 50px;}
 
 
-.duk2 {padding-left: 50px; text-transform: none;}
+.duk2 {padding-left: 50px; text-transform: none; }
 
 
 .duk3 {padding-left: 50px; font-style: italic; }
 
+.duk-shroom {width: 40%; position: absolute; bottom: 0px; right: 50px;}
+
+
+
+/*Hamburger*/
 
 
 
 
 
+/* Menu */
+
+
+
+
+.menu-title {color: #f0e1ce!important;  position: relative; left: 50px; line-height: 250px; top: 100px; text-align: left; font-size: 60px; z-index: 3;} 
+
+
+
+// reset
+body {
+  margin: 10px;
+  text-align: center;
+  font-size: 13px;
+}
+
+// style
+.search-box {
+  position: relative;
+  display: inline-block;
+  border: 2px solid #000;
+  border-radius: 20px;
+ 
+  input[type="text"] {
+    -webkit-appearance: none;
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 5px;
+    border: none;
+    border-radius: 20px;
+    box-sizing: border-box;
+    box-shadow: none;
+    z-index: 1;
+    transition: all 0.5s ease-out 0.5s;
+    outline: none;
+ 
+    &:focus {
+      width: 280px;
+      height: 30px;
+      margin-right: 20px;
+      transition: all 0.5s ease-out 0s;
+      
+      & + span {     
+        &::before {
+          height: 14px;
+          margin: -22px 0 0 -15px;
+          transition: all 0.2s ease-out 0.5s;
+        }
+        
+        &::after {
+          visibility: visible;
+          margin: -22px 0 0 -15px;
+          transition: all 0.2s ease-out 0.7s;
+        }
+      }
+    }
+  }
+ 
+  span {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    z-index: 10;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 2px;
+      height: 8px;
+      margin: -4px 0 0 0;
+      background-color: #000;
+      transform: rotate(-45deg);
+      transition: all 0.2s ease-out 0.2s;
+    }
+
+    &::after {
+      content: '';
+      visibility: hidden;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 2px;
+      height: 14px;
+      margin: -36px 0 0 5px;
+      background-color: #000;
+      transform: rotate(45deg);
+      transition: all 0.2s ease-out 0s;
+    }
+  }
+}
