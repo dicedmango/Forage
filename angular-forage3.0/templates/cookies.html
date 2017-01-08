@@ -1,11 +1,22 @@
- 
+
 
 <div class="cookies-page body2">
-	<ng-include src="'./templates/headerBar.html'"></ng-include>
 
-	<div ng-repeat="recepie in allRecipes">
+
+<img class="pattern"src="./img/linin.png">
+
+
+	<div class="header-position"> <ng-include src="'./templates/headerBar.html'"></ng-include></div>
+
+
+
+
+
+
+	<div ng-repeat="recepie in allRecipes" class="rec-timeline">
 			<center>
-<center>
+
+				<br><br>
 					<h2 class="title-dish">{{ recepie.name }}</h2>
 
 
@@ -15,11 +26,11 @@
 
 			<img class="add-cookbook" src="./img/add2.png">
 			<img class="share-rec" src="./img/share2.png">
-<br><br><br><br><br><br>
-<br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
+					<p class="description2">Description:</p><br><br>
 					<p class="description">{{ recepie.ingredients }}</p>
-				<br><br><br><br><br><br><br><br><br>
+				<br><br><br><br><br><br><br><br><br><br><br>
 
 
 				<img class="mushroom-rating" src="./logo/shoom4.png" >
@@ -31,7 +42,6 @@
 
 
 
-				<br><br><br><br><br>
 				</center>
 
 				
