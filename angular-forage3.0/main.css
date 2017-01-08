@@ -346,21 +346,32 @@ left: 35%;
      font-size: 40px;}
 
 
-/*Hamburger*/
+/*Iconsr*/
 
-.hamburger {    width: 7%;
+.hamburger {    width: 17%;
     position: absolute;
     top: 54px;
-    right: 50px;
+    right: -480px;
     z-index: 9;
 }
+
 
 .hamburger2 {width: 7%;
     position: absolute;
     top: 65px;
     left: 50px;}
 
+.hamburger3 {    width: 7%;
+    position: absolute;
+    top: 54px;
+    right: 50px;
+    z-index: 9;
+}
 
+
+
+
+/*Hamburger*/
 
 
 
@@ -368,8 +379,8 @@ left: 35%;
 /*Menu*/
 
 
-.menu-text {line-height: 60px; color: #faf7f2; position: relative; left: 50px; }
-.menu-title {color: #f0e1ce!important;  position: relative; left: 50px;} 
+
+.menu-title {color: #f0e1ce!important;  position: relative; left: 50px; line-height: 250px; top: 100px; text-align: left;} 
 
 
 
@@ -383,7 +394,7 @@ left: 35%;
 
 /* Timeline */
 
-.pattern {position: fixed; z-index: ; width: 100%; height: 100%;}
+.pattern {position: fixed; z-index:0; width: 100%; height: 100%;}
 
 
 
@@ -391,24 +402,26 @@ left: 35%;
     position: relative;
     width: 90%;
         top: 0px;
+        z-index: 0;
 }
 
 
 .add-cookbook {
     position: relative;
-    width: 10%;
-    left: 40%;
+    width: 8%;
+    left: 45%;
     top: -100px;
+    z-index:2 ;
  
 }
 
 
 .share-rec {
    position: relative;
-    width: 10%;
-    right: 40%;
+    width: 8%;
+    right: 43%;
     top: -100px;
- 
+     z-index:2 ;
  
 }
 
@@ -423,6 +436,7 @@ color: #838488;
     line-height: 80px;
     font-size: 20px;
     text-transform: capitalize;
+
 }
 
 
@@ -470,21 +484,15 @@ color: #838488;
 }
 
 
-
-
-
-
-.rec-timeline:nth-child(even) {
-    background:  #eaefea;
+.rec-timeline:nth-child(1n) {
+background:  #f0e5ed;
 }
-
-.rec-timeline:nth-child(odd) {
-    background:#faf7f2;
+.rec-timeline:nth-child(2n) {
+background:  #eaefea;
 }
-
-
-
-
+.rec-timeline:nth-child(3n) {
+background:  #faf7f2;
+}
 
 
 
@@ -819,15 +827,7 @@ button {
 .chii {
     text-align: left;
 }
-.menu-title {
-    font-size: 40pt;
-    font-family: cool;
-    color: #476a30;
-    position: relative;
-    top: -10px;
-    max-width: 90%;
-    text-align: left;
-}
+
 .logo3 {
     position: relative;
     width: 10%;
@@ -1121,15 +1121,6 @@ button {
     top: -950px;
     left: 400px;
 }
-.menu-title {
-    font-size: 40pt;
-    font-family: cool;
-    color: #476a30;
-    position: relative;
-    top: -10px;
-    max-width: 90%;
-    text-align: left;
-}
 .logo3 {
     position: relative;
     width: 10%;
@@ -1222,15 +1213,8 @@ button {
     position: relative;
     left: 30px;
 }
-.menu-title {
-    font-size: 40pt;
-    font-family: cool;
-    color: #476a30;
-    position: relative;
-    top: -10px;
-    max-width: 80%;
-    text-align: left;
-}
+
+
 .logo69 {
     position: relative;
     width: 40%;
