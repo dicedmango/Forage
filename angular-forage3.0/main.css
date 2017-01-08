@@ -606,6 +606,9 @@ position: relative;
 
 .title-30 {color: #6a6d52; font-size: 20px; padding-top: 100px;}
 
+.title-31 {color: #838488; font-size: 20px; padding-top: 100px; padding-left: 100px;}
+
+.rec-img {width: 90%;}
 
 .pd {text-transform: none; }
 
@@ -614,8 +617,14 @@ position: relative;
 .profile-colour2  {background-color: #eaefea; width: 100%;}
 
 
+.profile-shroom {
+    position: relative;
+    width: 30%; top: 15px;
+    
+}
 
 
+.add-rec {color: #6a6d52;}
 
 
 
@@ -711,13 +720,7 @@ position: relative;
     top: 15px;
     width: 100%;
 }
-.logo697 {
-    position: relative;
-    width: 9%;
-    left: 286px;
-    padding-right: 30px;
-    top: -83px;
-}
+
 .back33 {
     width: 13%;
     position: relative;
