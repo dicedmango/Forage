@@ -38,6 +38,7 @@ body {
 
 h1       {
           font-family: aron;
+          z-index: 2;
         
           
           }
@@ -45,13 +46,15 @@ h1       {
 h2       {
           font-family: aron;
          
-          
+            z-index: 2;
+        
           }
 
 .no-caps {text-transform: none; padding-left: 50px; width: 90%; font-size: 15px;}
 
 
-p {
+p {  z-index: 2;
+        
 
     text-align: left;
     color: #46454d;
@@ -73,10 +76,12 @@ a {
 .title-index {position: absolute; top: 20px; left: 20px;}
 
 
+
 .index-background {background: url(./img2/chopping.jpg);
     background-size: 100% ;
     background-repeat: no-repeat;
     height: 1750px;
+
 
 
 } 
@@ -95,7 +100,8 @@ a {
 
 /* Login */
 
-.input-position {position: absolute; left: -0px; width: 80%;}
+.login-page-background {background-color: #4463a1 ;width: 100%; height: 1800px;
+}
 
 
 /* Input */
@@ -103,221 +109,74 @@ a {
 
 
 
+.size-position {width: 80%; height: 50px; font-size: 30px;}
 
 
-.input {
-  position: relative;
-  z-index: 1;
-  display: inline-block;
-  margin: 1em;
-  max-width: 350px;
-  width: calc(100% - 2em);
-  vertical-align: top;
-top: 150px;
-left: 35%;
+.size-position2 {width: 80%; height: 50px; font-size: 30px; color: #ffffff;}
 
+
+
+.login-form { 
+
+    & input[type="email"], input[type="password"],  {
+    
+        border: 1px solid #314d89;
+        outline: none;
+        padding: 12px 20px;
+        color: #afafaf;
+        font-weight: 400;
+      font-family: 'Lato', sans-serif;
+    cursor:pointer;
+    }
+
+    & input[type="email"] {
+        border-bottom: none; 
+        border-radius: 4px 4px 0 0;
+        padding-bottom: 13px;
+        box-shadow: 0 -1px 0 #E0E0E0 inset,
+                    0 1px 2px rgba(0, 0, 0, 0.23) inset;
+    }
+
+    & input[type="password"] {
+        border-top: none; 
+        border-radius: 0 0 4px 4px;
+        box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.23) inset,
+                    0 1px 2px rgba(255, 255, 255, 0.1);
+    }
+
+    & input[type="submit"] {
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+        background: rgb(224,224,224);
+        background: -moz-linear-gradient(top,  rgba(224,224,224,1) 0%, rgba(206,206,206,1) 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(224,224,224,1)), color-stop(100%,rgba(206,206,206,1)));
+        background: -webkit-linear-gradient(top,  rgba(224,224,224,1) 0%,rgba(206,206,206,1) 100%);
+        background: -o-linear-gradient(top,  rgba(224,224,224,1) 0%,rgba(206,206,206,1) 100%);
+        background: -ms-linear-gradient(top,  rgba(224,224,224,1) 0%,rgba(206,206,206,1) 100%);
+        background: linear-gradient(to bottom,  rgba(224,224,224,1) 0%,rgba(206,206,206,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e0e0', endColorstr='#cecece',GradientType=0 );
+        display: block;
+        margin: 20px auto 0 auto;
+        width: 100%;
+        border: none;
+        border-radius: 3px;
+        padding: 8px;
+        font-size: 17px;
+        color: #636363;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.45);
+        font-weight: 700;
+        box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.17),
+                    0 1px 0 rgba(255, 255, 255, 0.36) inset;
+    &:hover {
+      background:#DDD; 
+    }
+    &:active {
+      padding-top: 9px;
+      padding-bottom: 7px;
+      background:#C9C9C9; 
+    }
+    }
 }
-
-.input__field {
-  position: relative;
-  display: block;
-  float: right;
-  padding: 0.8em;
-  width: 60%;
-  border: none;
-  border-radius: 0;
-  background: #f0f0f0;
-  color: #aaa;
-  font-weight: 400;
- font-family: aron!important;
-  -webkit-appearance: none; /* for box shadows to show on iOS */
-  font-size: 60px;
-}
-
-
-
-
-.input__field:focus {
-  outline: none;
-}
-
-.input__label {
-  font-family: aron!important;
-  display: inline-block;
-  float: right;
-  padding: 0 1em;
-  width: 40%;
-  color: #696969;
-  font-weight: bold;
-  font-size: 60px;
-  -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.input__label-content {
-  position: relative;
-  display: block;
-  padding: 1.6em 0;
-  width: 100%;
-
-}
-
-.graphic {
-  position: absolute;
-  top: 0;
-  left: 0;
-  fill: none;
-}
-
-.icon {
-  color: #ddd;
-  font-size: 150%;
-}
-
-
-.input--chisato {
-  padding-top: 1em;
-}
-
-.input__field--chisato {
-  width: 190%;
-  padding: 0.8em 0.5em;
-  background: transparent;
-  border: 5px solid;
-  color: #476a30;
-   height: 10px;
- 
-}
-
-
-
-
-.input__label--chisato {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  text-align: left;
-  overflow: hidden;
-  padding: 0;
-  pointer-events: none;
-  -webkit-transform: translate3d(0, 3em, 0);
-  transform: translate3d(0, 3em, 0);
-}
-
-.input__label-content--chisato {
-
-  font-weight: 400;
-  color: #e7e3d8;
-  font-family: aron!important;
-  font-weight: bold;
-  position: relative;
-
-}
-
-.input__label-content--chisato::after {
-  content: attr(data-content);
-  position: absolute;
-  top: -210%;
-  left: 80px;
-  color: #46454d;
-  font-weight: 800;
-  font-size: 40px;
-  z-index: 99;
-  height: 300px;
-
-
- 
-}
-
-.input__field--chisato:focus,
-.input--filled .input__field--chisato {
-  border-color: #476a30;
-}
-
-.input__field--chisato:focus + .input__label--chisato,
-.input--filled .input__label--chisato {
-  -webkit-animation: anim-chisato-1 0.25s forwards;
-  animation: anim-chisato-1 0.25s forwards;
-}
-
-.input__field--chisato:focus + .input__label--chisato .input__label-content--chisato,
-.input--filled .input__label-content--chisato {
-  -webkit-animation: anim-chisato-2 0.25s forwards ease-in;
-  animation: anim-chisato-2 0.25s forwards ease-in;
-}
-
-@-webkit-keyframes anim-chisato-1 {
-  0%, 70% {
-    -webkit-transform: translate3d(0, 3em, 0);
-    transform: translate3d(0, 3em, 0);
-  }
-  71%, 100% {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@-webkit-keyframes anim-chisato-2 {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  70%, 71% {
-    -webkit-transform: translate3d(0, 125%, 0);
-    transform: translate3d(0, 125%, 0);
-    opacity: 0;
-    -webkit-animation-timing-function: ease-out;
-  }
-  100% {
-    color: transparent;
-    -webkit-transform: translate3d(0, 200%, 0);
-    transform: translate3d(0, 200%, 0);
-  }
-}
-
-@keyframes anim-chisato-1 {
-  0%, 70% {
-    -webkit-transform: translate3d(0, 3em, 0);
-    transform: translate3d(0, 3em, 0);
-  }
-  71%, 100% {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes anim-chisato-2 {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  70%, 71% {
-    -webkit-transform: translate3d(0, 125%, 0);
-    transform: translate3d(0, 125%, 0);
-    opacity: 0;
-    -webkit-animation-timing-function: ease-out;
-  }
-  100% {
-    color: transparent;
-    -webkit-transform: translate3d(0, 200%, 0);
-    transform: translate3d(0, 200%, 0);
-  }
-}
-
-
-
-
-
-
-
-/* Main*/
-
 
 
 
@@ -396,7 +255,7 @@ left: 35%;
 
 /* Timeline */
 
-.pattern {position: fixed; z-index:0; width: 100%; height: 100%;}
+.pattern {position: fixed; z-index:1; width: 100%; height: 100%;}
 
 
 
@@ -465,6 +324,20 @@ color: #838488;
     font-style: italic;
 }
 
+.description3 {
+    font-size: 12px;
+    position: relative;
+    text-align: left;
+    color: #476a30;
+    font-family: min;
+    width: 90%;
+    font-weight: normal;
+    text-transform: capitalize;
+    font-style: italic;
+}
+
+
+
 
 
 .mushroom-rating{
@@ -495,7 +368,6 @@ background:  #eaefea;
 .rec-timeline:nth-child(3n) {
 background:  #faf7f2;
 }
-
 
 
 
@@ -639,10 +511,10 @@ position: relative;
 .duk {color: #af8c90; padding-left: 50px; position: relative;top: -20px;}
 
 
-.duk2 {padding-left: 50px;}
+.duk2 {padding-left: 50px; text-transform: none;}
 
 
-.duk3 {padding-left: 50px; font-style: italic;}
+.duk3 {padding-left: 50px; font-style: italic; }
 
 
 
