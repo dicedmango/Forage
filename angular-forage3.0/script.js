@@ -131,6 +131,7 @@ var app = angular.module('app', ['ngRoute', 'ngAnimate'])
 		.when('/cookies', { templateUrl: 'templates/cookies.html', controller: 'CookieCtrl' })
 		.when('/duk', { templateUrl: 'templates/duk.html', controller: 'DUKCtrl' })
 		.when('/user', { templateUrl: 'templates/user.html', controller: 'UserCtrl' })
+		.when('/tools', { templateUrl: 'templates/tools2.html' })
 		.otherwise({ redirectTo: '/' });
 }]);
 
