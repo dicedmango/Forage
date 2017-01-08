@@ -543,7 +543,7 @@ body {
 .search-box {
   position: relative;
   display: inline-block;
-  border: 2px solid #000;
+  border: 2px solid #46454d;
   border-radius: 20px;
  
   input[type="text"] {
