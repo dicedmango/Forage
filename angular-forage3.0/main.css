@@ -361,14 +361,16 @@ color: #46454d;
 
 
 .rec-timeline:nth-child(1n) {
-background:  #f0e5ed;
+background:   #f0ecef;
 }
 .rec-timeline:nth-child(2n) {
-background:  #d8e2d8;
+background:  #e7f0e7;
 }
 .rec-timeline:nth-child(3n) {
 background:  #faf7f2;
 }
+
+
 
 
 
@@ -497,7 +499,7 @@ position: relative;
 .pd {text-transform: none;  z-index: 2; z-index: 2;}
 
 
-.profile-colour1  {background-color: #f0e5ed; width: 100%;}
+.profile-colour1  {background-color:  #f0ecef; width: 100%;}
 .profile-colour2  {background-color: #eaefea; width: 100%;}
 
 
