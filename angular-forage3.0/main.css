@@ -67,7 +67,7 @@ p {  z-index: 2;
 
 
 a {
-    text-decoration: none;
+    text-decoration: none!important;
 }
 
 /*Index*/
@@ -266,43 +266,15 @@ a {
 
 
 
-.title-dish:nth-child(1n) {
+.title-dish{
 
-color: #af8c90;
+color: #46454d;
     position: relative;
     max-width: 90%;
     text-align: center;
     line-height: 80px;
     font-size: 20px;
-    text-transform: capitalize;
-
-}
-
-.title-dish:nth-child(2n)
-
-{
-
-color: #af8c90;
-    position: relative;
-    max-width: 90%;
-    text-align: center;
-    line-height: 80px;
-    font-size: 20px;
-    text-transform: capitalize;
-
-}
-
-.title-dish:nth-child(3n)
-
-{
-
-color: #6a6d52;
-    position: relative;
-    max-width: 90%;
-    text-align: center;
-    line-height: 80px;
-    font-size: 20px;
-    text-transform: capitalize;
+    text-transform: uppercase;
 
 }
 
@@ -329,6 +301,7 @@ color: #6a6d52;
     text-transform: capitalize;
     font-style: bold;
     text-decoration: underline;
+       
 }
 
 .description3 {
@@ -498,7 +471,7 @@ position: relative;
 .user-name {color: #6a6d52; font-size: 60px; padding-top: 100px; z-index: 3;}
 
 
-.title-28 {color: #838488; font-size: 40px; padding-top: 100px; z-index: 2;}
+.title-28 {color: #838488; font-size: 40px; padding-top: 100px; z-index: 2; text-transform: capitalize;}
 
 .title-29 {color: #af8c90; font-size: 20px; padding-top: 100px; z-index: 2;}
 
@@ -555,7 +528,7 @@ position: relative;
 
 
 
-.menu-title {color: #f0e1ce!important;  position: relative; left: 50px; line-height: 250px; top: 100px; text-align: left; font-size: 60px; z-index: 3;} 
+.menu-title {color: #f0e1ce!important;  position: relative; left: 50px; line-height: 250px; top: 100px; text-align: left; font-size: 60px; z-index: 3; text-decoration: none;} 
 
 
 
