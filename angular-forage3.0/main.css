@@ -9,7 +9,7 @@ body {
 .body2 {background-color: #d8e2d8; width: 100%;}
 
 
-.body3 {background-color: #46454d; width: 100%;}
+.body3 {background-color: #46454d; width: 100%; height: 100%;     height: 1730px}
 
 
 
@@ -67,8 +67,16 @@ p {  z-index: 2;
 
 
 a {
-    text-decoration: none!important;
+    ;
+    color: #f0e1ce!important;
+    text-decoration: none!important
 }
+
+a:hover {
+    
+    color: #af8c90!important;
+}
+
 
 /*Index*/
 
@@ -528,7 +536,7 @@ position: relative;
 
 
 
-.menu-title {color: #f0e1ce!important;  position: relative; left: 50px; line-height: 250px; top: 100px; text-align: left; font-size: 60px; z-index: 3; text-decoration: none;} 
+.menu-title {color: #f0e1ce!important;  width:60%;position: relative; left: 50px; line-height: 250px; top: 100px; text-align: left; font-size: 60px; z-index: 3; text-decoration: none;} 
 
 
 
