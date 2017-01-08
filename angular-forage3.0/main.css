@@ -6,7 +6,7 @@ body {
     background-color: #faf7f2;
 }
 
-.body2 {background-color: #eaefea; width: 100%;}
+.body2 {background-color: #d8e2d8; width: 100%;}
 
 
 .body3 {background-color: #46454d; width: 100%;}
@@ -338,13 +338,21 @@ color: #838488;
 
 
 
-
+.username {color: #46454d;
+    position: relative;
+    max-width: 90%;
+    text-align: left;
+    line-height: 80px;
+    font-size: 12px;
+    text-transform: capitalize;
+    }
 
 .mushroom-rating{
     position: relative;
     width: 15%;
     left: 35%;
     top: 15px;
+    z-index: 2;
 
 }
 
@@ -363,7 +371,7 @@ color: #838488;
 background:  #f0e5ed;
 }
 .rec-timeline:nth-child(2n) {
-background:  #eaefea;
+background:  #d8e2d8;
 }
 .rec-timeline:nth-child(3n) {
 background:  #faf7f2;
