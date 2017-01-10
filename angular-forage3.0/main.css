@@ -3,7 +3,7 @@
 
 
 body {
-    background-color: #faf7f2;
+    background-color: #faf7f2!important;
 }
 
 .body2 {background-color: #f0e1ce; width: 100%;}
@@ -206,7 +206,7 @@ a:hover {
 
 
 .title-main1 { position: absolute;
-    top: 50px;
+    top: 35px;
     left: 5%;
     color: #46454d;
     text-align: center;
@@ -258,7 +258,7 @@ a:hover {
 
 /* Timeline */
 
-.pattern {position: fixed; z-index:1!important; width: 100%; height: 100%;}
+.pattern {position: fixed; z-index:-1!important; width: 100%; height: 100%;}
 
 
 
