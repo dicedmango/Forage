@@ -9,22 +9,19 @@ body {
   margin: 0;
   padding: 0;
   background-color: #333;
-
 }
 a {
   text-decoration: none;
   color: inherit;
-  z-index: 9;
 }
 nav {
-  background-color: #f0e1ce;
+  background-color: #f46801;
   padding: 3% 0;
   display: inline-block;
   width: 100%;
   float: left;
   position: relative;
   -webkit-transform: translateY(0px);
-  z-index: 9;
 }
 nav a {
   color: white;
@@ -98,11 +95,9 @@ nav a {
   -o-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   cursor: pointer;
-  z-index: 9;
- 
 }
 #hamburger span {
-  background-color: #46454d;
+  background-color: #fff;
   display: block;
   position: absolute;
   height: 9px;
@@ -117,7 +112,6 @@ nav a {
   -moz-transition: .25s ease-in-out;
   -o-transition: .25s ease-in-out;
   transition: .25s ease-in-out;
-    
 }
 #hamburger span:nth-child(1) {
   top: 0px;
