@@ -1,3 +1,5 @@
+<!--
+
 <div class="recipe-page" ng-if="currentRecepie">
     <ng-include src="'./templates/headerBar.html'"></ng-include>
 
@@ -16,4 +18,41 @@
               </center>
 
       </div>
+</div>
+-->
+
+
+<div class="rec-timeline">
+<img class="pattern" src="./img/linin.png">
+
+  <center>
+
+    <br><br>
+    <h2 class="title-dish">{{ currentRecepie.name }}</h2>
+    <br><br>
+
+    <img class="timeline-img" ng-src="{{currentRecepie.img}}"><br>
+
+    <img class="add-cookbook" src="./img/add2.png">
+    <img class="share-rec" src="./img/share2.png">
+    
+    <br><br><br><br><br><br><br><br><br><br>
+
+    <p class="description2">Description:</p>
+    <p class="description">{{ currentRecepie.ingredients }}<!--<a href="#recipe">-->
+    
+    <br><br>
+
+    <p class="description2">Method:</p>
+    <p class="description">{{ currentRecepie.Method }}<!--<a href="#recipe">-->
+    
+
+    <p class="username">JOliver420</p>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <img class="mushroom-rating" src="./logo/shoom4.png" >
+    <!---<div class="timeline-line"></div>-->
+
+  </center>
 </div>

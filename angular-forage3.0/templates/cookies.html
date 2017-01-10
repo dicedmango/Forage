@@ -3,67 +3,44 @@
 <div class="cookies-page body2">
 
 
-<img class="pattern"src="./img/linin.png">
+<img class="pattern" src="./img/linin.png">
 
 
-	<div class="header-position"> <ng-include src="'./templates/headerBar.html'"></ng-include></div>
+	<div class="header-position"> 
+		<ng-include src="'./templates/headerBar.html'"></ng-include>
+	</div>
 
-<a name="top"></a>
-
-
-
-
-
+	<a name="top"></a>
 
 	<div ng-repeat="recepie in allRecipes" class="rec-timeline">
-			<center>
+		<center>
 
-				<br><br>
-					<h2 class="title-dish">{{ recepie.name }}</h2>
-
-<br>
-<br>
+			<br><br>
+			<h2 class="title-dish">{{ recepie.name }}</h2>
+			<br><br>
 
 			<img class="timeline-img" ng-src="{{recepie.img}}"><br>
 
 			<img class="add-cookbook" src="./img/add2.png">
 			<img class="share-rec" src="./img/share2.png">
-<br>
-
-<br><br><br><br><br><br><br><br><br>
-
-					<p class="description2">Description:</p>
-					<p class="description">{{ recepie.ingredients }}<!--<a href="#recipe">--><p class="description3">Click For Recipe</p>
-
-					<p class="username">JOliver420</p>
-
-<br><br>
-
-
-				<br><br><br><br><br><br><br><br><br><br>
-
-
-				<img class="mushroom-rating" src="./logo/shoom4.png" >
-<!---<div class="timeline-line"></div>-->
-
-
-
-
-
-
-
-				</center>
-
 			
+			<br><br><br><br><br><br><br><br><br><br>
 
-
-
+			<p class="description2">Description:</p>
+			<p class="description">{{ recepie.ingredients }}<!--<a href="#recipe">-->
 			<a ng-href="#/rec?id={{recepie.id}}">
-				
+				<p class="description3">Click For Recipe</p>
 			</a>
-		</div>
+
+			<p class="username">JOliver420</p>
+
+			<br><br><br><br><br><br><br><br><br><br><br><br>
+
+			<img class="mushroom-rating" src="./logo/shoom4.png" >
+			<!---<div class="timeline-line"></div>-->
+
+		</center>
 	</div>
 
-</div>
 
-	<a href="#top"><img class="up" src="./img/up.png"></a>
+<a href="#top"><img class="up" src="./img/up.png"></a>
