@@ -15,7 +15,7 @@ a {
   color: inherit;
 }
 nav {
-  background-color: #f46801;
+  background-color: #f0e1ce;
   padding: 3% 0;
   display: inline-block;
   width: 100%;
@@ -97,7 +97,7 @@ nav a {
   cursor: pointer;
 }
 #hamburger span {
-  background-color: #fff;
+  background-color:#46454d;
   display: block;
   position: absolute;
   height: 9px;
