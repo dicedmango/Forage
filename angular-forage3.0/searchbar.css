@@ -18,7 +18,7 @@ body{
 }
 
 input{
-	background-color: #ffffff;
+	    background-color: transparent;
 	border: none;
 	font-size: 16px;
 	padding: 10px 0px 10px 0px;
@@ -35,9 +35,9 @@ input{
 }
 
 .expandSearch{
-	border: solid 1px #eeeeee;
-	    margin-top: 200px;
-	    width: 400px;
+	border: solid 3px transparent;
+    margin-top: 200px;
+    width: 400px;
 }
 
 .expandSearch input{
@@ -50,7 +50,7 @@ input{
 .expandSearch a{
 	display: block;
 	padding: 12px 15px 8px 15px;
-	background-color: #eeeeee;
+	  background-color: #f0e1ce;
 }
 
 .showSearch input{
@@ -62,9 +62,10 @@ margin-left: 10px;
 }
 
 .showSearch a{
-	background-color: #b3d2f2;
+	    background-color: #f0e1ce;
+
 }
 
 .showSearch{
-	border-color: #b3d2f2;
+	    border-color: #f0e1ce;
 }
