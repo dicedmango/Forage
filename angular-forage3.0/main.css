@@ -3,7 +3,7 @@
 
 
 body {
-    background-color: #faf7f2;
+    background-color: #faf7f2!important;
 }
 
 .body2 {background-color: #f0e1ce; width: 100%;}
@@ -11,7 +11,9 @@ body {
 
 .body3 {background-color: #46454d; width: 100%; height: 100%;     height: 1730px}
 
+.cookies-page {position: absolute; width: 100%; top: 55px;}
 
+.rec-timeline {position: absolute; width: 100%; top: 55px;}
 
 /*fonts*/
 
@@ -121,7 +123,7 @@ a:hover {
 .size-position {width: 80%; height: 50px; font-size: 30px;}
 
 
-.size-position2 {width: 80%; height: 50px; font-size: 30px; color: #ffffff;}
+.size-position2 {width: 80%; height: 50px; font-size: 30px; color: #ffffff; z-index: 9;}
 
 
 
@@ -195,13 +197,13 @@ a:hover {
 
 #header {
     
-    height: 170px;
+    height: 130px;
 
 }
 
 #header-position {
 
-    position: fixed;
+    position: relative;
 }
 
 
@@ -258,7 +260,7 @@ a:hover {
 
 /* Timeline */
 
-.pattern {position: fixed; z-index:-1!important; width: 100%; height: 100%;}
+.pattern {position: fixed; z-index:1!important; width: 100%; height: 110%; top: -55px;}
 
 
 
@@ -298,14 +300,14 @@ color: #46454d;
     max-width: 90%;
     text-align: center;
     line-height: 80px;
-    font-size: 20px;
+    font-size: 60px;
     text-transform: uppercase;
 
 }
 
 
 .description {
-    font-size: 12px;
+  font-size: 40px;
     position: relative;
     text-align: left;
     color: #46454d;
@@ -313,10 +315,11 @@ color: #46454d;
     width: 90%;
     font-weight: normal;
     text-transform: capitalize;
+    line-height: 1.2;
 }
 
 .description2 {
-    font-size: 12px;
+    font-size: 40px;
     position: relative;
     text-align: left;
     color: #46454d;
@@ -330,7 +333,7 @@ color: #46454d;
 }
 
 .description3 {
-    font-size: 12px;
+    font-size: 40px;
     position: relative;
     text-align: left;
     color: #af8c90!important;
@@ -348,7 +351,7 @@ color: #46454d;
     max-width: 90%;
     text-align: left;
     line-height: 80px;
-    font-size: 12px;
+    font-size: 40px;
     text-transform: capitalize;
     }
 
@@ -356,7 +359,7 @@ color: #46454d;
     position: relative;
     width: 15%;
     left: 35%;
-    top: 15px;
+    top: 6px;
     z-index: 2;
 
 }
@@ -546,7 +549,7 @@ position: relative;
 
 
 
-.menu-title {color: #f0e1ce!important;  width:60%;position: relative; left: 70px; line-height: 250px; top: 270px; text-align: left; font-size: 60px; z-index: 3; text-decoration: none;} 
+.menu-title {color: #f0e1ce;   width: 70%;  position: relative; left: 70px; line-height: 207px; top: -1000px; text-align: left; font-size: 50px;  text-decoration: none;} 
 
 /* Search */
 
