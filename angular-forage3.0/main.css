@@ -6,14 +6,14 @@ body {
     background-color: #faf7f2!important;
 }
 
-.body2 {background-color: #f0e1ce; width: 100%;}
+.body2 {background-color: #f0e1ce; width: 100%; }
 
 
 .body3 {background-color: #46454d; width: 100%; height: 100%;     height: 1730px}
 
 .cookies-page {position: absolute; width: 100%; top: 55px;}
 
-.rec-timeline {position: absolute; width: 100%; top: 55px;}
+.rec-timeline {position: relative; width: 100%; top: 55px;}
 
 /*fonts*/
 
