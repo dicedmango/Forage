@@ -37,12 +37,12 @@
 
 			<h2 class="menu-title" id="id1">
 				
-<a href="#">Search<br></a>
-<a href="#user">Profile<br></a>
-<a href="#add">Add Recipe<br></a></a>
-<a href="#cookies">Dish Of The Day<br></a>
-<a href="#about">About<br></a>
-<a href="#index">Log Out<br></a>
+<a href="#" onclick="closeNav()">Search<br></a>
+<a href="#user" onclick="closeNav()">Profile<br></a>
+<a href="#add" onclick="closeNav()">Add Recipe<br></a></a>
+<a href="#cookies" onclick="closeNav()">Dish Of The Day<br></a>
+<a href="#about" onclick="closeNav()">About<br></a>
+<a href="#index" onclick="closeNav()">Log Out<br></a>
 		  <br>
 
 
@@ -54,19 +54,59 @@
 
 <script>
 
-var closed = true;
+var state = "closed";
 
-function myFunction() {
-	if(closed) {
-		closed = false;
+function myFunction() { 
 
-	    document.getElementById("id1").style.top = "2000px"; 
+
+console.log(state)
+
+//$("#hamburger").click();
+
+	if(state == "open") {
+		state = "closed";
+
+	    $("#id1").css("top", "-2000px"); 
 	}
 	else {
-		closed = true;
-    	document.getElementById("id1").style.top = "70px"; 
+		state = "open";
+	    $("#id1").css("top", "-70px"); 
     }
 }
+
+
+
+
+
+
+	function closeNav() {
+		
+		state = "closed";
+
+		$('#site-wrapper').toggleClass('show-nav');
+		
+	    $("#id1").css("top", "-2000px"); 
+	}
+
+	$(function(){
+	  $('.toggle-nav').click(function(){
+	    $('#site-wrapper').toggleClass('show-nav');
+	  });
+	  $(function(){
+	    $('body').click(function(){
+	      $(this).toggleClass('show-nav');
+	    });
+	  });
+	  $(document).ready(function() {
+	    $('#hamburger').click(function() {
+	      $(this).toggleClass('open');
+	    });
+	  });
+	});
+
+
+
+
 
 </script>
 
@@ -92,21 +132,6 @@ function myFunction() {
 
 <script>
 
-	$(function(){
-	  $('.toggle-nav').click(function(){
-	    $('#site-wrapper').toggleClass('show-nav');
-	  });
-	  $(function(){
-	    $('body').click(function(){
-	      $(this).toggleClass('show-nav');
-	    });
-	  });
-	  $(document).ready(function() {
-	    $('#hamburger').click(function() {
-	      $(this).toggleClass('open');
-	    });
-	  });
-	});
 
 </script>
 

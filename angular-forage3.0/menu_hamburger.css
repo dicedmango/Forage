@@ -58,7 +58,7 @@ background-image: url("http://www.home-is.co.uk/wp-content/uploads/2015/12/Black
   position: relative;
  
   -webkit-transform: translateY(0px);
-  transition: all 1.5s ease-in-out;
+  transition: all 0.8s ease-in-out;
   width: 100%;
       height: 14.5%;
 }
@@ -68,7 +68,7 @@ background-image: url("http://www.home-is.co.uk/wp-content/uploads/2015/12/Black
   position: absolute;
   -webkit-transform: translateY(-3px);
   transform: translateY(-253px);
-  transition: all 5s ease-in-out;
+  transition: all 0.8s ease-in-out;
   z-index: 0
 }
 #site-wrapper.show-nav {
