@@ -8,20 +8,22 @@ body {
   font-family: helvetica, 'helvetica';
   margin: 0;
   padding: 0;
-  background-color: #333;
+  background-color: #46454d;
 }
 a {
   text-decoration: none;
   color: inherit;
+
 }
 nav {
-  background-color: #f0e1ce;
+background-image: url("./img/lininbutter.png");
   padding: 3% 0;
   display: inline-block;
   width: 100%;
   float: left;
   position: relative;
   -webkit-transform: translateY(0px);
+
 }
 nav a {
   color: white;
@@ -34,13 +36,11 @@ nav a {
 }
 .one-half {
   display: inline-block;
-  width: 50%;
+  width: 100%;
 }
 .one-third {
   display: inline-block;
-  width: 30.3%;
   margin-left: 3%;
-  border-top: 1px solid #222;
   padding-top: 1rem;
   float: left;
 }
@@ -48,7 +48,7 @@ nav a {
   margin-left: 0;
 }
 .off-nav {
-  background-color: #333;
+background-image: url("http://www.home-is.co.uk/wp-content/uploads/2015/12/Black-Wood-Wall-Cladding.jpg");
   color: white;
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -56,22 +56,25 @@ nav a {
   float: left;
   top: 0px;
   position: relative;
-  height: 253px;
+ 
   -webkit-transform: translateY(0px);
-  transition: all .75s ease-in-out;
+  transition: all 1.5s ease-in-out;
+  width: 100%;
+      height: 14.5%;
 }
 #site-wrapper {
   width: 100%;
   height: 100%;
   position: absolute;
-  -webkit-transform: translateY(-253px);
+  -webkit-transform: translateY(-3px);
   transform: translateY(-253px);
-  transition: all .75s ease-in-out;
+  transition: all 5s ease-in-out;
+  z-index: 0
 }
 #site-wrapper.show-nav {
   -webkit-transform: translateY(0px);
-  transform: translateY(0px);
-  transition: all .75s ease-in-out;
+  transform: translateY(180px)
+  transition: all 3s ease-in-out;
   position: relative;
 }
 .social a {
