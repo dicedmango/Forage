@@ -120,7 +120,7 @@ function openMenu() {
 var app = angular.module('app', ['ngRoute', 'ngAnimate'])
 .config( ['$routeProvider', function($routeProvider) {
 	$routeProvider
-		.when('/', { templateUrl: 'templates/index.html' })
+		.when('/', { templateUrl: 'templates/index.html', controller: 'defaultCtrl' })
 		.when('/login', { templateUrl: 'templates/login.html', controller: 'LoginCtrl' })	
 		.when('/rate', { templateUrl: 'templates/rate.html' })
 		.when('/recipe', { templateUrl: 'templates/recipe.html', controller: 'RecipeCtrl' })
@@ -136,9 +136,15 @@ var app = angular.module('app', ['ngRoute', 'ngAnimate'])
 }]);
 
 
+app.controller('defaultCtrl', ['$scope', '$rootScope', '$http', '$location', function($s, $rootScope, $http, $location) {
+
+	$rootScope.headerHidden = true;
+
+}]);
+
 // CONTROLLERS
 
-app.controller('DUKCtrl', ['$scope', '$http', '$location', function($s, $http, $location) {
+app.controller('DUKCtrl', ['$scope', '$rootScope', '$http', '$location', function($s, $rootScope, $http, $location) {
 
 	$s.pageClass = 'duk-page';
 	$s.duks = [
@@ -201,9 +207,13 @@ app.controller('DUKCtrl', ['$scope', '$http', '$location', function($s, $http, $
 
 	console.log("$s.duks", $s.duks);
 
+	$rootScope.headerHidden = true;
 }]);
 
-app.controller('UserCtrl', ['$scope', '$http', '$location', function($s, $http, $location) {
+app.controller('UserCtrl', ['$scope', '$rootScope', '$http', '$location', function($s, $rootScope, $http, $location) {
+
+
+	$rootScope.headerHidden = false;
 
 	$s.pageClass = 'user-page';
 	console.log("user controller");
@@ -222,20 +232,26 @@ app.controller('UserCtrl', ['$scope', '$http', '$location', function($s, $http, 
 }]);
 
 
-app.controller('LoginCtrl', ['$scope', '$http', '$location', function($s, $http, $location) {
+app.controller('LoginCtrl', ['$scope', '$rootScope', '$http', '$location', function($s, $rootScope, $http, $location) {
 
 	$s.pageClass = 'login-page';
 
+
+	$rootScope.headerHidden = true;
+
 }]);
 
-app.controller('SearchCtrl', ['$scope', '$http', '$location', function($s, $http, $location) {
+app.controller('SearchCtrl', ['$scope', '$rootScope', '$http', '$location', function($s, $rootScope, $http, $location) {
 
 	$s.pageClass = 'search-page';
 
 }]);
 
 
-app.controller('RecipeCtrl', ['$scope', '$http', '$location', function($s, $http, $location) {
+app.controller('RecipeCtrl', ['$scope', '$rootScope', '$http', '$location', function($s, $rootScope, $http, $location) {
+
+
+	$rootScope.headerHidden = false;
 
 	$s.pageClass = 'recipe-page';
 	$s.currentRecepie = {};
@@ -253,9 +269,12 @@ app.controller('RecipeCtrl', ['$scope', '$http', '$location', function($s, $http
 
 }]);
 
-app.controller('CookieCtrl', ['$scope', '$http', '$location', function($s, $http, $location) {
+app.controller('CookieCtrl', ['$scope', '$rootScope', '$http', '$location', function($s, $rootScope, $http, $location) {
 
 	$s.pageClass = 'cookies-page';
+
+
+	$rootScope.headerHidden = false;
 
 }]);
 

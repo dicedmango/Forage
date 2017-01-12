@@ -7,11 +7,6 @@
 	outline: none!important;
 }
 
-body{
-	font-family: arial, sans-serif;
-	padding: 40px;
-	font-size: 100%;
-}
 
 .clearfix{
 	clear: both;
@@ -20,8 +15,12 @@ body{
 input{
 	    background-color: transparent;
 	border: none;
-	font-size: 16px;
+	font-size: 50px;
 	padding: 10px 0px 10px 0px;
+	color: #f0e1ce; 
+	position: relative; right: 15px; 
+	    font-family: cool;
+
 }
 
 
@@ -37,7 +36,7 @@ input{
 .expandSearch{
 	border: solid 3px transparent;
     margin-top: 200px;
-    width: 400px;
+    width: 440px;
 }
 
 .expandSearch input{
@@ -50,7 +49,7 @@ input{
 .expandSearch a{
 	display: block;
 	padding: 12px 15px 8px 15px;
-	  background-color: #f0e1ce;
+	  background-color: transparent;
 }
 
 .showSearch input{
@@ -62,10 +61,10 @@ margin-left: 10px;
 }
 
 .showSearch a{
-	    background-color: #f0e1ce;
+	    background-color: transparent;
 
 }
 
 .showSearch{
-	    border-color: #f0e1ce;
+	    border-color:transparent;
 }

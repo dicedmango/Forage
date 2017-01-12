@@ -15,6 +15,8 @@ body {
 
 .rec-timeline {position: relative; width: 100%; top: 55px;}
 
+
+
 /*fonts*/
 
 
@@ -70,7 +72,7 @@ p {  z-index: 2;
 
 a {
     ;
-    color: #f0e1ce!important;
+    color: #f0e1ce;
     text-decoration: none!important;
     z-index: 999;
 }
@@ -120,10 +122,16 @@ a:hover {
 
 
 
-.size-position {width: 80%; height: 50px; font-size: 30px;}
+.size-position {width: 80%; height: 50px; font-size: 30px; background-color: #ffffff;}
 
 
-.size-position2 {width: 80%; height: 50px; font-size: 30px; color: #ffffff; z-index: 9}
+.size-position2 {    width: 80%;
+    height: 50px;
+    font-size: 30px;
+    color: #ffffff;
+    z-index: 9;
+    top: 150px;
+    position: relative;}
 
 
 
@@ -328,9 +336,36 @@ color: #46454d;
     font-weight: normal;
     text-transform: capitalize;
     font-style: bold;
+    text-decoration: underline;}
+       
+.description5 {
+    font-size: 40px;
+    position: relative;
+    text-align: left;
+    color: #46454d;
+    font-family: min;
+    width: 90%;
+    font-weight: normal;
+    text-transform: capitalize;
+    font-style: bold;
     text-decoration: underline;
        
 }
+
+
+.description6 {
+    font-size: 15px;
+    position: relative;
+    text-align: left;
+    color: #46454d;
+    font-family: min;
+    width: 90%;
+    font-weight: normal;
+    text-transform: none;
+ 
+       
+}
+
 
 .description3 {
     font-size: 40px;
