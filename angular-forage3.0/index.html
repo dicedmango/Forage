@@ -22,65 +22,36 @@
 </head>
     
 <body ng-app="app" ng-controller="PageCtrl">
-	<!-- <ng-include src="'./templates/banner.html'"></ng-include> -->
 
 	<!-- header -->
-	<div id="site-wrapper" class="here" style="z-index: 9;" ng-if="!headerHidden">  
-
+	<div id="site-wrapper" class="here" style="z-index: 9;" ng-show="!headerHidden">  
 
 		<div class="off-nav">
 			
-
-
-
-
-
-
 			<h2 class="menu-title" id="id1">
 
+			<div class="expandSearch">
 
+				<input id="searchbar" type="text" placeholder="Search" ng-model="searchText">
+				
+					<svg ng-click="executeSearch()" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="70px" height="70px" viewBox="375.045 607.885 30.959 30.33" enable-background="new 375.045 607.885 30.959 30.33" xml:space="preserve">
+						<path fill="#f0e1ce" d="M405.047,633.805l-7.007-6.542c-0.129-0.121-0.267-0.226-0.408-0.319c1.277-1.939,2.025-4.258,2.025-6.753 c0-6.796-5.51-12.306-12.307-12.306s-12.306,5.51-12.306,12.306s5.509,12.306,12.306,12.306c2.565,0,4.945-0.786,6.916-2.128 c0.122,0.172,0.257,0.337,0.418,0.488l7.006,6.542c1.122,1.048,2.783,1.093,3.709,0.101 C406.327,636.507,406.169,634.853,405.047,633.805z M387.351,629.051c-4.893,0-8.86-3.967-8.86-8.86s3.967-8.86,8.86-8.86 s8.86,3.967,8.86,8.86S392.244,629.051,387.351,629.051z"/>
+					</svg>
+				
+			</div>
 
+			<div class="clearfix"></div>
 
-
-
-
-
-
-
-		<p class="expandSearch">
-			<input id="searchbar" type="text" placeholder="Search" />
-			<a href="#">
-				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="70px" height="70px" viewBox="375.045 607.885 30.959 30.33" enable-background="new 375.045 607.885 30.959 30.33" xml:space="preserve">
-					<path fill="#f0e1ce" d="M405.047,633.805l-7.007-6.542c-0.129-0.121-0.267-0.226-0.408-0.319c1.277-1.939,2.025-4.258,2.025-6.753 c0-6.796-5.51-12.306-12.307-12.306s-12.306,5.51-12.306,12.306s5.509,12.306,12.306,12.306c2.565,0,4.945-0.786,6.916-2.128 c0.122,0.172,0.257,0.337,0.418,0.488l7.006,6.542c1.122,1.048,2.783,1.093,3.709,0.101 C406.327,636.507,406.169,634.853,405.047,633.805z M387.351,629.051c-4.893,0-8.86-3.967-8.86-8.86s3.967-8.86,8.86-8.86 s8.86,3.967,8.86,8.86S392.244,629.051,387.351,629.051z"/>
-				</svg>
-			</a>
-		</p>
-
-		<div class="clearfix"></div>
-
-</a>
-
-
-
-
-
-
-
-
-
-<a href="#user" onclick="closeNav()">Profile<br></a>
-<a href="#add" onclick="closeNav()">Add Recipe<br></a></a>
-<a href="#cookies" onclick="closeNav()">Dish Of The Day<br></a>
-<a href="#about" onclick="closeNav()">About<br></a>
-<a href="#index" onclick="closeNav()">Log Out<br></a>
-		  <br>
-
+			<a href="#user" onclick="closeNav()">Profile<br></a>
+			<a href="#add" onclick="closeNav()">Add Recipe<br></a></a>
+			<a href="#cookies" onclick="closeNav()">Dish Of The Day<br></a>
+			<a href="#about" onclick="closeNav()">About<br></a>
+			<a href="#index" onclick="closeNav()">Log Out<br></a>
+			<br>
 
 		</div>
 		<nav>
 		  <div class="container">
-	
-
 
 <script>
 
@@ -88,10 +59,7 @@ var state = "closed";
 
 function myFunction() { 
 
-
-console.log(state)
-
-//$("#hamburger").click();
+	console.log(state)
 
 	if(state == "open") {
 		state = "closed";
@@ -103,9 +71,6 @@ console.log(state)
 	    $("#id1").css("top", "-70px"); 
     }
 }
-
-
-
 
 
 
@@ -150,7 +115,7 @@ console.log(state)
 				if(hasBeenClicked) {
 					console.log("search by this", $("#searchbar").val());
 
-					window.location.href = "#/cookies?search=" + $("#searchbar").val();
+					//window.location.href = "#/cookies?search=" + $("#searchbar").val();
 
 					return false;
 				}

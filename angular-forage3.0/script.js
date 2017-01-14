@@ -280,6 +280,24 @@ app.controller('CookieCtrl', ['$scope', '$location', '$rootScope', '$http', '$lo
 
 app.controller('PageCtrl', ['$scope', '$rootScope', '$http', '$location', function($s, $r, $http, $location) {
 
+	$s.searchText = "";
+
+	$s.executeSearch = function(searchText) {
+
+		var searchText = $("#searchbar").val();
+
+		console.log("search", $("#searchbar").val());
+
+
+		if(!searchText) return;
+
+		$location.path('#/cookies?search=' + searchText)
+
+		$location.path('/cookies?search=' + searchText)
+
+		//$location.absUrl() === '#/cookies?search=' + searchText;
+	}
+
 	$s.recipes = [];
 	$r.recipesFilter = "";
 
@@ -297,6 +315,11 @@ app.controller('PageCtrl', ['$scope', '$rootScope', '$http', '$location', functi
 	    console.log("$s.recipes", $s.recipes);
 	});
 
+  	$s.$watch("s", function(n, o) {
+
+  		console.log("searchText has changed to", n);
+
+  	});
 
     $s.$watch("recipesFilter", function(n, o) {
 
@@ -317,8 +340,5 @@ app.controller('PageCtrl', ['$scope', '$rootScope', '$http', '$location', functi
 
 			console.log("$s.recipes filter has changed to", $s.recipes);
 		});
-
-
-
     });
 }]);
