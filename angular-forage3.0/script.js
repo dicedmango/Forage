@@ -235,8 +235,6 @@ app.controller('UserCtrl', ['$scope', '$rootScope', '$http', '$location', functi
 app.controller('LoginCtrl', ['$scope', '$rootScope', '$http', '$location', function($s, $rootScope, $http, $location) {
 
 	$s.pageClass = 'login-page';
-
-
 	$rootScope.headerHidden = true;
 
 }]);
@@ -269,19 +267,22 @@ app.controller('RecipeCtrl', ['$scope', '$rootScope', '$http', '$location', func
 
 }]);
 
-app.controller('CookieCtrl', ['$scope', '$rootScope', '$http', '$location', function($s, $rootScope, $http, $location) {
+app.controller('CookieCtrl', ['$scope', '$location', '$rootScope', '$http', '$location', function($s, $location, $r, $http, $location) {
 
 	$s.pageClass = 'cookies-page';
+	$r.headerHidden = false;
 
+	$r.recipesFilter = $location.$$search.search;
 
-	$rootScope.headerHidden = false;
+	console.log("cookies controller", $location.$$search.search);
 
 }]);
 
-app.controller('PageCtrl', ['$scope', '$http', '$location', function($s, $http, $location) {
+app.controller('PageCtrl', ['$scope', '$rootScope', '$http', '$location', function($s, $r, $http, $location) {
 
-	$s.allRecipes = [];
-	$s.filteredRecipes = [];
+	$s.recipes = [];
+	$r.recipesFilter = "";
+
 	$s.users = [];
 
   	$.get('/api/users', function(data) {
@@ -292,26 +293,32 @@ app.controller('PageCtrl', ['$scope', '$http', '$location', function($s, $http, 
 
   	$.get('/api/recipes', function(data) {
 
-	    $s.allRecipes = data;
-	    console.log("$s.allRecipes", $s.allRecipes);
+	    $s.recipes = data;
+	    console.log("$s.recipes", $s.recipes);
 	});
 
 
+    $s.$watch("recipesFilter", function(n, o) {
+
+		$.get('/api/recipes', function(data) {
+
+			console.log("recipe filter has changed to", n, data);
+
+			var reg = new RegExp(n, 'i');
+
+			$s.recipes = _.filter(data, function(recipe) {
+				console.log("filter recipe", recipe);
+				if(!recipe.name) return false
+				//return true;
+				return recipe.name.match(reg);
+			})
+
+			$s.$apply();
+
+			console.log("$s.recipes filter has changed to", $s.recipes);
+		});
 
 
-    $s.searchtext = "";
 
-    $s.$watch("searchtext", function(n, o) {
-		
-		$s.filteredRecipes = _.filter($s.allRecipes, function(recipe) {
-
-			var reg = new RegExp(n);
-
-			return recipe.name.match(reg);
-
-		})
-
-		console.log("searchtext change", n, $s.filteredRecipes);
     });
-
 }]);
