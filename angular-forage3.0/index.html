@@ -86,8 +86,6 @@ function myFunction() {
 	$(function(){
 
 
-// search bar
-
 	var hasBeenClicked = false;
 
 	var expandSearch = {
@@ -115,7 +113,8 @@ function myFunction() {
 				if(hasBeenClicked) {
 					console.log("search by this", $("#searchbar").val());
 
-					//window.location.href = "#/cookies?search=" + $("#searchbar").val();
+					closeNav();
+					window.location.href = "/#/cookies?search=" + $("#searchbar").val();
 
 					return false;
 				}
